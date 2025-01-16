@@ -1,5 +1,5 @@
 ---
-title: Getting Started with zeroth
+title: Getting Started
 excerpt: >-
   This page will help you get started with zeroth. You'll be up and running in a
   jiffy!
