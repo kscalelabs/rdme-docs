@@ -1,6 +1,6 @@
 ---
 title: Genesis
-excerpt: ' Genesis: A Generative and Universal Physics Engine for Robotics and Beyond'
+excerpt: Getting started with Genesis physics simulation with K-Scale Bots.
 deprecated: false
 hidden: false
 metadata:
