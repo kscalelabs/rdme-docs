@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Z-Bot Overview
 deprecated: false
 hidden: false
 metadata:
