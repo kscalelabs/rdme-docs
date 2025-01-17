@@ -87,7 +87,9 @@ It’ll be specified in someplace like
 
 ## Okay… but where is that on my machine?
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/90bfd7cd-abb5-4278-98f7-34932f644926/a0d3697b-a48d-4379-97b2-77062cd8b940/image.png)
+![](https://files.readme.io/26479e0947ff034bc343193914363ab40ea186000ab84661ed9676b21f5e5565-image.png)
+
+<br />
 
 Buildroot: [https://github.com/zeroth-robotics/buildroot](https://github.com/zeroth-robotics/buildroot)
 
