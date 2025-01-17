@@ -1,5 +1,5 @@
 ---
-title: Robot Overview
+title: Zeroth Bot Overview
 excerpt: >-
   Powerful, affordable, and open-source robotics dev kit & platform for
   builders.
