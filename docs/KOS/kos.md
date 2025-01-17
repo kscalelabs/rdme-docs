@@ -1,5 +1,5 @@
 ---
-title: '`pykos`'
+title: KOS SDK
 excerpt: K-Scale Operating System
 deprecated: false
 hidden: false
