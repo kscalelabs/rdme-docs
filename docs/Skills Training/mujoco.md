@@ -1,5 +1,6 @@
 ---
 title: Mujoco Playground
+excerpt: Getting started with MuJoCo Playground physics simulation with K-Scale Bots.
 deprecated: false
 hidden: false
 metadata:
