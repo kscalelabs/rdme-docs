@@ -6,7 +6,3 @@ metadata:
   robots: index
 ---
 `pip install pykos`
-
-<br />
-
-/
