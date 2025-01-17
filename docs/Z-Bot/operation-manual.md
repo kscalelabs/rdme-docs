@@ -1,5 +1,5 @@
 ---
-title: Z-Bot Operation Manual
+title: Operation Manual
 deprecated: false
 hidden: false
 metadata:
