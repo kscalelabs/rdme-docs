@@ -1,5 +1,5 @@
 ---
-title: Help
+title: FAQ
 deprecated: false
 hidden: false
 metadata:
