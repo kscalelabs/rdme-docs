@@ -1,5 +1,5 @@
 ---
-title: KOS SDK
+title: Introduction
 excerpt: K-Scale Operating System
 deprecated: false
 hidden: false
