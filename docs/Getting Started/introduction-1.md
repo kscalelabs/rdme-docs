@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Start building with KOS
 deprecated: false
 hidden: false
 metadata:
