@@ -59,7 +59,6 @@ The Zeroth Bot consists of head, torso, arms, and legs, with total 16 DoFs, allo
 |                        | Auditory Alerts                | Low Battery Alert, Joint Overheat Alert                  |
 | Communication Methods  | Wireless Connections           | WIFI 6                                                   |
 |                        | GPRC                           |                                                          |
-|                        |                                |                                                          |
 
 ## Joint Motors
 
