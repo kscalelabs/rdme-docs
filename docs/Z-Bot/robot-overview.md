@@ -5,6 +5,10 @@ hidden: false
 metadata:
   robots: index
 ---
+<Image align="center" src="https://files.readme.io/299bf6da93adc761a172c73cc66dfea9f055f908692e4c8208fcfd07c135aac0-52D09022-5F10-44BB-9E18-1752175972B0_4_5005_c.jpeg" />
+
+<br />
+
 Zeroth Bot is an open-source humanoid robot development platform designed for developers and researchers, made for advanced ML and software applications development.
 
 ## Robot Composition
