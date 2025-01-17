@@ -1,5 +1,8 @@
 ---
 title: Robot Overview
+excerpt: >-
+  Powerful, affordable, and open-source robotics dev kit & platform for
+  builders.
 deprecated: false
 hidden: false
 metadata:
