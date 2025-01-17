@@ -1,5 +1,6 @@
 ---
 title: Genesis
+excerpt: ' Genesis: A Generative and Universal Physics Engine for Robotics and Beyond'
 deprecated: false
 hidden: false
 metadata:
