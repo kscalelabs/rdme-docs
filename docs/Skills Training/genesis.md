@@ -7,7 +7,7 @@ metadata:
 ---
 If you work on a Mac, you can install the package with the following command:
 
-```shell
+```shell Shell
 micromamba create -n genesis python=3.12
 micromamba activate genesis
 
@@ -15,7 +15,7 @@ micromamba activate genesis
 
 If you work on a Linux machine, you can install the package with the following command:
 
-```text
+```shell
 conda create -n genesis python=3.12
 conda activate genesis
 ```
