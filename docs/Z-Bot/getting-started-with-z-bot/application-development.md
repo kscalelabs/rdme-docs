@@ -32,3 +32,32 @@ actuator_name_to_id = {
     'right_ankle_pitch' : 45,
 }
 ```
+
+## Getting Started
+
+Use the starter code in the [skillet](https://github.com/kscalelabs/skillet/tree/master) repo to test your actuators.
+
+You will need python 3.11 to run this code.
+
+### Installation
+
+<br />
+
+```bash bash
+
+# clone this repo
+# in the root folder of the repo do 
+pip install -e .
+
+```
+
+### Usage
+
+#### Run move all actuators
+
+This will move each joint 5 degrees and print any that failed.
+
+```bash bash
+# from the root folder of the repo, run
+python skillet/examples/move_all_joints_a_little.py
+```
