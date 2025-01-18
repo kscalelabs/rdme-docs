@@ -28,7 +28,7 @@ pip install pykos
 
 ## Getting Started
 
-First, import the `pykos` module and create an instance of the KOS client:
+First, import the `pykos` module and create an instance of the KOS client. Remember to connect to the robot through the cable or ip:
 
 ```python
 from pykos import KOS
