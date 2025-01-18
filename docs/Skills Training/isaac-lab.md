@@ -46,7 +46,6 @@ pip install isaacsim-extscache-physics==4.2.0.2 isaacsim-extscache-kit==4.2.0.2 
 
 ```bash
 isaacsim
-
 ```
 
 Logs can be found at `/home/dpsh/.nvidia-omniverse/`
@@ -54,7 +53,6 @@ Logs can be found at `/home/dpsh/.nvidia-omniverse/`
 ## Isaac Lab
 
 ```bash
-# cd to repo root
 # Get Isaaclab as a submodule
 git submodule update --init --recursive 
 ```
@@ -87,35 +85,22 @@ python source/standalone/tutorials/00_sim/create_empty.py
 
 ## Run with Robot
 
-### Install GPR extension
+### Install ZBot extension
 
 ```bash
-cd exts/gpr
+cd exts/zbot
 python -m pip install -e .
 ```
 
 ### Run training / playing
 
-#### For GPR / Kbot
-
-Training an agent with RSL-RL on Velocity-Rough-Kbot-v0:
-
-```bash
-# run script for training
-${ISAAC_LAB_PATH}/isaaclab.sh -p scripts/rsl_rl/train.py --task Velocity-Rough-Kbot-v0
-# run script for playing
-${ISAAC_LAB_PATH}/isaaclab.sh -p scripts/rsl_rl/play.py --task Velocity-Rough-Kbot-Play-v0
-```
-
 #### For zbot2
 
 ```bash
 # run training
-# cd to repo root (klab folder)
 ${ISAAC_LAB_PATH}/isaaclab.sh -p scripts/rsl_rl/train.py --task Velocity-Rough-Zbot2-v0
 
 # run play
-# cd to repo root (klab folder)
 ${ISAAC_LAB_PATH}/isaaclab.sh -p scripts/rsl_rl/play.py --task Velocity-Rough-Zbot2-Play-v0
 ```
 
@@ -155,7 +140,7 @@ ${ISAAC_LAB_PATH}/isaaclab.sh -p scripts/rsl_rl/play_imu.py  \
 
 # Adding a new robot from URDF
 
-Instructions in [AddNewRobot.md](AddNewRobot.md)
+Instructions in [AddNewRobot.md](https://github.com/kscalelabs/klab/blob/master/AddNewRobot.md)
 
 # Troubleshooting
 
@@ -177,20 +162,19 @@ In the `rsl_rl/utils/wandb_utils.py` file, change the wandb.run.name to the last
 # Change generated name to project-number format            
 wandb.run.name = project + wandb.run.name.split("-")[-1] # <--- After this line
 
-# ALI CHANGES
 # Change wandb run name to the last folder in log_dir path
 wandb.run.name = os.path.basename(log_dir)                     # <--- Add this line
 ```
 
 ## Inotify limit
 
-If you see this in the logs
+If you see this in the logs at the start of the Omniverse Launcher:
 
 ```
 Failed to create an inotify instance. Your system may be at the limit of inotify instances. The limit is listed in `/proc/sys/fs/inotify/max_user_watches` but can be modified. A reboot or logging out and back in may also resolve the issue.
 ```
 
-Just increase the limits via the following commands:
+Increase the limits via the following commands:
 
 ```bash
 sudo sysctl fs.inotify.max_user_instances=8192
