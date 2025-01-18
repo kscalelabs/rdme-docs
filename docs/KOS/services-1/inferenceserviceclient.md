@@ -6,4 +6,4 @@ hidden: false
 metadata:
   robots: index
 ---
-[inference.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/inference.py)
+Just give me the code: [inference.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/inference.py)
