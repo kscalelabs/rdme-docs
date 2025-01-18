@@ -1,8 +1,8 @@
 ---
 title: First steps with robot
 excerpt: >-
-  The starting place for all example code to get up and running using a Zeroth
-  Bot. 
+  The starting place for all example code to get up and running using Zeroth or
+  K Bots. 
 deprecated: false
 hidden: false
 metadata:
@@ -14,9 +14,11 @@ Install `pip install skillet` to get access to first basic skills.
 
 An example list is shown here: [https://github.com/kscalelabs/skillet/tree/master/skillet/examples](https://github.com/kscalelabs/skillet/tree/master/skillet/examples)
 
-You can start from
+<br />
 
 ## Examples
+
+You can start from:
 
 1. Camera
 2. Moving a joints
