@@ -31,6 +31,8 @@ git lfs install
 
 # Pull large files (like USD models)
 git lfs pull
+
+git clone git@github.com:kscalelabs/klab.git
 ```
 
 ## Create environment
