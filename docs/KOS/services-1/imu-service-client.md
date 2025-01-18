@@ -10,6 +10,10 @@ metadata:
 ---
 Just give me the code: [imu.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/imu.py)
 
-## Examples
+## Getting IMU values
+
+todo
+
+## Calibrating the IMO
 
 todo
