@@ -1,5 +1,5 @@
 ---
-title: SimServiceClient
+title: Sim
 deprecated: false
 hidden: false
 metadata:
