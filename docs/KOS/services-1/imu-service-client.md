@@ -14,6 +14,10 @@ Just give me the code: [imu.py](https://github.com/kscalelabs/kos/blob/master/ko
 
 todo (incl all getters?)
 
+## Zeroing the IMU
+
+todo (incl why)
+
 ## Calibrating the IMU
 
-todo (incl zeroing and calibrating)
+todo (incl why)
