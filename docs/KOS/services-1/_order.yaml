@@ -1,5 +1,5 @@
-- imu-service-client
 - actuator-service-client
+- imu-service-client
 - ledmatrixserviceclient
 - soundserviceclient
 - processmanagerserviceclient
