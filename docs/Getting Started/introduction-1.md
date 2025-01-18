@@ -55,9 +55,9 @@ Control actuators connected to the robot.
 # Configure actuator with ID 1
 response = client.actuator.configure_actuator(
     actuator_id=1,
-    kp=1.0,
-    kd=0.1,
-    ki=0.01,
+    kp=32,
+    kd=32,
+    ki=32,
     max_torque=100.0,
     torque_enabled=True,
     zero_position=True
