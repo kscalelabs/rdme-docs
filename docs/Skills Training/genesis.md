@@ -11,7 +11,6 @@ If you work on a Mac, you can install the package with the following command:
 ```shell Shell
 micromamba create -n genesis python=3.12
 micromamba activate genesis
-
 ```
 
 If you work on a Linux machine, you can install the package with the following command:
