@@ -1,6 +1,6 @@
 ---
 title: Genesis
-excerpt: Getting started with Genesis physics simulation with K-Scale Bots.
+excerpt: A simple and efficient library for training humanoid locomotion in Genesis.
 deprecated: false
 hidden: false
 metadata:
