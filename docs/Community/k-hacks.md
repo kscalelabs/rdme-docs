@@ -1,6 +1,6 @@
 ---
 title: K-Hacks
-excerpt: K-Scale Hackathons
+excerpt: K-Scale Official Hackathons
 deprecated: false
 hidden: false
 metadata:
