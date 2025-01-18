@@ -8,6 +8,10 @@ metadata:
 ---
 Just give me the code: [led\_matrix.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/led_matrix.py)
 
-## Examples
+## Getting the state of the LED matrix
+
+todo
+
+## Display using the LED matrix
 
 todo
