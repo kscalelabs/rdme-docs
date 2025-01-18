@@ -1,6 +1,8 @@
 ---
 title: IMU
-excerpt: The IMU service client
+excerpt: >-
+  The IMUService provides methods to interact with the Inertial Measurement
+  Unit.
 deprecated: false
 hidden: false
 metadata:
