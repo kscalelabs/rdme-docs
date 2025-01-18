@@ -6,3 +6,6 @@ hidden: false
 metadata:
   robots: index
 ---
+Previous Hackathons
+
+How to participate
