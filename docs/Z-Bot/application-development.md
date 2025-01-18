@@ -6,4 +6,4 @@ hidden: false
 metadata:
   robots: index
 ---
-[K-Scale OS]()
+[K-Scale OS](https://kscale.readme.io/update/docs/kos#/)
