@@ -8,21 +8,23 @@ metadata:
 ---
 [K-Scale OS](https://kscale.readme.io/update/docs/kos#/)
 
-body = \{ &#x20;
-&#x20;   "l\_shoulder": 14,
-&#x20;   "l\_rotator": 15,
-&#x20;   "l\_elbow": 16,
-&#x20;   "r\_shoulder": 13,
-&#x20;   "r\_elbow": 11,
-&#x20;   "r\_rotator": 12,
-&#x20;   "l\_ankle": 6,
-&#x20;   "l\_knee": 7,
-&#x20;   "l\_thigh": 8,
-&#x20;   "l\_hamstring": 9,
-&#x20;   "l\_hip": 10,
-&#x20;   "r\_ankle": 1,
-&#x20;   "r\_knee": 2,
-&#x20;   "r\_thigh": 3,
-&#x20;   "r\_hamstring": 4,
-&#x20;   "r\_hip": 5,
+```
+body = {
+    "l_shoulder": 14,
+    "l_rotator": 15,
+    "l_elbow": 16,
+    "r_shoulder": 13,
+    "r_elbow": 11,
+    "r_rotator": 12,
+    "l_ankle": 6,
+    "l_knee": 7,
+    "l_thigh": 8,
+    "l_hamstring": 9,
+    "l_hip": 10,
+    "r_ankle": 1,
+    "r_knee": 2,
+    "r_thigh": 3,
+    "r_hamstring": 4,
+    "r_hip": 5,
 }
+```
