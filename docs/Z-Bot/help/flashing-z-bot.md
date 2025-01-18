@@ -41,6 +41,6 @@ ssh root@192.168.42.1
 # Copy wpa_supplicant file
 cp /etc/wpa_supplicant.conf /boot/
 
-# Add your network
+# Add your wifi network name (ssid) and password (psk)
 vim /boot/wpa_supplicant.conf
 ```
