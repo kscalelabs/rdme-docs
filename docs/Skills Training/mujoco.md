@@ -46,3 +46,7 @@ You can inspect the training results through the output.mp4 file or running sim2
 ```
 python sim2sim.py --model_path 
 ```
+
+<br />
+
+> 🚧 Sim2Real pipeline WIP
