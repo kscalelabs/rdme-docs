@@ -20,7 +20,7 @@ To make it easier to get started with KOS skills, we've written a Python package
 Just run
 
 ```Text bash
-pip install skillet
+pip install skillit
 ```
 
 and import anything you need!
