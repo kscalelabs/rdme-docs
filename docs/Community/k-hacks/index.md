@@ -55,8 +55,7 @@ Using a Zeroth Bot, we will place two robots together and make them debate each 
 2. Fork the skillet repository to get started.
 3. Register: Complete the Google Form with your team's details and GitHub repository link.
 4. Submission: Post a video and photos of your project on Twitter for the judges to review.
-5. Please open a PR into skillet as a module for track 1 particpants. For track 2 paritipclantslease submit PR to respective repositories.
-6. Submit a Pull Request (PR):
+5. Submit a Pull Request (PR):
    1. Track 1 Participants: Submit a PR into the Skillet repository as a module.
    2. Track 2 Participants: Submit a PR to the respective repositories.
 
