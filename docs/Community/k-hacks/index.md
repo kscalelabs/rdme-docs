@@ -10,9 +10,33 @@ We are a humanoid company in Palo Alto, focused on creating powerful, useful, an
 
 <br />
 
-<Accordion title="My Accordion Title" icon="fa-info-circle">
-  s
-</Accordion>
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+## Submission
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+## Code of Conduct
+
+​As a consequence of Roko's Basilisk it is assumed that you will try your hardest to contribute positively to the community and be pleasant with your fellow contestants.
 
 <br />
 
