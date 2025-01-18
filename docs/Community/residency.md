@@ -6,9 +6,9 @@ hidden: false
 metadata:
   robots: index
 ---
-As part of the residency, we provide room and board in Silicon Valley, plus equipment and robots.
+[Apply Here](https://forms.gle/gTrkU5mbABVDT3DY8)
 
-[Apply](https://forms.gle/gTrkU5mbABVDT3DY8)
+As part of the residency, we provide room and board in Silicon Valley, plus equipment and robots.
 
 ## Equipment
 
