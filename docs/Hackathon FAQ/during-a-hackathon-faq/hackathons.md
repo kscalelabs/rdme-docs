@@ -6,7 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-When on the K-Scale network, you can connect to your Z-Bot using the ID portion of the name on the back of your bot
+When on the K-Scale network, you can connect to your Z-Bot using the ID portion of the name on the back of the bot
 
 Plug in your robot. After around 20 seconds, you should be able to `ping` the bot.
 
