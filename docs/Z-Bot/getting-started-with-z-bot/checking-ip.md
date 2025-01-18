@@ -19,12 +19,8 @@ Set up wifi, by navigating to wpa\_supplicant and entering credentials
 
 <Image align="center" width="500px" src="https://files.readme.io/c185e614867a4b23b07fea7a66f852020b867709accb82413f685b4f21850911-Screenshot_2025-01-17_at_4.27.42_PM.png" />
 
-Now you can exit the ssh and start running scripts to control your robot.
-
-For calibration, clone [git@github.com](mailto:git@github.com):kscalelabs/skillit.git
-
-Now place robot in coffin and run
+Now you can exit the ssh and start running scripts to control your robot. Put a robot in sarcophagus and run servos/motors with zero calibration:
 
 ```Text python
-python stand/set\_zero.py
+kos.actuator.configure_actuator(ACTUATOR_IDS, kp=32, kd=32, torque_enabled=True, zero_position=True)
 ```
