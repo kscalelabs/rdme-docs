@@ -23,7 +23,7 @@ pip install skillit
 
 and import anything you need!
 
-```Text Python
+```python Python
 from skillit.play import FramePlayer
 from skillit.record import SkillRecorder
 
