@@ -12,8 +12,8 @@ Just give me the code: [imu.py](https://github.com/kscalelabs/kos/blob/master/ko
 
 ## Getting IMU values
 
-todo
+todo (incl all getters?)
 
 ## Calibrating the IMU
 
-todo
+todo (incl zeroing and calibrating)
