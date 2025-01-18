@@ -18,4 +18,4 @@ todo
 
 ## Configure an actuator
 
-todo
+todo (incl get state)
