@@ -1,7 +1,7 @@
 - actuator-service-client
+- soundserviceclient
 - imu-service-client
 - ledmatrixserviceclient
-- soundserviceclient
 - processmanagerserviceclient
 - inferenceserviceclient
 - simserviceclient
