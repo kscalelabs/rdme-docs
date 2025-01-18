@@ -1,5 +1,5 @@
 ---
-title: Actuator Service Client
+title: ActuatorServiceClient
 deprecated: false
 hidden: false
 metadata:
