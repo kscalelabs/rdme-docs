@@ -1,5 +1,5 @@
 ---
-title: Hackathons
+title: Hackathon-specific FAQ
 deprecated: false
 hidden: false
 metadata:
