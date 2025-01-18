@@ -51,7 +51,7 @@ joint_name_to_id = {
 }
 
 recorder = SkillRecorder(
-  	ip="192.168.42.1",
+  ip="192.168.42.1",
     joint_name_to_id=joint_name_to_id,
     frequency=20,  # Record at 20Hz
     countdown=3,  # 3 second countdown before recording
