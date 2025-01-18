@@ -10,40 +10,11 @@ We are a humanoid company in Palo Alto, focused on creating powerful, useful, an
 
 <br />
 
-## Equipment
+<Accordion title="My Accordion Title" icon="fa-info-circle">
+  s
+</Accordion>
 
-The Hackathon will have the following equipment onsite:
-
-* **3D printers:**
-  * We use the Bambu Labs X1 Carbon printers. Please contact Ben or JX for assistance setting up the printers.
-
-* **Electronics bench:**
-  * Two soldering stations
-  * Power supply, multimeter(s), and other relevant equipment
-
-* **Assorted resistors, capacitors, and other components**
-
-* **Actuators:**
-  * We have a limited number of actuators available, so we strongly suggest bringing your own.
-
-* **CAN controllers:**
-  * Some of what we have available are:
-    * LX-16A
-    * Feetech
-    * Robstride
-    * MyActuator
-    * Encos
-
-* **Jetsons**
-
-* **GPUs**
-
-## Judges
-
-* [Ben Bolte](https://ben.bolte.cc)
-* [Paweł Budzianowski](http://budzianowski.github.io)
-* [Jingxiang Mo](https://jingxiangmo.com)
-* [Rui Xu](https://www.linkedin.com/in/ruixu)
+<br />
 
 ## Past Hackathons
 
