@@ -37,34 +37,32 @@ from pykos import KOS
 client = KOS(ip='localhost', port=50051)
 ```
 
-## Actuator Definition
-
-<br />
-
-ACTUATOR\_NAME\_TO\_ID = \{ &#x20;
-&#x20;   "left\_shoulder\_yaw": 11,
-&#x20;   "left\_shoulder\_pitch": 12,
-&#x20;   "left\_elbow\_yaw": 13,
-&#x20;   "left\_gripper": 14,
-&#x20;   "right\_shoulder\_yaw": 21,
-&#x20;   "right\_shoulder\_pitch": 22,
-&#x20;   "right\_elbow\_yaw": 23,
-&#x20;   "right\_gripper": 24,
-&#x20;   "left\_hip\_yaw": 31,
-&#x20;   "left\_hip\_roll": 32,
-&#x20;   "left\_hip\_pitch": 33,
-&#x20;   "left\_knee\_pitch": 34,
-&#x20;   "left\_ankle\_pitch": 35,
-&#x20;   "right\_hip\_yaw": 41,
-&#x20;   "right\_hip\_roll": 42,
-&#x20;   "right\_hip\_pitch": 43,
-&#x20;   "right\_knee\_pitch": 44,
-&#x20;   "right\_ankle\_pitch": 45,
+```python
+ACTUATOR_NAME_TO_ID = {
+    "left_shoulder_yaw": 11,
+    "left_shoulder_pitch": 12,
+    "left_elbow_yaw": 13,
+    "left_gripper": 14,
+    "right_shoulder_yaw": 21,
+    "right_shoulder_pitch": 22,
+    "right_elbow_yaw": 23,
+    "right_gripper": 24,
+    "left_hip_yaw": 31,
+    "left_hip_roll": 32,
+    "left_hip_pitch": 33,
+    "left_knee_pitch": 34,
+    "left_ankle_pitch": 35,
+    "right_hip_yaw": 41,
+    "right_hip_roll": 42,
+    "right_hip_pitch": 43,
+    "right_knee_pitch": 44,
+    "right_ankle_pitch": 45,
 }
 
-<br />
+ACTUATOR_ID_TO_NAME = {v: k for k, v in ACTUATOR_NAME_TO_ID.items()}
+```
 
-ACTUATOR\_ID\_TO\_NAME = \{v: k for k, v in ACTUATOR\_NAME\_TO\_ID.items()}
+<br />
 
 ## Services
 
@@ -73,6 +71,39 @@ The KOS client provides several services, each accessible via the client object.
 ### Actuator Service
 
 Control actuators connected to the robot.
+
+<br />
+
+#### Actuator Definition
+
+<br />
+
+Use this convention to assign names to actuator IDs:
+
+```python
+ACTUATOR_NAME_TO_ID = {
+    "left_shoulder_yaw": 11,
+    "left_shoulder_pitch": 12,
+    "left_elbow_yaw": 13,
+    "left_gripper": 14,
+    "right_shoulder_yaw": 21,
+    "right_shoulder_pitch": 22,
+    "right_elbow_yaw": 23,
+    "right_gripper": 24,
+    "left_hip_yaw": 31,
+    "left_hip_roll": 32,
+    "left_hip_pitch": 33,
+    "left_knee_pitch": 34,
+    "left_ankle_pitch": 35,
+    "right_hip_yaw": 41,
+    "right_hip_roll": 42,
+    "right_hip_pitch": 43,
+    "right_knee_pitch": 44,
+    "right_ankle_pitch": 45,
+}
+
+ACTUATOR_ID_TO_NAME = {v: k for k, v in ACTUATOR_NAME_TO_ID.items()}
+```
 
 #### Example: Configure an Actuator
 
