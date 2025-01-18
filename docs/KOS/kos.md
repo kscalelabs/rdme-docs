@@ -16,7 +16,7 @@ If you need to develop with KOS on your robot, clone the repository and follow t
 
 Here is a high-level overview of the K-Scale OS architecture.
 
-<br />
+<Image align="center" src="https://files.readme.io/169b02022fcecc9274b804d4d861d4ac097ac3db3f21ce66709eed5851d421c5-Screenshot_2025-01-18_at_01.47.12.png" />
 
 ## Simple example
 
