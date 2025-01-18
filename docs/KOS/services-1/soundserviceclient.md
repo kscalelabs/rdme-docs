@@ -8,7 +8,7 @@ hidden: false
 metadata:
   robots: index
 ---
-Reference for [sound.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/sound.py)
+Just give me the code: [sound.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/sound.py)
 
 ## Examples
 
