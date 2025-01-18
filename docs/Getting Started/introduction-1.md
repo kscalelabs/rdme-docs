@@ -391,8 +391,6 @@ if __name__ == "__main__":
 
 <br />
 
-<br />
-
 ### Process Manager Service
 
 Manage processes on the robot.
