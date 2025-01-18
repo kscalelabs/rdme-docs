@@ -72,11 +72,9 @@ The KOS client provides several services, each accessible via the client object.
 
 Control actuators connected to the robot.
 
-<br />
-
 #### Actuator Definition
 
-<br />
+<Image align="center" src="https://files.readme.io/b72839a04316c7ea135c56706bd7497bf465fc5fb6f230aa883b063e821a05e1-image.png" />
 
 Use this convention to assign names to actuator IDs:
 
