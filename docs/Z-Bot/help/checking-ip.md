@@ -5,6 +5,8 @@ hidden: false
 metadata:
   robots: index
 ---
+## Obtaining the IP
+
 To check your Z-Bot's IP address, first connect to it through USB and ssh into it
 
 ```Text bash
