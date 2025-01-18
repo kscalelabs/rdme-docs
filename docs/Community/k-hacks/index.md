@@ -47,6 +47,8 @@ Using a Zeroth Bot, we will place two robots together and make them debate each 
 
 ​Improve the current KOS, inference, simulation, and libraries.
 
+<br />
+
 ## Submission
 
 1. Please join the Discord: [https://discord.gg/NayacF5g](https://discord.gg/NayacF5g)
@@ -55,7 +57,17 @@ Using a Zeroth Bot, we will place two robots together and make them debate each 
 4. You're REQUIRED to post Twitter video and photos for the judges to review your demo.
 5. Please open a PR into skillet as a module for track 1 particpants. For track 2 paritipclantslease submit PR to respective repositories.
 
-<br />
+## Getting Started
+
+[https://github.com/kscalelabs/skillet](https://github.com/kscalelabs/skillet)
+
+## Questions and technical issues?
+
+Ask [https://kscale.readme.io/discuss#/](https://kscale.readme.io/discuss#/) and we'll respond as soon as possible.
+
+## Prizes
+
+The winner of each track will be receiving different rewards.
 
 ## Timeline
 
@@ -78,18 +90,6 @@ Using a Zeroth Bot, we will place two robots together and make them debate each 
 ​3:00 PM: Dinner & Demos
 
 <br />
-
-## Prizes
-
-The winner of each track will be receiving different rewards.
-
-## Getting Started
-
-<br />
-
-## Questions and technical issues?
-
-Ask [https://kscale.readme.io/discuss#/](https://kscale.readme.io/discuss#/) and we'll respond as soon as possible.
 
 ## Past Hackathons
 
