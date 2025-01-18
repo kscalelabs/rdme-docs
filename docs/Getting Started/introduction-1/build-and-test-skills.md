@@ -11,7 +11,7 @@ Import KOS into your project:
 import pykos
 ```
 
-If you have a operational robot, you can now program your first skill.
+If you have a operational robot, you can now record your first actions.
 
 To make it easier to get started with KOS skills, we've written a Python package to record and playback your robot's actions.
 
