@@ -65,7 +65,7 @@ Using a Zeroth Bot, we will place two robots together and make them debate each 
 
 ## Getting Started
 
-[https://github.com/kscalelabs/skillit](https://github.com/kscalelabs/skillit) and our [KOS intro](https://kscale.readme.io/docs/introduction-1#/)
+[https://github.com/kscalelabs/skillet](https://github.com/kscalelabs/skillet) and our [KOS intro](https://kscale.readme.io/docs/introduction-1#/)
 
 ## Questions and technical issues?
 
