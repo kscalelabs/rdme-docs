@@ -8,6 +8,10 @@ metadata:
 ---
 Just give me the code: [sim.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/sim.py)
 
-## Controlling the simulation environment
+## Control playback
+
+todo
+
+## Set parameters
 
 todo
