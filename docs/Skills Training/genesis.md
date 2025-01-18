@@ -32,7 +32,10 @@ You can run the training and evaluation for Zeroth Bot with the following comman
 
 ```shell
 python zbot/zbot_train.py -e zbot-walking --num_envs 4096
-python zbot/zbot_eval.py -e zbot-walking --ckpt 100
 ```
 
 On MacPro3 the training will take up to 30 min, you can evaluate some basic walking policy after first 5-10 minutes.
+
+```
+python zbot/zbot_eval.py -e zbot-walking --ckpt 100
+```
