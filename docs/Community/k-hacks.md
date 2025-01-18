@@ -183,4 +183,4 @@ The Hackathon will have the following equipment onsite:
 
 [K-Hack 2](https://x.com/kscalelabs/status/1831050313056559431)
 
-[K-Hack 1](https://lu.ma/khacks.0.2")
+[K-Hack 2](https://lu.ma/khacks.0.2)
