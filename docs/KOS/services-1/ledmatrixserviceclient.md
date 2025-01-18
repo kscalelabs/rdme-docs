@@ -6,7 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-Reference for [led\_matrix.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/led_matrix.py)
+[led\_matrix.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/led_matrix.py)
 
 ## Examples
 
