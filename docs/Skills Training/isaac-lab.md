@@ -21,7 +21,7 @@ lsb_release -a
 #Codename:	jammy
 ```
 
-## Clone repository
+You can now clone Klab repository:
 
 ```bash
 # Install Git LFS
@@ -35,7 +35,7 @@ git lfs pull
 git clone git@github.com:kscalelabs/klab.git
 ```
 
-## Create environment
+Create environment appropriate environment:
 
 ```bash
 conda create -n env_isaacsim python=3.10
@@ -44,32 +44,25 @@ pip install isaacsim==4.2.0.2 --extra-index-url https://pypi.nvidia.com
 pip install isaacsim-extscache-physics==4.2.0.2 isaacsim-extscache-kit==4.2.0.2 isaacsim-extscache-kit-sdk==4.2.0.2 --extra-index-url https://pypi.nvidia.com
 ```
 
-## Test IsaacSim can launch
+You can now test if IsaacSim can launch:
 
 ```bash
 isaacsim
 ```
 
-Logs can be found at `/home/dpsh/.nvidia-omniverse/`
-
-## Isaac Lab
+Logs can be found at `/home/dpsh/.nvidia-omniverse/`. Once confirmed you can install IsaacLab:
 
 ```bash
 # Get Isaaclab as a submodule
 git submodule update --init --recursive 
-```
 
-### Install additional packages
-
-```bash
+# Install additional packages too
 sudo apt install cmake build-essential
 cd IsaacLab
 ./isaaclab.sh --install # or "./isaaclab.sh -i"
 ```
 
-# Usage
-
-## Test empty sim
+Verify that IsaacLab was installed properly:
 
 ### Option 1: Using the isaaclab.sh executable
 
