@@ -1,5 +1,5 @@
 ---
-title: LEDMatrixServiceClient
+title: LED Matrix
 deprecated: false
 hidden: false
 metadata:
