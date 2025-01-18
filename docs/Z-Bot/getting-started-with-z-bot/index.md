@@ -1,5 +1,5 @@
 ---
-title: Getting started with Z-Bot
+title: Help
 deprecated: false
 hidden: false
 metadata:
