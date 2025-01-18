@@ -6,4 +6,6 @@ hidden: false
 metadata:
   robots: index
 ---
-[sim.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/sim.py)
+Just give me the code: [sim.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/sim.py)
+
+## Controlling the simulation environment
