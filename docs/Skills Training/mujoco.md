@@ -15,7 +15,6 @@ Clone our Mujoco Playground repository:
 ```bash
 git clone https://github.com/kscalelabs/mujoco_playground.git
 cd mujoco_playground
-
 ```
 
 Install [Mujoco Playground](https://github.com/google-deepmind/mujoco_playground) and our
