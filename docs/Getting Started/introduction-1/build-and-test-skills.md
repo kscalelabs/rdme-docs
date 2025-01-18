@@ -9,6 +9,8 @@ metadata:
 import pykos
 ```
 
+<br />
+
 If you have a operational robot, you can now program your first skill
 
 <br />
