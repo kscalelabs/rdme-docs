@@ -14,6 +14,8 @@ next:
       title: Introduction to KOS
       type: basic
 ---
+KOS requires a working installation of [Python](https://www.python.org/downloads/).
+
 KOS is simple to install using pip:
 
 ```python
