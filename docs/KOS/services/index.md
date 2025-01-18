@@ -1,5 +1,6 @@
 ---
 title: Skills
+excerpt: Code examples for developing and manipulating skills
 deprecated: false
 hidden: false
 metadata:
