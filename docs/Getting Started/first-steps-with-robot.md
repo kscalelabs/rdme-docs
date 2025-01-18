@@ -26,3 +26,4 @@ You can start from:
 1. Camera
 2. Moving a joints
 3. Moving all joints
+4. Run a torch model
