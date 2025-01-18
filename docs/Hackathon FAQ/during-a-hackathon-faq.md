@@ -1,5 +1,6 @@
 ---
 title: During a hackathon FAQ
+excerpt: FAQ when in the K-Scale house during an official hackathon
 deprecated: false
 hidden: false
 metadata:
