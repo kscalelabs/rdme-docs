@@ -10,7 +10,7 @@ metadata:
 
 Use this convention for assigning names to the actuator ids.
 
-```
+```python
 actuator_name_to_id = {
     'left_shoulder_yaw' : 11,
     'left_shoulder_pitch' : 12,
