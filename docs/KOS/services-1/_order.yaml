@@ -3,3 +3,4 @@
 - ledmatrixserviceclient
 - soundserviceclient
 - processmanagerserviceclient
+- inferenceserviceclient
