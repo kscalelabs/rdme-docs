@@ -17,7 +17,7 @@ To make it easier to get started with KOS skills, we've written a Python package
 
 Just run
 
-```Text bash
+```shell bash
 pip install skillit
 ```
 
