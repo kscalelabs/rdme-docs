@@ -1,5 +1,5 @@
 ---
-title: Important repos
+title: Repo Locations
 deprecated: false
 hidden: false
 metadata:
