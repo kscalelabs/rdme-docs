@@ -13,6 +13,8 @@ next:
 ---
 ## ​Get ready for K-Hacks!
 
+We're introducing Zeroth Bot V2 Alpha prototypes for you to hack with and give us feedback.
+
 ​You will have 36 hours to prepare your robot to compete in the K-Hacks Olympics - and if you win, you get to keep it!
 
 ​All necessary equipment will be provided at the event.
