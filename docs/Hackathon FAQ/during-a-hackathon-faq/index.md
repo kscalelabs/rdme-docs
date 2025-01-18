@@ -8,6 +8,6 @@ metadata:
 next:
   pages:
     - slug: hackathons
-      title: Connecting to your bot
+      title: Connecting to Z-Bot
       type: basic
 ---
