@@ -11,7 +11,7 @@ next:
       title: Build and test skills
       type: basic
 ---
-KOS is simple to install using pip
+KOS is simple to install using pip:
 
 ```python
 pip install pykos
