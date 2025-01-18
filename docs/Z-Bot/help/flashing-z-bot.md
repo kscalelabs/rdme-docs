@@ -33,7 +33,7 @@ Navigate to the corresponding Gitlab job here (by commit or tag or branch or how
 
 ## Optionally
 
-Once you’ve ssh’d into your MilkV over USB (ip = 192.168.42.1)
+Once you’ve ssh’d into your MilkV over USB (ip = 192.168.42.1), password is milkv
 
 ```bash
 ssh root@192.168.42.1
