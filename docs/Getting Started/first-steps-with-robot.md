@@ -10,7 +10,7 @@ metadata:
 ---
 ## Skillet
 
-Install  `pip install skillet` to get access to first basic skills.
+Install `pip install skillet` to get access to first basic skills.
 
 An example list is shown here: [https://github.com/kscalelabs/skillet/tree/master/skillet/examples](https://github.com/kscalelabs/skillet/tree/master/skillet/examples)
 
