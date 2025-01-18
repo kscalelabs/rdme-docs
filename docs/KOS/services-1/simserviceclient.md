@@ -1,6 +1,6 @@
 ---
 title: Sim
-excerpt: Service to control the simulation environment.
+excerpt: Use SimulationService to control the simulation environment.
 deprecated: false
 hidden: false
 metadata:
