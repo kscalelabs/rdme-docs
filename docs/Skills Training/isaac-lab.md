@@ -8,6 +8,8 @@ metadata:
 ---
 # Installation
 
+KLab repository requires installation of IsaacSim and IsaacLab. Below we provide step by step instructions how to install them on Ubuntu 22.04.
+
 ## Prerequisites
 
 Make sure you have Ubuntu 22.04 version of OS:
