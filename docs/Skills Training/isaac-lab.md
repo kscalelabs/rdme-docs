@@ -1,6 +1,6 @@
 ---
 title: Isaac Lab
-excerpt: Train new locomotion policies with K-Scale Bots.
+excerpt: Train new locomotion and manipulation policies with K-Scale Bots in Isaac Lab.
 deprecated: false
 hidden: false
 metadata:
