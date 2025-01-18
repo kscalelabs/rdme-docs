@@ -30,3 +30,17 @@ Navigate to the corresponding Gitlab job here (by commit or tag or branch or how
 ![](https://files.readme.io/57b9cabd7db28e198fec22c250b436bf790d82b089b88184c0945aed0055c403-image.png)
 
 ### And you’re done!
+
+## Optionally
+
+Once you’ve ssh’d into your MilkV over USB (ip = 192.168.42.1)
+
+```bash
+ssh root@192.168.42.1
+
+# Copy wpa_supplicant file
+cp /etc/wpa_supplicant.conf /boot/
+
+# Add your network
+vim /boot/wpa_supplicant.conf
+```
