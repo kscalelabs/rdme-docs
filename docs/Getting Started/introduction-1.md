@@ -28,14 +28,7 @@ pip install pykos
 
 ## Getting Started
 
-First, import the `pykos` module and create an instance of the KOS client. Remember to connect to the robot through the cable or ip:
-
-```python
-from pykos import KOS
-
-# Connect to KOS running on localhost at port 50051
-client = KOS(ip='localhost', port=50051)
-```
+First, import the `pykos` module and create an instance of the KOS client. Remember to connect to the robot through the cable or ip.
 
 ```python
 ACTUATOR_NAME_TO_ID = {
@@ -62,7 +55,7 @@ ACTUATOR_NAME_TO_ID = {
 ACTUATOR_ID_TO_NAME = {v: k for k, v in ACTUATOR_NAME_TO_ID.items()}
 ```
 
-<br />
+If you have issues connecting see also [Connection issues](https://docs.kscale.dev/update/docs/checking-ip)
 
 ## Services
 
