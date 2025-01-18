@@ -14,6 +14,6 @@ Just give me the code: [imu.py](https://github.com/kscalelabs/kos/blob/master/ko
 
 todo
 
-## Calibrating the IMO
+## Calibrating the IMU
 
 todo
