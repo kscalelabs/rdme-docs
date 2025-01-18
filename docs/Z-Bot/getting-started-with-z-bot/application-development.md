@@ -1,5 +1,5 @@
 ---
-title: Programming
+title: Programming Z-Bot
 excerpt: Anybody that can write Python can program this robot
 deprecated: false
 hidden: false
