@@ -1,5 +1,6 @@
 ---
-title: Connecting to your Z-Bot on the K-Scale network
+title: Connecting to your bot
+excerpt: Connecting to your Z-Bot on the K-Scale network
 deprecated: false
 hidden: false
 metadata:
