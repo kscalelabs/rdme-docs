@@ -9,9 +9,11 @@ metadata:
 
 ### On the K-Scale network, you can connect to your Z-Bot using the name on the back of your bot
 
-Connecting to `Z-4 Denys`
+Plug in your robot. After around 20 seconds, you can ping the bot using the ID portion of the name on the back
 
-```Text bash
+Connecting to `Z-4 Denys`:
+
+```text bash
 $ ping Z-4
 
 PING z-4.kscale.lan (10.33.85.1): 56 data bytes
