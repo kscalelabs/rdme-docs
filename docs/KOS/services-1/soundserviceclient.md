@@ -8,4 +8,8 @@ hidden: false
 metadata:
   robots: index
 ---
-[sound.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/sound.py)
+Reference for [sound.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/sound.py)
+
+## Examples
+
+todo
