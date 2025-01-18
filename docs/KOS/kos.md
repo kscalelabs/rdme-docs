@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Introduction to KOS
 excerpt: K-Scale Operating System
 deprecated: false
 hidden: false
