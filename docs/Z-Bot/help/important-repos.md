@@ -1,5 +1,5 @@
 ---
-title: Repo Locations
+title: Repo Location
 deprecated: false
 hidden: false
 metadata:
