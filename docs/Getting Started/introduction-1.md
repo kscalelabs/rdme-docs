@@ -55,8 +55,6 @@ ACTUATOR_NAME_TO_ID = {
 ACTUATOR_ID_TO_NAME = {v: k for k, v in ACTUATOR_NAME_TO_ID.items()}
 ```
 
-If you have issues connecting see also [Connection issues](https://docs.kscale.dev/update/docs/checking-ip)
-
 ## Services
 
 The KOS client provides several services, each accessible via the client object. Below are the services and examples of how to use them.
