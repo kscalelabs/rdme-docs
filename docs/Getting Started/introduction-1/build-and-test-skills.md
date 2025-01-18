@@ -1,5 +1,5 @@
 ---
-title: Skillit Action Recorder
+title: Action Recorder
 deprecated: false
 hidden: false
 metadata:
