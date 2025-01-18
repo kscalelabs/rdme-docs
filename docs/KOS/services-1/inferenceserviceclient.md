@@ -10,6 +10,8 @@ Just give me the code: [inference.py](https://github.com/kscalelabs/kos/blob/mas
 
 ## Uploading a model
 
-<br />
+todo
 
 ## Running inference
+
+todo
