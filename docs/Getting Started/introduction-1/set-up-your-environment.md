@@ -8,7 +8,7 @@ metadata:
 next:
   pages:
     - slug: build-and-test-skills
-      title: Build and test skills
+      title: Building and testing skills
       type: basic
     - slug: kos
       title: Introduction to KOS
