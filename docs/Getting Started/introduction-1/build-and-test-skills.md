@@ -13,8 +13,6 @@ import pykos
 
 If you have a operational robot, you can now program your first skill.
 
-<TutorialTile emoji="🦉" slug="make-your-robot-wave" title="Make your Robot wave" />
-
 To make it easier to get started with KOS skills, we've written a Python package to record and playback your robot's actions.
 
 Just run
