@@ -1,6 +1,5 @@
 ---
-title: Services
-excerpt: Services included in the K-Scale OS
+title: Developing Skills
 deprecated: false
 hidden: false
 metadata:
