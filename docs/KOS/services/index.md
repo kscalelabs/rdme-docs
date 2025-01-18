@@ -1,5 +1,5 @@
 ---
-title: Developing Skills
+title: Skills
 deprecated: false
 hidden: false
 metadata:
