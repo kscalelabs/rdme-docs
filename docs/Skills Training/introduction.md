@@ -28,16 +28,16 @@ Learning algorithms allow to train humanoids to perform different skills such as
 
 ### Physics engines
 
-Physics engines are software libraries designed to simulate physical systems in a virtual environment. They are crucial in a variety of fields such as video games, animation, robotics, and engineering simulations. These engines handle the mathematics involved in simulating physical processes like motion, collisions, and fluid dynamics
+Physics engines are software libraries designed to simulate physical systems in a virtual environment. They are crucial in a variety of fields such as video games, animation, robotics, and engineering simulations. These engines handle the mathematics involved in simulating physical processes like motion, collisions, and fluid dynamics. Three popular engines are:
 
 * PhysX is a physics engine by NVIDIA used primarily for video games and real-time simulations. It supports rigid body dynamics, cloth simulation, and particle effects, enhancing realism and interactivity in 3D environments.\
   MuJoCo
 * MuJoCo (Multi-Joint dynamics with Contact) is a physics engine designed for research in robotics and biomechanics. It's known for its speed, accuracy, and ease of use, making it popular for simulating complex systems with robotics and articulated structures.
-* Bullet  is a physics engine supporting real-time collision detection and multi-physics simulation for VR, games, visual effects, robotics, machine learning
+* Bullet  is a physics engine supporting real-time collision detection and multi-physics simulation for VR, games, visual effects, robotics, machine learning.
 
 ### Training frameworks
 
-We support three popular training frameworks:
+Given the physical engine, simulators can create environments used to train skill for different humanoids.  We support three such popular training frameworks:
 
 [Isaac Lab](https://kscale.readme.io/update/docs/isaac-lab)
 
