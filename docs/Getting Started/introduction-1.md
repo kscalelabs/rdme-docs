@@ -43,8 +43,6 @@ client = KOS(ip='localhost', port=50051)
 
 The KOS client provides several services, each accessible via the client object. Below are the services and examples of how to use them.
 
-<br />
-
 ### Actuator Service
 
 Control actuators connected to the robot.
