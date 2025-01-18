@@ -10,6 +10,14 @@ metadata:
 ---
 Just give me the code: [sound.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/sound.py)
 
-## Examples
+## Audio Information
+
+todo
+
+## Play audio
+
+todo
+
+## Record audio
 
 todo
