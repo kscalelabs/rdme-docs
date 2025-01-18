@@ -6,4 +6,6 @@ hidden: false
 metadata:
   robots: index
 ---
-[actuator.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/actuator.py)
+Reference for [actuator.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/actuator.py)
+
+## Examples
