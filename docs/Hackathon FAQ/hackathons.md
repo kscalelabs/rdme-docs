@@ -14,7 +14,8 @@ Plug in your robot. After around 20 seconds, you can `ping` the bot using the ID
 Connecting to `Z-9 Wesley`:
 
 ```text bash
-» ping Z-9
+$ ping Z-9
+
 PING z-9.kscale.lan (10.33.85.9): 56 data bytes
 64 bytes from 10.33.85.9: icmp_seq=0 ttl=64 time=99.295 ms
 64 bytes from 10.33.85.9: icmp_seq=1 ttl=64 time=8.524 ms
