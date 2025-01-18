@@ -14,3 +14,11 @@ next:
       title: Building and testing skills
       type: basic
 ---
+## Introduction
+
+`pykos` is a Python client for the K-Scale Operating System (KOS), allowing you to interact with various services provided by KOS, such as controlling actuators, accessing IMU data, managing processes, and more.
+
+## Installation
+
+To install `pykos`, you can use pip:\
+`pip install pykos`
