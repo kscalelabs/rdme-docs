@@ -1,5 +1,5 @@
 ---
-title: SoundServiceClient
+title: Sound
 deprecated: false
 hidden: false
 metadata:
