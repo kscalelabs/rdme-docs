@@ -8,23 +8,25 @@ metadata:
 ---
 [K-Scale OS](https://kscale.readme.io/update/docs/kos#/)
 
+This is how to set up the body for every script you run
+
 ```
 body = {
-    "l_shoulder": 14,
-    "l_rotator": 15,
-    "l_elbow": 16,
-    "r_shoulder": 13,
-    "r_elbow": 11,
-    "r_rotator": 12,
-    "l_ankle": 6,
-    "l_knee": 7,
-    "l_thigh": 8,
-    "l_hamstring": 9,
-    "l_hip": 10,
-    "r_ankle": 1,
-    "r_knee": 2,
-    "r_thigh": 3,
-    "r_hamstring": 4,
-    "r_hip": 5,
+    "l_shoulder": 11,
+    "l_rotator": 12,
+    "l_elbow": 13,
+    "r_shoulder": 21,
+    "r_elbow": 22,
+    "r_rotator": 23,
+    "l_ankle": 35,
+    "l_knee": 34,
+    "l_thigh": 33,
+    "l_hamstring": 32,
+    "l_hip": 31,
+    "r_ankle": 45,
+    "r_knee": 44,
+    "r_thigh": 43,
+    "r_hamstring": 42,
+    "r_hip": 41,
 }
 ```
