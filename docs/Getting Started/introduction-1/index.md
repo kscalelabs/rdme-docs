@@ -11,6 +11,6 @@ next:
       title: Set up your environment
       type: basic
     - slug: build-and-test-skills
-      title: Build and test skills
+      title: Building and testing skills
       type: basic
 ---
