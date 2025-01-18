@@ -516,7 +516,7 @@ This package also supports playback from your json file, letting you capture com
 
 ### Example Script
 
-```Text Python
+```python Python
 from skillit.play import FramePlayer
 from skillit.record import SkillRecorder
 
