@@ -41,7 +41,7 @@ Using a Zeroth Bot, having a human standing in front of the robot and then imita
 
 #### Debating
 
-Using a Zeroth Bot, we will place two robots together and make them debate each other.
+Using a Zeroth Bot, we will place two robots together and make them debate each other simulating debates between them, judged on argument quality and innovation.
 
 ### Track 2: Capabilities and Ecosystem Expansion
 
