@@ -6,7 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-[led\_matrix.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/led_matrix.py)
+Just give me the code: [led\_matrix.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/led_matrix.py)
 
 ## Examples
 
