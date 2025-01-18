@@ -10,3 +10,7 @@ import pykos
 ```
 
 If you have a operational robot, you can now program your first skill
+
+<br />
+
+<TutorialTile emoji="🦉" slug="make-your-robot-wave" title="Make your Robot wave" />
