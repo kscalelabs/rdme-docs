@@ -49,19 +49,11 @@ Using a Zeroth Bot, we will place two robots together and make them debate each 
 
 ## Submission
 
-1. You'll need to enter a Google form to register your team which will contain your GitHub
-2. You're REQUIRED to post Twitter video and photos for the judges to review your demo.
-3. <br />
-
-### For track 1 participants:
-
-<br />
-
-### For track 2 participants:
-
-Please submit PR to respective repositories.
-
-<br />
+1. Please join the Discord: [https://discord.gg/NayacF5g](https://discord.gg/NayacF5g)
+2. please fork
+3. You'll need to enter a Google form to register your team which will contain your GitHub repo
+4. You're REQUIRED to post Twitter video and photos for the judges to review your demo.
+5. Please open a PR into skillet as a module for track 1 particpants. For track 2 paritipclantslease submit PR to respective repositories.
 
 <br />
 
