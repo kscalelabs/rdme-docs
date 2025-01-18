@@ -9,12 +9,6 @@ Main repo: [https://github.com/zeroth-robotics/zeroth-bot](https://github.com/ze
 
 Corresponding gitlab: [https://gitlab.kscale.ai/zeroth-robotics/OpenLCH](https://gitlab.kscale.ai/zeroth-robotics/OpenLCH)
 
-<br />
-
-# KOS for Z-Bot
-
-<br />
-
 # Flashing Z-Bot
 
 ## Basics
