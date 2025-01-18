@@ -5,3 +5,8 @@ hidden: false
 metadata:
   robots: index
 ---
+What is simulator,
+
+how to train standing, walking
+
+How to try to deploy
