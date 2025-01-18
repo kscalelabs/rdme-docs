@@ -85,7 +85,7 @@ Note: this works for both the bundled python and the virtual environment
 python source/standalone/tutorials/00_sim/create_empty.py
 ```
 
-## Run with Robot
+## Basic locomotion skills
 
 ### Install ZBot extension
 
