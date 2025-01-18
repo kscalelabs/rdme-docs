@@ -147,40 +147,202 @@ else:
 
 ### Sound Service
 
-Play and record audio.
+Play and record audio using the robot's speakers and microphones.
 
-#### Example: Get Audio Info
+> ❗️ WIP KOS Feature: The sound service requires an environment set up with Alpine Linux.
 
-```python
-# Get audio capabilities
-audio_info = client.sound.get_audio_info()
-print(f"Playback available: {audio_info['playback']['available']}")
-print(f"Supported sample rates: {audio_info['playback']['sample_rates']}")
+#### Preparing the Environment
+
+1. Copy the test script to the robot:
+
+```shell
+scp -O audio_test.py root@<KOS_IP_ADDRESS>:/root/alpine/root/
 ```
 
-#### Example: Play Audio
+Replace \<KOS\_IP\_ADDRESS> with the IP address of your KOS device.
+
+2. Connect to the robot via SSH and prepare the environment:
+
+```shell
+   ssh root@<KOS_IP_ADDRESS>
+   chroot /root/alpine
+   cd /root
+   source venv/bin/activate
+```
+
+#### Running the Audio Test Script
+
+```shell
+python3 audio_test.py
+```
+
+To record longer audio (e.g., 30 seconds):
+
+```shell
+python3 audio_test.py --duration 30
+```
+
+#### Copying Recorded Audio Back to Your Computer
+
+```shell
+scp -O root@<KOS_IP_ADDRESS>:/root/alpine/root/recorded_audio.wav .
+```
+
+#### Example: Audio Test Script
 
 ```python
-# Play a raw audio file
-def audio_chunks():
-    with open('audio.raw', 'rb') as f:
+`import sounddevice as sd
+import soundfile as sf
+import argparse
+
+# Default parameters
+DEFAULT_DURATION = 5  # Default recording duration in seconds
+
+def main(duration):
+    # File to store the recorded audio
+    output_file = "recorded_audio.wav"
+
+    # Device parameters
+    record_device_id = 0      # Microphone device index
+    playback_device_id = 1    # Speaker device index
+    channels = [2]            # Use channel 2 of the microphone
+    samplerate = 44100        # Sampling rate in Hz
+
+    try:
+        # Step 1: Record audio
+        print(f"Recording for {duration} seconds...")
+        audio_data = sd.rec(int(duration * samplerate), samplerate=samplerate, 
+                            channels=len(channels), device=record_device_id, dtype='float32', mapping=channels)
+        sd.wait()  # Wait until recording is finished
+        print("Recording finished.")
+
+        # Save the recorded audio to a WAV file
+        sf.write(output_file, audio_data, samplerate)
+        print(f"Audio saved to {output_file}")
+
+        # Step 2: Play back the recorded audio
+        print(f"Playing back the recorded audio...")
+        data, samplerate = sf.read(output_file)
+        sd.play(data, samplerate=samplerate, device=playback_device_id)
+        sd.wait()  # Wait for playback to complete
+        print("Playback finished.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Record and play back audio with adjustable duration."
+    )
+    # Add argument for duration
+    parser.add_argument(
+        "--duration",
+        type=int,
+        default=DEFAULT_DURATION,
+        help="Recording duration in seconds (default: 5).",
+    )
+    args = parser.parse_args()
+
+    # Run the main function
+    main(args.duration)
+```
+
+<br />
+
+### Computer Vision with KOS
+
+Integrate computer vision capabilities with KOS using WebRTC.
+
+> ❗️ WIP KOS Feature: The computer vision service requires WebRTC connection.
+
+#### Requirements
+
+Install the necessary Python packages:\
+`pip install aiortc opencv-python requests`
+
+<br />
+
+#### Example: Display Video Stream
+
+```python
+import asyncio
+import base64
+import requests
+import cv2
+from aiortc import RTCPeerConnection, RTCSessionDescription, VideoStreamTrack
+import logging
+
+logging.getLogger('ffmpeg').setLevel(logging.ERROR)
+
+# Server URL (replace with your actual server URL)
+SERVER_URL = "http://<KOS_IP_ADDRESS>:8083/stream/s1/channel/0/webrtc?uuid=s1&channel=0"
+
+# Video Display Track
+class VideoDisplay(VideoStreamTrack):
+    def __init__(self, track):
+        super().__init__()
+        self.track = track
+
+    async def recv(self):
+        frame = await self.track.recv()
+        img = frame.to_ndarray(format="bgr24")
+        # Do something with the frame, e.g., display or object detection
+        cv2.imshow("WebRTC Video", img)
+        cv2.waitKey(1)
+        return frame
+
+async def main():
+    pc = RTCPeerConnection()
+    pc.addTransceiver("video", direction="recvonly")
+
+    @pc.on("track")
+    def on_track(track):
+        if track.kind == "video":
+            display = VideoDisplay(track)
+            asyncio.ensure_future(display.recv())
+
+    # Create and set local description
+    offer = await pc.createOffer()
+    await pc.setLocalDescription(offer)
+
+    # Send offer to server
+    sdp_offer_base64 = base64.b64encode(pc.localDescription.sdp.encode("utf-8")).decode("utf-8")
+    # Prepare headers and data
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "X-Requested-With": "XMLHttpRequest",
+    }
+    data = {"data": sdp_offer_base64}
+
+    # Send HTTP POST request
+    response = requests.post(SERVER_URL, headers=headers, data=data, verify=False)
+    response.raise_for_status()
+
+    # Decode the base64 SDP answer from the server
+    sdp_answer = base64.b64decode(response.text).decode("utf-8")
+
+    # Set remote description
+    await pc.setRemoteDescription(RTCSessionDescription(sdp=sdp_answer, type="answer"))
+
+    try:
         while True:
-            chunk = f.read(4096)
-            if not chunk:
-                break
-            yield chunk
+            await asyncio.sleep(1)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        cv2.destroyAllWindows()
+        await pc.close()
 
-audio_config = {
-    "sample_rate": 44100,
-    "bit_depth": 16,
-    "channels": 2
-}
-response = client.sound.play_audio(audio_chunks(), **audio_config)
-if response.success:
-    print("Audio played successfully.")
-else:
-    print(f"Failed to play audio: {response.error}")
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
+
+#### Explanation
+
+* Server URL: Replace \<KOS\_IP\_ADDRESS> with the IP address of your KOS device.
+* Video Processing: Inside the recv method, frames are received and can be processed or simply displayed using OpenCV.
+* SSL Verification: verify=False is used in the requests.post call. If your server uses SSL certificates, you may need to handle SSL verification accordingly.
+
+<br />
 
 <br />
 
