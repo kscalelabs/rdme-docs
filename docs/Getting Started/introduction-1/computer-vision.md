@@ -5,7 +5,7 @@ hidden: false
 metadata:
   robots: index
 ---
-```
+```python
 import asyncio
 import base64
 import requests
