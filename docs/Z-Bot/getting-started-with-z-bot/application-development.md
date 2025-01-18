@@ -8,25 +8,27 @@ metadata:
 ---
 [K-Scale OS](https://kscale.readme.io/update/docs/kos#/)
 
-This is how to set up the body for every script you run
+Use this convention for assigning names to the actuator ids.
 
-```
-body = {
-    "l_shoulder": 11,
-    "l_rotator": 12,
-    "l_elbow": 13,
-    "r_shoulder": 21,
-    "r_elbow": 22,
-    "r_rotator": 23,
-    "l_ankle": 35,
-    "l_knee": 34,
-    "l_thigh": 33,
-    "l_hamstring": 32,
-    "l_hip": 31,
-    "r_ankle": 45,
-    "r_knee": 44,
-    "r_thigh": 43,
-    "r_hamstring": 42,
-    "r_hip": 41,
+```Text python
+actuator_name_to_id = {
+    'left_shoulder_yaw' : 11,
+    'left_shoulder_pitch' : 12,
+    'left_elbow_yaw' : 13,
+    'left_gripper' : 14,
+    'right_shoulder_yaw' : 21,
+    'right_shoulder_pitch' : 22,
+    'right_elbow_yaw' : 23,
+    'right_gripper' : 24,
+    'left_hip_yaw' : 31,
+    'left_hip_roll' : 32,
+    'left_hip_pitch' : 33,
+    'left_knee_pitch' : 34,
+    'left_ankle_pitch' : 35,
+    'right_hip_yaw' : 41,
+    'right_hip_roll' : 42,
+    'right_hip_pitch' : 43,
+    'right_knee_pitch' : 44,
+    'right_ankle_pitch' : 45,
 }
 ```
