@@ -30,44 +30,14 @@ pip install pykos
 
 First, import the `pykos` module and create an instance of the KOS client. Remember to connect to the robot through the cable or ip.
 
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
 ```python
-ACTUATOR_NAME_TO_ID = {
-    "left_shoulder_yaw": 11,
-    "left_shoulder_pitch": 12,
-    "left_elbow_yaw": 13,
-    "left_gripper": 14,
-    "right_shoulder_yaw": 21,
-    "right_shoulder_pitch": 22,
-    "right_elbow_yaw": 23,
-    "right_gripper": 24,
-    "left_hip_yaw": 31,
-    "left_hip_roll": 32,
-    "left_hip_pitch": 33,
-    "left_knee_pitch": 34,
-    "left_ankle_pitch": 35,
-    "right_hip_yaw": 41,
-    "right_hip_roll": 42,
-    "right_hip_pitch": 43,
-    "right_knee_pitch": 44,
-    "right_ankle_pitch": 45,
-}
+from pykos import KOS
 
-ACTUATOR_ID_TO_NAME = {v: k for k, v in ACTUATOR_NAME_TO_ID.items()}
+# Connect to KOS running on localhost at port 50051
+client = KOS(ip='localhost', port=50051)
 ```
+
+Replace 'localhost' and 50051 with the IP address and port where your KOS server is running.
 
 ## Services
 
