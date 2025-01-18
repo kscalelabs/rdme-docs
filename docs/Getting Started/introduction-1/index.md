@@ -20,5 +20,25 @@ next:
 
 ## Installation
 
-To install `pykos`, you can use pip:\
-`pip install pykos`
+To install `pykos`, you can use pip:
+
+```shell
+pip install pykos
+```
+
+## Getting Started
+
+First, import the `pykos` module and create an instance of the KOS client:
+
+```python
+from pykos import KOS
+
+# Connect to KOS running on localhost at port 50051
+client = KOS(ip='localhost', port=50051)
+```
+
+<br />
+
+## Services
+
+The KOS client provides several services, each accessible via the client object. Below are the services and examples of how to use them.
