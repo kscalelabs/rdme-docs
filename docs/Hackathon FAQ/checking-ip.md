@@ -1,5 +1,5 @@
 ---
-title: Checking IP
+title: Connecting to Z-Bot
 deprecated: false
 hidden: false
 metadata:
