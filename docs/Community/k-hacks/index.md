@@ -56,7 +56,7 @@ Using a Zeroth Bot, we will place two robots together and make them debate each 
 3. Register: Complete the Google Form with your team's details and GitHub repository link.
 4. Make the coolest demo you can!
 5. Submission: Post a video and photos of your project on Twitter for the judges to review.
-6. Submit a Pull Request (PR):
+6. Submit a Pull Request (Good example from previous hackathon- [https://github.com/theswerd/basedbot/tree/main](https://github.com/theswerd/basedbot/tree/main)):
    1. Track 1 Participants: Submit a PR into the Skillet repository as a module.
    2. Track 2 Participants: Submit a PR to the respective repositories.
 
