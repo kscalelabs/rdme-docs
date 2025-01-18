@@ -7,7 +7,7 @@ metadata:
 ---
 ## Obtaining the IP
 
-To check your Z-Bot's IP address, first connect to it through USB and ssh into it
+To check your Z-Bot's IP address, first connect to it through USB and ssh into it. Password is milkv
 
 ```Text bash
 ssh root@192.168.42.1
