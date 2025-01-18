@@ -1,5 +1,5 @@
 ---
-title: Building and testing skills
+title: Skillit Action Recorder
 deprecated: false
 hidden: false
 metadata:
