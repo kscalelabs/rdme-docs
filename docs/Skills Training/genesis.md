@@ -39,3 +39,7 @@ On MacPro3 the training will take up to 30 min, you can evaluate some basic walk
 ```
 python zbot/zbot_eval.py -e zbot-walking --ckpt 100
 ```
+
+<br />
+
+> 🚧 Sim2Real pipeline WIP
