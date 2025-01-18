@@ -7,7 +7,7 @@ metadata:
 ---
 ## I want to work on KOS for Z-Bot but don’t know where it is
 
-right here → [https://github.com/zeroth-robotics/zeroth-bot/tree/main/kos-zbot](https://github.com/zeroth-robotics/zeroth-bot/tree/main/kos-zbot)
+[right here](https://github.com/zeroth-robotics/zeroth-bot/tree/main/kos-zbot)
 
 ## Okay, how do I build it?
 
