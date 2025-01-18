@@ -10,30 +10,38 @@ metadata:
 ---
 ## Getting Started
 
-Clone this repository
+Clone our Mujoco Playground repository:
 
 ```bash
 git clone https://github.com/kscalelabs/mujoco_playground.git
-pip install mujoco_playground
+cd mujoco_playground
+
 ```
 
-2. Follow standard installation instructions for [Mujoco Playground](https://github.com/google-deepmind/mujoco_playground)
+Install [Mujoco Playground](https://github.com/google-deepmind/mujoco_playground) and our
+
+```text bash
+pip install playground
+pip install -e .
+```
 
 ## Running ZBot experiments
 
-Run a small training with visualization with the following command:
+You can train a standing policy within 20 min on RTX 4090
 
 ```bash
-python run_local_training.py
+python playground/runner.py --env ZbotJoystickFlatTerrain
 ```
 
-or through notebook:
+You can inpect the training performance through the reward plot or videos of evaluated policy.
+
+If you have access to Google Colab you can try running the notebook:
 
 ```bash
-ipython run_local_training.ipynb
+ipython playground/.ipynb
 ```
 
-## Evaluation
+## Evaluation (WIP)
 
 You can inspect the training results through the output.mp4 file or running sim2sim evaluation through
 
