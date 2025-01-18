@@ -21,7 +21,7 @@ lsb_release -a
 #Codename:	jammy
 ```
 
-## Clone repo and lfs pull
+## Clone repository
 
 ```bash
 # Install Git LFS
