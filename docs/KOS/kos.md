@@ -6,7 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-> 📘 pip install pykos
+`pip install pykos`
 
 The K-Scale Operating System (OS) combines the hardware, software and firmware to provide an open-source skeleton for powering general-purpose robots.
 
