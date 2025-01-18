@@ -1,5 +1,5 @@
 ---
-title: Build and test skills
+title: Building and testing skills
 deprecated: false
 hidden: false
 metadata:
