@@ -1,12 +1,10 @@
 ---
-title: Hackathon-specific FAQ
+title: Connecting to your Z-Bot on the K-Scale network
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-## Connecting to your Z-Bot on the K-Scale network
-
 On the K-Scale network, you can connect to your Z-Bot using the name on the back of your bot
 
 Plug in your robot.
