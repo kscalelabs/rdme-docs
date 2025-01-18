@@ -2,5 +2,4 @@
 - actuator-service-client
 - ledmatrixserviceclient
 - soundserviceclient
-- processmanagerserviceclient
 - inferenceserviceclient
