@@ -8,7 +8,7 @@ metadata:
 ---
 # Installation
 
-KLab repository requires installation of IsaacSim and IsaacLab. Below we provide step by step instructions how to install them on Ubuntu 22.04.
+KLab repository requires installation of [IsaacSim](https://developer.nvidia.com/isaac/sim)  and [IsaacLab](https://isaac-sim.github.io/IsaacLab/main/index.html) . Below we provide step by step instructions how to install them on Ubuntu 22.04.
 
 ## Prerequisites
 
