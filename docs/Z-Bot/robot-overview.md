@@ -1,18 +1,16 @@
 ---
 title: Zeroth Bot Overview
-excerpt: >-
-  Powerful, affordable, and open-source robotics dev kit & platform for
-  builders.
+excerpt: Open-source robotics dev kit & platform for builders.
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-<Image align="center" src="https://files.readme.io/299bf6da93adc761a172c73cc66dfea9f055f908692e4c8208fcfd07c135aac0-52D09022-5F10-44BB-9E18-1752175972B0_4_5005_c.jpeg" />
-
-<br />
-
 Zeroth Bot is an open-source humanoid robot development platform designed for developers and researchers, made for advanced ML and software applications development.
+
+## Joint Motors
+
+![](https://files.readme.io/b72839a04316c7ea135c56706bd7497bf465fc5fb6f230aa883b063e821a05e1-image.png)
 
 ## Robot Composition
 
@@ -22,7 +20,7 @@ The Zeroth Bot consists of head, torso, arms, and legs, with total 16 DoFs, allo
 * Each leg has 5 DoF
 * Battery, IMU, camera, microphone, and speaker are installed in the torso
 
-## Robot Functions
+## Robot Functions (coming soon)
 
 * Omnidirectional walking
   * Supports forward, backward, and lateral walking
@@ -62,53 +60,3 @@ The Zeroth Bot consists of head, torso, arms, and legs, with total 16 DoFs, allo
 |                        | Auditory Alerts                | Low Battery Alert, Joint Overheat Alert                  |
 | Communication Methods  | Wireless Connections           | WIFI 6                                                   |
 |                        | GPRC                           |                                                          |
-
-## Joint Motors
-
-![](https://files.readme.io/b72839a04316c7ea135c56706bd7497bf465fc5fb6f230aa883b063e821a05e1-image.png)
-
-<br />
-
-### Joint ID and Limits
-
-| Joint ID | Joint Name | Max Limit (Deg) | Min Limit (Deg) |
-| -------- | ---------- | --------------- | --------------- |
-| 11       |            |                 |                 |
-| 12       |            |                 |                 |
-| 13       |            |                 |                 |
-| 14       |            |                 |                 |
-| 21       |            |                 |                 |
-| 22       |            |                 |                 |
-| 23       |            |                 |                 |
-| 24       |            |                 |                 |
-| 31       |            |                 |                 |
-| 32       |            |                 |                 |
-| 33       |            |                 |                 |
-| 34       |            |                 |                 |
-| 35       |            |                 |                 |
-| 41       |            |                 |                 |
-| 42       |            |                 |                 |
-| 43       |            |                 |                 |
-| 44       |            |                 |                 |
-| 45       |            |                 |                 |
-
-### Coordinate System
-
-The joint coordinate system with all joints at zero position is shown in the diagram below.
-
-\[robot in zero position]
-
-## Controller
-
-|   |   |
-| - | - |
-|   |   |
-|   |   |
-
-Computing Power: RISC-V Dual Core 0.5TOPS NPU (Extensible to 26 TOPS with AI Backpack)
-
-Network: WI-FI6/BT5 onboard
-
-Video: 1080p camera
-
-Audio: Speaker, Microphone
