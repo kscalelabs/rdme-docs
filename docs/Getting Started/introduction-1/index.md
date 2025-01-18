@@ -42,3 +42,31 @@ client = KOS(ip='localhost', port=50051)
 ## Services
 
 The KOS client provides several services, each accessible via the client object. Below are the services and examples of how to use them.
+
+<br />
+
+### IMU Service
+
+Access the Inertial Measurement Unit (IMU) data.
+
+<br />
+
+#### Example: Get IMU Values
+
+```python
+# Get basic IMU sensor values
+imu_values = client.imu.get_imu_values()
+print(f"Accelerometer X: {imu_values.accel_x}")
+print(f"Gyroscope Z: {imu_values.gyro_z}")
+```
+
+#### Example: Zero the IMU
+
+```python
+# Zero the IMU with default parameters
+response = client.imu.zero(duration=1.0)
+if response.success:
+    print("IMU zeroed successfully.")
+else:
+    print(f"Failed to zero IMU: {response.error}")
+```
