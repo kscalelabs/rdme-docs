@@ -8,6 +8,14 @@ metadata:
 ---
 Just give me the code: [actuator.py](https://github.com/kscalelabs/kos/blob/master/kos-py/pykos/services/actuator.py)
 
-## Examples
+## Calibrate an actuator
+
+todo
+
+## Command actuators
+
+todo
+
+## Configure an actuator
 
 todo
