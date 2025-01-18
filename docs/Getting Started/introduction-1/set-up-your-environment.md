@@ -11,7 +11,7 @@ next:
       title: Build and test skills
       type: basic
     - slug: kos
-      title: Introduction
+      title: Introduction to KOS
       type: basic
 ---
 KOS is simple to install using pip:
