@@ -87,9 +87,9 @@ The winner of each track will be receiving different rewards.
 
 <br />
 
-<br />
+## Questions and technical issues?
 
-<br />
+Ask [https://kscale.readme.io/discuss#/](https://kscale.readme.io/discuss#/) and we'll respond as soon as possible.
 
 ## Past Hackathons
 
