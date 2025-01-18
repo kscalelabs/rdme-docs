@@ -16,8 +16,6 @@ If you need to develop with KOS on your robot, clone the repository and follow t
 
 Here is a high-level overview of the K-Scale OS architecture.
 
-<Image align="center" src="https://files.readme.io/731118b10f68ebd7ebc69429bd35a4df547c535a6f8d67c0076eb557b87437a4-Screenshot_2025-01-18_at_01.47.12.png" />
-
 <br />
 
 ## Simple example
@@ -34,8 +32,6 @@ self.kos.actuator.configure_actuator(actuator_id=actuator_id, kp=120, kd=10, tor
 motor_feedback = kos.actuator.get_actuators_state([actuator_id])
 kos.actuator.command_actuators({"actuator_id": actuator_id, "position": 0.5})
 ```
-
-<br />
 
 ### Protobufs
 
