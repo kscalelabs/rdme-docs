@@ -1,6 +1,8 @@
 ---
 title: Mujoco Playground
-excerpt: Getting started with MuJoCo Playground physics simulation with K-Scale Bots.
+excerpt: >-
+  A simple and efficient library for training humanoid locomotion in MJX and
+  MuJoCo.
 deprecated: false
 hidden: false
 metadata:
