@@ -5,3 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
+```python
+pip install pykos
+```
