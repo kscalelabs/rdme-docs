@@ -30,6 +30,20 @@ pip install pykos
 
 First, import the `pykos` module and create an instance of the KOS client. Remember to connect to the robot through the cable or ip.
 
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
 ```python
 ACTUATOR_NAME_TO_ID = {
     "left_shoulder_yaw": 11,
