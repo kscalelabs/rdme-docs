@@ -6,18 +6,6 @@ hidden: false
 metadata:
   robots: index
 ---
-```python
-pip install pykos
-```
-
-<br />
-
-```python Python
-import pykos
-```
-
-<br />
-
 If you have a operational robot, you can now program your first skill
 
 <TutorialTile emoji="🦉" slug="make-your-robot-wave" title="Make your Robot wave" />
