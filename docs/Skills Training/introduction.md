@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Introduction to Skills Training
 deprecated: false
 hidden: false
 metadata:
