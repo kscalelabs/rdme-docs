@@ -54,8 +54,8 @@ Using a Zeroth Bot, we will place two robots together and make them debate each 
 ## Submission
 
 1. Join the Discord: [https://discord.gg/NayacF5g](https://discord.gg/NayacF5g) for real time updates
-2. Fork the skillit repository to get started. [https://github.com/kscalelabs/skillit](https://github.com/kscalelabs/skillit)
-   1. The Python package will be cleaned up and modularized post-hackathon. Until then, we've put a bunch of example scripts to get started in [skillit/recipes](https://github.com/kscalelabs/skillit/tree/master/skillit/recipes)
+2. Fork the skillit repository to get started. [https://github.com/kscalelabs/skillet](https://github.com/kscalelabs/skillet)
+   1. The Python package will be cleaned up and modularized post-hackathon. Until then, we've put a bunch of example scripts to get started in [skillit/recipes](https://github.com/kscalelabs/skillet)
 3. Work on your project and ask any questions in [https://kscale.readme.io/discuss#/](https://kscale.readme.io/discuss#/)
 4. \[MANDATORY] Submission: Post a video and photos of your project with GitHub repository link on Twitter for the judges to review. Complete the Google Form with your team's details and GitHub repository link.
 5. Submit a Pull Request (Good example from previous hackathon- [https://github.com/theswerd/basedbot/tree/main](https://github.com/theswerd/basedbot/tree/main)):
