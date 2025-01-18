@@ -1,5 +1,6 @@
 ---
 title: Set up your environment
+excerpt: Setting up your development environment with K-Scale OS
 deprecated: false
 hidden: false
 metadata:
@@ -10,6 +11,8 @@ next:
       title: Build and test skills
       type: basic
 ---
+KOS is simple to install using pip
+
 ```python
 pip install pykos
 ```
