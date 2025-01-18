@@ -1,5 +1,5 @@
 ---
-title: IMUServiceClient
+title: IMU
 excerpt: The IMU service client
 deprecated: false
 hidden: false
