@@ -19,5 +19,3 @@ KOS is simple to install using pip:
 ```python
 pip install pykos
 ```
-
-Once KOS is installed you're already ready to build and test your first skill.
