@@ -5,6 +5,8 @@ hidden: false
 metadata:
   robots: index
 ---
+Import KOS into your project
+
 ```python Python
 import pykos
 ```
