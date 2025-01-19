@@ -26,6 +26,16 @@ next:
 
 Learning algorithms allow to train humanoids to perform different skills such as manipulation or locomotion. Below is an overview of general approaches to training machine learning models for humanoid robots with example applications. Typically you need a simulator, training framework and machine learning method to train end to end behaviors.
 
+### Simulation Artifacts
+
+To view simulation artifacts, use the K-Scale API:
+
+```text
+pip install kscale
+ks robots list  # To list the available robots
+ks robots urdf download <robot-name>  # To download the robot
+```
+
 ### Physics engines
 
 Physics engines are software libraries designed to simulate physical systems in a virtual environment. They are crucial in a variety of fields such as video games, animation, robotics, and engineering simulations. These engines handle the mathematics involved in simulating physical processes like motion, collisions, and fluid dynamics. Three popular engines are:
