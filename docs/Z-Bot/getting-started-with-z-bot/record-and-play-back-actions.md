@@ -5,26 +5,38 @@ hidden: false
 metadata:
   robots: index
 ---
-How to record and play back
+# Robot Skill Recording Guide
 
-make sure your robot is connected via wifi
+## Setup
 
-Then ssh into robot so you can start and restart the server (this is important)
+1. Connect robot to WiFi
+2. SSH into robot so you can start/restart the server
+3. Navigate to the project: cd kscale/skillit
 
-Whenever getting a grpc error or if your actuators are locked up run
+## Server Management
 
-killall kos (to kill the client server)
+# Stop server
 
-Now run this /usr/local/bin/kos --log --log-level trace to start the server again with logging
+killall kos
 
-Now run python examples/move\_all\_joints\_a\_little.py to check all your joints
+# Start server with logging
 
-(If at any point you get really stuck, unplug power from your servos)
+/usr/local/bin/kos --log --log-level trace
 
-Also note that the button cuts power to the servos so if your servos are saying they are running but are not, try pushing the button
+## Test Joints
 
-cd kscale/skillet
+python examples/move\_all\_joints\_a\_little.py
 
-python examples/play\_record\_example.py record  --ip 10.33.11.238 --skill-name video to start recording
+## Record Skills
 
-play back like this python examples/play\_record\_example.py play --ip 10.33.11.238 --file ./skill\_video\_20250119\_021912.json
+python examples/play\_record\_example.py record --ip 10.33.11.238 --skill-name video
+
+## Play Back Skills
+
+python examples/play\_record\_example.py play --ip 10.33.11.238 --file ./skill\_video\_20250119\_021912.json
+
+## Troubleshooting
+
+* If servos lock: unplug servo power
+* No response: check robot's power button
+* For gRPC errors: restart KOS server
