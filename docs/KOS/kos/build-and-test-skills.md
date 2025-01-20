@@ -43,6 +43,7 @@ joint_name_to_id = {
     "left_hip_pitch": 33,
     "left_knee_pitch": 34,
     "left_ankle_pitch": 35,
+  
     "right_hip_yaw": 41,
     "right_hip_roll": 42,
     "right_hip_pitch": 43,
