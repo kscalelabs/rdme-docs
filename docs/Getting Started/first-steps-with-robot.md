@@ -2,7 +2,7 @@
 title: First steps with robot
 excerpt: >-
   The starting place for all example code to get up and running using Zeroth or
-  K Bots. 
+  K-Bots. 
 deprecated: false
 hidden: false
 metadata:
