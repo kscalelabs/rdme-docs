@@ -38,6 +38,7 @@ joint_name_to_id = {
     "right_shoulder_pitch": 22,
     "right_elbow_yaw": 23,
     "right_gripper": 24,
+  
     "left_hip_yaw": 31,
     "left_hip_roll": 32,
     "left_hip_pitch": 33,
