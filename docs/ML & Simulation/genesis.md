@@ -16,7 +16,7 @@ micromamba activate genesis
 If you work on a Linux machine, you can install the package with the following command:
 
 ```shell
-conda create -n genesis python=3.12
+conda create -n genesis python=3.11
 conda activate genesis
 ```
 
