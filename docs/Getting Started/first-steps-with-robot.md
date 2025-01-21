@@ -1,5 +1,5 @@
 ---
-title: First steps with robot
+title: First steps with your robot
 excerpt: >-
   The starting place for all example code to get up and running using Zeroth or
   K-Bots. 
@@ -21,9 +21,15 @@ An example list is shown here: [https://github.com/kscalelabs/skillet/tree/maste
 
 ## Examples
 
-You can start from:
+The example list on Github is here: <a href="https://github.com/kscalelabs/skillet/tree/master/skillet/examples" target="_blank">kscalelabs/skillet/tree/master/skillet/example</a>
 
-1. Camera
+You can start by:
+
+1. Interacting with the camera
 2. Moving a joints
 3. Moving all joints
-4. Run a torch model
+4. Running a torch model
+
+Check the README for information on recording and playing back skills from JSON files.
+
+The python package [Action Recorder](link_to_action_recorder) makes it easy to play and record skills.
