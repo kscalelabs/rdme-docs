@@ -1,5 +1,5 @@
 ---
-title: Actuator Package
+title: Actuator
 deprecated: false
 hidden: false
 metadata:
