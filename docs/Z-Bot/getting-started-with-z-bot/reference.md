@@ -1,6 +1,6 @@
 ---
 title: PyKOS Reference
-excerpt: pykos
+excerpt: 'pykos is the python interface for KOS (robot operating system) '
 deprecated: false
 hidden: false
 metadata:
