@@ -1,0 +1,143 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "PyKOS Python Client Documentation",
+    "description": "Python client library for controlling robots through KOS",
+    "version": "1.0.0",
+    "x-readme": {
+      "samples-languages": [
+        "python"
+      ],
+      "explorer-enabled": true,
+      "categories": [
+        {
+          "name": "Setup",
+          "description": "Client initialization and setup"
+        },
+        {
+          "name": "IMU",
+          "description": "IMU sensor operations"
+        },
+        {
+          "name": "Actuator",
+          "description": "Actuator control operations"
+        }
+      ]
+    }
+  },
+  "paths": {
+    "/python/kos/init": {
+      "get": {
+        "tags": [
+          "Setup"
+        ],
+        "summary": "Initialize KOS Client",
+        "description": "Create a new KOS client instance",
+        "x-readme": {
+          "code-samples": [
+            {
+              "language": "python",
+              "code": "# Connect to local KOS instance\nkos = KOS()\n\n# Connect to remote KOS instance\nkos = KOS(ip='192.168.1.100', port=50051)"
+            }
+          ]
+        }
+      }
+    },
+    "/python/imu/values": {
+      "get": {
+        "tags": [
+          "IMU"
+        ],
+        "summary": "Get IMU Values",
+        "description": "Get the latest IMU sensor values",
+        "x-readme": {
+          "code-samples": [
+            {
+              "language": "python",
+              "code": "values = kos.imu.get_imu_values()"
+            }
+          ]
+        },
+        "responses": {
+          "200": {
+            "description": "Current IMU sensor readings",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IMUResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "IMUResponse": {
+        "description": "IMU service response model.",
+        "properties": {
+          "acceleration": {
+            "description": "Acceleration values in m/s^2",
+            "items": {
+              "type": "number"
+            },
+            "title": "Acceleration",
+            "type": "array"
+          },
+          "angular_velocity": {
+            "description": "Angular velocity values in rad/s",
+            "items": {
+              "type": "number"
+            },
+            "title": "Angular Velocity",
+            "type": "array"
+          },
+          "orientation": {
+            "description": "Orientation quaternion",
+            "items": {
+              "type": "number"
+            },
+            "title": "Orientation",
+            "type": "array"
+          }
+        },
+        "required": [
+          "acceleration",
+          "angular_velocity",
+          "orientation"
+        ],
+        "title": "IMUResponse",
+        "type": "object"
+      },
+      "ActuatorResponse": {
+        "description": "Actuator service response model.",
+        "properties": {
+          "position": {
+            "description": "Current position",
+            "title": "Position",
+            "type": "number"
+          },
+          "velocity": {
+            "description": "Current velocity",
+            "title": "Velocity",
+            "type": "number"
+          },
+          "torque": {
+            "description": "Current torque",
+            "title": "Torque",
+            "type": "number"
+          }
+        },
+        "required": [
+          "position",
+          "velocity",
+          "torque"
+        ],
+        "title": "ActuatorResponse",
+        "type": "object"
+      }
+    }
+  }
+}
