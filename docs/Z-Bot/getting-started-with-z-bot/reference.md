@@ -1,5 +1,6 @@
 ---
-title: API Reference
+title: PyKOS Reference
+excerpt: pykos
 deprecated: false
 hidden: false
 metadata:
