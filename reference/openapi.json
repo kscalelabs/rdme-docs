@@ -1,0 +1,153 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "PyKOS API Documentation",
+    "description": "Python client for controlling robots through KOS",
+    "version": "1.0.0",
+    "x-readme": {
+      "samples-languages": [
+        "python"
+      ],
+      "explorer-enabled": true,
+      "categories": [
+        {
+          "name": "IMU",
+          "description": "IMU sensor operations"
+        },
+        {
+          "name": "Actuator",
+          "description": "Actuator control operations"
+        }
+      ]
+    }
+  },
+  "paths": {
+    "/kos.get_imu_data": {
+      "get": {
+        "operationId": "get_imu_data",
+        "tags": [
+          "IMU"
+        ],
+        "summary": "Get IMU Data",
+        "description": "Get IMU sensor data",
+        "x-readme": {
+          "code-samples": [
+            {
+              "language": "python",
+              "code": "kos = KOS()\ndata = kos.get_imu_data()"
+            }
+          ]
+        },
+        "responses": {
+          "200": {
+            "description": "Current IMU sensor readings",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IMUResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/kos.get_actuator_state": {
+      "get": {
+        "operationId": "get_actuator_state",
+        "tags": [
+          "Actuator"
+        ],
+        "summary": "Get Actuator State",
+        "description": "Get current actuator state",
+        "x-readme": {
+          "code-samples": [
+            {
+              "language": "python",
+              "code": "kos = KOS()\nstate = kos.get_actuator_state()"
+            }
+          ]
+        },
+        "responses": {
+          "200": {
+            "description": "Current actuator state",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActuatorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "IMUResponse": {
+        "description": "IMU service response model.",
+        "properties": {
+          "acceleration": {
+            "description": "Acceleration values in m/s^2",
+            "items": {
+              "type": "number"
+            },
+            "title": "Acceleration",
+            "type": "array"
+          },
+          "angular_velocity": {
+            "description": "Angular velocity values in rad/s",
+            "items": {
+              "type": "number"
+            },
+            "title": "Angular Velocity",
+            "type": "array"
+          },
+          "orientation": {
+            "description": "Orientation quaternion",
+            "items": {
+              "type": "number"
+            },
+            "title": "Orientation",
+            "type": "array"
+          }
+        },
+        "required": [
+          "acceleration",
+          "angular_velocity",
+          "orientation"
+        ],
+        "title": "IMUResponse",
+        "type": "object"
+      },
+      "ActuatorResponse": {
+        "description": "Actuator service response model.",
+        "properties": {
+          "position": {
+            "description": "Current position",
+            "title": "Position",
+            "type": "number"
+          },
+          "velocity": {
+            "description": "Current velocity",
+            "title": "Velocity",
+            "type": "number"
+          },
+          "torque": {
+            "description": "Current torque",
+            "title": "Torque",
+            "type": "number"
+          }
+        },
+        "required": [
+          "position",
+          "velocity",
+          "torque"
+        ],
+        "title": "ActuatorResponse",
+        "type": "object"
+      }
+    }
+  }
+}
