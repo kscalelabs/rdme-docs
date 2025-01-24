@@ -21,12 +21,11 @@ pip install -e .
 
 The example list on Github is here: <a href="https://github.com/kscalelabs/skillet/tree/master/skillet/examples" target="_blank">kscalelabs/skillet/tree/master/skillet/example</a>
 
-You can start by:
+You can start with:
 
 1. Interacting with the camera
-2. Moving a joints
-3. Moving all joints
-4. Running a torch model
+2. Moving joints
+3. Running a machine learning model
 
 Check the README for information on recording and playing back skills from JSON files.
 
