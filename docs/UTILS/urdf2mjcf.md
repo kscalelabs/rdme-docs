@@ -67,8 +67,6 @@ options:
                         Default position for the robot.
 ```
 
-<br />
-
 ### Python
 
 To run the conversion script from Python, use:
