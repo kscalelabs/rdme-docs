@@ -7,35 +7,17 @@ metadata:
 ---
 # URDF to Mujoco Converter
 
-<br />
-
-```
-```
-
-<br />
-
 `urdf2mjcf` is a tool for converting URDF models to Mujoco XML.
-
-\<Cards>
-&#x20; \<Cards.Card
-&#x20;   icon=\{\<FaGithub />}
-&#x20;   title="Github"
-&#x20;   href="https\://github.com/kscalelabs/urdf2mjcf"
-&#x20;   description="Contribute to our open-source projects"
-&#x20; />
-\</Cards>
 
 Here is an example, with the input URDF on the right and the output MJCF on the left:
 
-\<Image
-&#x20; src=\{urdf2mjcf\_example}
-&#x20; alt="URDF to MJCF"
-&#x20; width="100%"
-&#x20; className="mx-auto"
-&#x20; style=\{\{ marginTop: '1em', marginBottom: '1em' }}
+\<Image\
+src=\{urdf2mjcf\_example}
+alt="URDF to MJCF"
+width="100%"
+className="mx-auto"
+style=\{\{ marginTop: '1em', marginBottom: '1em' }}
 />
-
-
 
 ## Installation
 
@@ -82,13 +64,14 @@ To see all the options, use:
 
 <br />
 
-As of `urdf2mjcf==0.0.4`, the options are:```bash
-usage: urdf2mjcf [-h] [--no-collision-mesh] [--output OUTPUT] [--copy-meshes]
-                 [--camera-distance CAMERA_DISTANCE]
-                 [--camera-height-offset CAMERA_HEIGHT_OFFSET]
-                 [--no-frc-limit] [--default-position DEFAULT_POSITION]
-                 urdf_path
-```
+As of `urdf2mjcf==0.0.4`, the options are:\`\`\`bash\
+usage: urdf2mjcf \[-h] \[--no-collision-mesh] \[--output OUTPUT] \[--copy-meshes]
+\[--camera-distance CAMERA\_DISTANCE]
+\[--camera-height-offset CAMERA\_HEIGHT\_OFFSET]
+\[--no-frc-limit] \[--default-position DEFAULT\_POSITION]
+urdf\_path
+
+````
 
 <br />
 
@@ -113,7 +96,7 @@ Camera height offset.
 \--no-frc-limit        Do not include force limit for the actuators.
 \--default-position DEFAULT\_POSITION
 Default position for the robot.```
-```
+````
 
 <br />
 
@@ -134,5 +117,7 @@ run(\
 urdf\_path="path/to/your/robot.urdf",
 mjcf\_path="path/to/save/robot.mjcf",
 copy\_meshes=True,
-)```
+)\`\`\`
+
+```
 ```
