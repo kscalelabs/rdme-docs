@@ -1,5 +1,5 @@
 ---
-title: URDF to Mujoco Converter
+title: Urdf to Mujoco Converter
 deprecated: false
 hidden: false
 metadata:
