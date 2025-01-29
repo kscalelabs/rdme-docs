@@ -11,7 +11,7 @@ metadata:
 
 Here is an example, with the input URDF on the right and the output MJCF on the left:
 
-![]()
+<Image align="center" src="https://files.readme.io/88353b2712e56119be059d02b21b61ef0f220713053b23eeab57770691a287d2-Screenshot_2025-01-29_at_15.29.15.png" />
 
 ## Installation
 
