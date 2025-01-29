@@ -11,113 +11,74 @@ metadata:
 
 Here is an example, with the input URDF on the right and the output MJCF on the left:
 
-\<Image\
-src=\{urdf2mjcf\_example}
-alt="URDF to MJCF"
-width="100%"
-className="mx-auto"
-style=\{\{ marginTop: '1em', marginBottom: '1em' }}
-/>
+![]()
 
 ## Installation
 
-<br />
-
 You can install the package using `pip`:
 
-<br />
-
 ```
+pip install urdf2mjcf
 ```
-
-<br />
 
 ## Usage
 
-<br />
-
-<br />
-
 ### Command Line
-
-<br />
 
 To run the conversion script from the command line, use:
 
-<br />
-
 ```
+urdf2mjcf path/to/your/robot.urdf
 ```
-
-<br />
 
 This will save the MJCF file in the same directory as the URDF file.
 
-<br />
-
 To see all the options, use:
 
-<br />
+```
+urdf2mjcf -h
+```
+
+As of `urdf2mjcf==0.0.4`, the options are:
 
 ```
-```
-
-<br />
-
-As of `urdf2mjcf==0.0.4`, the options are:\`\`\`bash\
-usage: urdf2mjcf \[-h] \[--no-collision-mesh] \[--output OUTPUT] \[--copy-meshes]
-\[--camera-distance CAMERA\_DISTANCE]
-\[--camera-height-offset CAMERA\_HEIGHT\_OFFSET]
-\[--no-frc-limit] \[--default-position DEFAULT\_POSITION]
-urdf\_path
-
-````
-
-<br />
+usage: urdf2mjcf [-h] [--no-collision-mesh] [--output OUTPUT] [--copy-meshes]
+                 [--camera-distance CAMERA_DISTANCE]
+                 [--camera-height-offset CAMERA_HEIGHT_OFFSET]
+                 [--no-frc-limit] [--default-position DEFAULT_POSITION]
+                 urdf_path
 
 Convert a URDF file to an MJCF file.
 
-<br />
+positional arguments:
+  urdf_path             The path to the URDF file.
 
-positional arguments:\
-urdf\_path             The path to the URDF file.
-
-<br />
-
-options:\
--h, --help            show this help message and exit
-\--no-collision-mesh   Do not include collision meshes.
-\--output OUTPUT       The path to the output MJCF file.
-\--copy-meshes         Copy mesh files to the output MJCF directory.
-\--camera-distance CAMERA\_DISTANCE
-Camera distance from the robot.
-\--camera-height-offset CAMERA\_HEIGHT\_OFFSET
-Camera height offset.
-\--no-frc-limit        Do not include force limit for the actuators.
-\--default-position DEFAULT\_POSITION
-Default position for the robot.```
-````
+options:
+  -h, --help            show this help message and exit
+  --no-collision-mesh   Do not include collision meshes.
+  --output OUTPUT       The path to the output MJCF file.
+  --copy-meshes         Copy mesh files to the output MJCF directory.
+  --camera-distance CAMERA_DISTANCE
+                        Camera distance from the robot.
+  --camera-height-offset CAMERA_HEIGHT_OFFSET
+                        Camera height offset.
+  --no-frc-limit        Do not include force limit for the actuators.
+  --default-position DEFAULT_POSITION
+                        Default position for the robot.
+```
 
 <br />
 
 ### Python
 
-<br />
-
 To run the conversion script from Python, use:
 
-<br />
-
 ```
-```
+from urdf2mjcf import run
 
-<br />
-
-run(\
-urdf\_path="path/to/your/robot.urdf",
-mjcf\_path="path/to/save/robot.mjcf",
-copy\_meshes=True,
-)\`\`\`
-
-```
+run(
+    urdf_path="path/to/your/robot.urdf",
+    mjcf_path="path/to/save/robot.mjcf",
+    copy_meshes=True,
+)
 ```
