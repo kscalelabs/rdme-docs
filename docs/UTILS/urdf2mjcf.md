@@ -1,12 +1,11 @@
 ---
-title: Urdf to Mujoco Converter
+title: URDF to Mujoco Converter
+excerpt: Utility for converting from URDF format to Mujoco format
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-# URDF to Mujoco Converter
-
 `urdf2mjcf` is a tool for converting URDF models to Mujoco XML.
 
 Here is an example, with the input URDF on the right and the output MJCF on the left:
