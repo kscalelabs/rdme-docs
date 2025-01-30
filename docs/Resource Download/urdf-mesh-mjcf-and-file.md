@@ -1,5 +1,5 @@
 ---
-title: URDF, MESH, MJCF and File
+title: URDF, MESH, and MJCF File
 deprecated: false
 hidden: false
 metadata:
