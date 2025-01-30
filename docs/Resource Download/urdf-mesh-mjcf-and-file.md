@@ -8,7 +8,7 @@ metadata:
 First, you need to authenticate with the kscale api by running
 
 ```shell
-pip install kscale\
+pip install kscale
 kscale user key
 ```
 
