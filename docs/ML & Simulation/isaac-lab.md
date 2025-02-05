@@ -29,19 +29,24 @@ You can now clone Klab repository:
 # Install Git LFS
 sudo apt-get update
 sudo apt-get install git-lfs
-git lfs install
+git lfs install # initialize git lfs
+
+# clone the repo
+git clone git@github.com:kscalelabs/klab.git
 
 # Pull large files (like USD models)
 git lfs pull
 
-git clone git@github.com:kscalelabs/klab.git
+# Get Isaaclab as a submodule
+git submodule update --init --recursive 
 ```
 
-Create environment appropriate environment:
+Create the appropriate python environment using [conda](https://docs.anaconda.com/miniconda/):
 
-```bash
-conda create -n env_isaacsim python=3.10
-conda activate env_isaacsim
+```Text bash
+cd IsaacLab
+./isaaclab.sh -c isaaclab # create the conda environment
+conda activate isaaclab
 pip install isaacsim==4.2.0.2 --extra-index-url https://pypi.nvidia.com
 pip install isaacsim-extscache-physics==4.2.0.2 isaacsim-extscache-kit==4.2.0.2 isaacsim-extscache-kit-sdk==4.2.0.2 --extra-index-url https://pypi.nvidia.com
 ```
@@ -55,16 +60,13 @@ isaacsim
 Logs can be found at `/home/dpsh/.nvidia-omniverse/`. Once confirmed you can install IsaacLab:
 
 ```bash
-# Get Isaaclab as a submodule
-git submodule update --init --recursive 
-
 # Install additional packages too
 sudo apt install cmake build-essential
-cd IsaacLab
+# run this in the IsaacLab folder
 ./isaaclab.sh --install # or "./isaaclab.sh -i"
 ```
 
-Verify that IsaacLab was installed properly:
+## Verify that IsaacLab was installed properly:
 
 ### Option 1: Using the isaaclab.sh executable
 
@@ -85,7 +87,7 @@ python source/standalone/tutorials/00_sim/create_empty.py
 ### Install ZBot extension
 
 ```bash
-cd exts/zbot
+cd exts/zbot2
 python -m pip install -e .
 ```
 
@@ -129,8 +131,7 @@ ${ISAAC_LAB_PATH}/isaaclab.sh -p scripts/rsl_rl/play_imu.py  \
   --task Velocity-Rough-Zbot2-Play-v0 \
   --num_envs 1 \
   --video \
-  --video_length 100 \
-  --imu_type projected_gravity \
+  --video_length 500 \
   --load_run 2025-01-09_04-50-36 \
   --checkpoint model_0.pt 
 ```
