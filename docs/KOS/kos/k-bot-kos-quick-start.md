@@ -14,10 +14,12 @@ metadata:
 `pip install kos-sim`
 
 ```bash
-kos-sim kbot-v1 --no-gravity # disable render of MuJoCo
+kos-sim kbot-v1 --no-gravity --no-render
 ```
 
 KOS-Sim is now listening
+
+* you can leave the render on, but there may be latency issues. Disable the rendering if you face this.
 
 **KOS-K-Bot**
 
