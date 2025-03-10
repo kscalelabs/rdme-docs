@@ -25,8 +25,4 @@ Zeroth-01 is constructed from both prefabricated and 3D printed parts.
 | Speaker            | 3 Watt Speaker                                  | [Link](https://www.amazon.com/CQRobot-JST-PH2-0-Interface-Electronic-Projects/dp/B0822Z4LPH/)                                                                          | x1       | 8                                                                | 11/14        |
 | Amplifier          | LM386 Mono Audio Amplifier                      | [Link](https://www.amazon.com/HiLetgo-LM386-Audio-Amplifier-Module/dp/B00LNACGTY/)                                                                                     | x1       | 8                                                                | 11/01        |
 
-\*The STS3215 servos are no longer sufficient for the speed requirements of the legs. Please use the STS3250 servos as we look for a suitable replacement.
-
-### Next Steps
-
-In addition to the BoM, also see our [3D printing guide](/build/3d_print).
+\*The STS3215 45RPM servos are no longer sufficient for the speed requirements of the legs. Please use the STS3250 servos as we look for a suitable replacement.
