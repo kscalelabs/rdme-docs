@@ -1,5 +1,5 @@
 ---
-title: 3D Print Guide
+title: 3D Printing Guide
 deprecated: false
 hidden: false
 metadata:
