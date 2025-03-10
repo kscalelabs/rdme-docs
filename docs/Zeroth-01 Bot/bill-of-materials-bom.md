@@ -1,5 +1,5 @@
 ---
-title: Bill of Materials (BOM)
+title: BOM
 deprecated: false
 hidden: false
 metadata:
