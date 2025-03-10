@@ -5,15 +5,9 @@ hidden: true
 metadata:
   robots: index
 ---
-> ❗️ 🚫 Public Alpha. Zeroth-01 Bot is available for basic demos, please expect breaking changes until 1.0 is reached.
+> ❗️ ⚠️ The Bill of Materials (BoM) is not yet finalized. For more information, see our [Discord](\[https://discord.gg/G6KP76uha5]\(https://discord.gg/G6KP76uha5\))
 
 Zeroth-01 is constructed from both prefabricated and 3D printed parts.
-
-The following materials should be ordered for assembly of your Zeroth-01 bot. For 3D printing, see our [3D printing guide](/build/3d_print).
-
-::: warning\
-⚠️ The Bill of Materials (BoM) is not yet finalized. For more information, see our [Discord](https://discord.gg/G6KP76uha5).
-:::
 
 *Last updated: 11/28/2024*
 
