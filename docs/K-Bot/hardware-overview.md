@@ -1,5 +1,5 @@
 ---
-title: Hardware Overview
+title: About K-Bot
 excerpt: An overview of the K-Bot hardware
 deprecated: false
 hidden: false
