@@ -1,5 +1,5 @@
 ---
-title: Hardware Overview
+title: About Zeroth-02
 excerpt: Open-source robotics dev kit & platform for builders.
 deprecated: false
 hidden: false
