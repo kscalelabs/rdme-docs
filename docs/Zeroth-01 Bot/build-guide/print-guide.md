@@ -10,7 +10,7 @@ metadata:
 | Resource    | Link                                                                                                                     | Description                        |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
 | OnShape CAD | [Link](https://cad.onshape.com/documents/b4672a7f8ce3947bd250f2c1/w/ff02744612b3ad395d4541a6/e/9772c11323fdee205b2ba4cc) | Latest CAD design files (editable) |
-| STL Files   | [STL Files](/20241118stl.zip)                                                                                            | Ready-to-print STL files           |
+| STL Files   | [STL Files](https://drive.google.com/file/d/1MNHojoT2D_zTg5fWHhfeQub_x7tZ2UEH/view?usp=sharing)                          | Ready-to-print STL files           |
 
 <br />
 
