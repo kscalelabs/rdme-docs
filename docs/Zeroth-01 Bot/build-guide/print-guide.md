@@ -18,7 +18,7 @@ metadata:
 
 *Parameters: Configured for Bambu printers*
 
-<Table>
+<Table align={["left","left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -108,7 +108,7 @@ metadata:
 
 Please refer to the following table for all the required parts:
 
-<Table>
+<Table align={["left","left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -117,6 +117,14 @@ Please refer to the following table for all the required parts:
 
       <th>
         Visual Reference
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
       </th>
     </tr>
   </thead>
@@ -132,6 +140,14 @@ Please refer to the following table for all the required parts:
 
         <br />
       </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
 
     <tr>
@@ -144,6 +160,14 @@ Please refer to the following table for all the required parts:
 
         <br />
       </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
 
     <tr>
@@ -155,6 +179,14 @@ Please refer to the following table for all the required parts:
         ![](https://files.readme.io/b7b7667783fc0073c15e27dc44ffc33e3a6d97fd3acc9f896d0630fe4ec5440d-image.png)
 
         <br />
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
       </td>
     </tr>
 
@@ -186,6 +218,14 @@ Please refer to the following table for all the required parts:
 
         <br />
       </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
 
     <tr>
@@ -197,6 +237,14 @@ Please refer to the following table for all the required parts:
         ![](https://files.readme.io/63394f6bfcd7270e301f029b101f14fb782b7da98161b88679de751bb6c5246d-image.png)
 
         <br />
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
       </td>
     </tr>
 
@@ -210,6 +258,14 @@ Please refer to the following table for all the required parts:
 
         <br />
       </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
 
     <tr>
@@ -221,6 +277,14 @@ Please refer to the following table for all the required parts:
         ![](https://files.readme.io/dcfabae19929ec3c0eece88b8af0a53cabe12790cf555ee2d8b34d6e3f0d037f-image.png)
 
         <br />
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
       </td>
     </tr>
 
@@ -234,6 +298,14 @@ Please refer to the following table for all the required parts:
 
         <br />
       </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
 
     <tr>
@@ -245,6 +317,14 @@ Please refer to the following table for all the required parts:
         ![](https://files.readme.io/b569babea35e3580a87624d6f61b6c95345f023e349a1692b2e30b05f450fb76-image.png)
 
         <br />
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
       </td>
     </tr>
 
@@ -258,6 +338,14 @@ Please refer to the following table for all the required parts:
 
         <br />
       </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
 
     <tr>
@@ -269,6 +357,14 @@ Please refer to the following table for all the required parts:
         ![](https://files.readme.io/55d5c12c65029774fe83af9fbdc4c17a92254f06cb8e80f1dc9e487f8501b16d-image.png)
 
         <br />
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
       </td>
     </tr>
   </tbody>
