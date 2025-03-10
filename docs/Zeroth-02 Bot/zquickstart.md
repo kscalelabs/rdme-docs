@@ -1,5 +1,5 @@
 ---
-title: Quickstart
+title: About Zeroth-01
 excerpt: Learn to develop and control K-Scale robots with our open-source software.
 deprecated: false
 hidden: false
