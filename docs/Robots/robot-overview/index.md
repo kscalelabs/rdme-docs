@@ -1,5 +1,5 @@
 ---
-title: Z-Bot
+title: Zeroth-02
 excerpt: Open-source robotics dev kit & platform for builders.
 deprecated: false
 hidden: false
