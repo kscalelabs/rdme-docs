@@ -10,3 +10,5 @@ metadata:
     Neque porro quisquam est qui dolorem ipsum quia
   </Card>
 </Cards>
+
+<Embed typeOfEmbed="github" url="https://github.com/kscalelabs/ksim" />
