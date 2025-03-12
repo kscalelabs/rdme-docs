@@ -1,5 +1,5 @@
 ---
-title: Sharp bits
+title: Debugging NANs
 deprecated: false
 hidden: false
 metadata:
