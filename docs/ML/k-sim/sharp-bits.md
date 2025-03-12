@@ -14,3 +14,4 @@ We have identified some common issues that cause NANs:
 3. MJX logic (additional forward pass helps stabilize the dynamics before step)
 4. Appropriate XML definition (for example gain size on light joints)
 5. Solver type, iteration steps, and physical timestamp
+6. The XLA Triton gemm kernel is buggy. To fix, try disabling with export XLA\_FLAGS="--xla\_gpu\_enable\_triton\_gemm=false"
