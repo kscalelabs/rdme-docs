@@ -95,7 +95,7 @@ These should absolutely be annotated:
 
 ### Sharp Bits
 
-See more [here](https://docs.kscale.dev/update/docs/sharp-bits#/)]
+See more [here](https://docs.kscale.dev/update/docs/sharp-bits-1#/)
 
 ## Troublehsooting
 
