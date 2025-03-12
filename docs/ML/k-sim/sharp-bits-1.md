@@ -5,7 +5,7 @@ hidden: false
 metadata:
   robots: index
 ---
-[https://github.com/google-deepmind/mujoco/issues/1143##](https://github.com/google-deepmind/mujoco/issues/1143##) MJCF definition
+## MJCF definition
 
 Changes to the MJCF can significantly impact the training speed. Here are the most important things to look at:
 
