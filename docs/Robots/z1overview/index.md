@@ -1,5 +1,5 @@
 ---
-title: About Zeroth-01
+title: Zeroth-01
 deprecated: false
 hidden: false
 metadata:
