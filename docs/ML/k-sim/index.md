@@ -123,7 +123,7 @@ export MUJOCO_GL="egl"
 
 ### Possible sources of NaNs
 
-See more [here](https://docs.kscale.dev/update/docs/sharp-bits)
+See more [here](https://docs.kscale.dev/update/docs/nans)
 
 ### Long run / wait times
 
