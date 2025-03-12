@@ -95,7 +95,7 @@ These should absolutely be annotated:
 
 ### Sharp Bits
 
-* Add all sharp bits or unorthodox (yet correct) design decisions here.
+See more [here](https://docs.kscale.dev/update/docs/sharp-bits#/)]
 
 ## Troublehsooting
 
@@ -123,7 +123,7 @@ export MUJOCO_GL="egl"
 
 ### Possible sources of NaNs
 
-* The XLA Triton gemm kernel is buggy. To fix, try disabling with `export XLA_FLAGS="--xla_gpu_enable_triton_gemm=false"`
+See more [here](https://docs.kscale.dev/update/docs/sharp-bits)
 
 ### Long run / wait times
 
