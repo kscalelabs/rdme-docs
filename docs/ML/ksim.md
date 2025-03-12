@@ -6,7 +6,7 @@ metadata:
   robots: index
 ---
 <Cards columns={0}>
-  <Card title="First Card" href="https://readme.com" icon="fa-home" target="_blank">
+  <Card title="KSim" href="https://github.com/kscalelabs/ksim" icon="fa-github" target="_blank">
     Neque porro quisquam est qui dolorem ipsum quia
   </Card>
 </Cards>
