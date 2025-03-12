@@ -1,5 +1,5 @@
 ---
-title: Introduction to KOS
+title: Operating System (KOS)
 excerpt: The K-Scale Operating System
 deprecated: false
 hidden: false
