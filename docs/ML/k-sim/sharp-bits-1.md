@@ -12,5 +12,5 @@ Changes to the MJCF can significantly impact the training speed. Here are the mo
 1. Boxes instead of even the most simplified meshes
 2. Explicit contacts list
 3. Addition of every new collision (even of a simple type) adds >10% slowness
-4. Restrict [maxhullvert](https://mujoco.readthedocs.io/en/stable/XMLreference.html#asset-mesh-maxhullvert) parameter below 64 or less.
-5. Hfield behaves [unreliably](https://github.com/google-deepmind/mujoco/issues/1143) even with simple geom types.
+4. Restrict [maxhullvert](https://mujoco.readthedocs.io/en/stable/XMLreference.html#asset-mesh-maxhullvert) parameter below 64 or less
+5. Hfield behaves [unreliably](https://github.com/google-deepmind/mujoco/issues/1143) even with simple geom types
