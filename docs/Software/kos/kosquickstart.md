@@ -5,23 +5,18 @@ hidden: false
 metadata:
   robots: index
 ---
-### SERVERS
+### Servers
 
-**KOS-Sim**
+**Sim**
 
-`conda activate your_env_name`
-
-`pip install kos-sim`
-
-```bash
+```shell
+pip install kos-sim  # To install the simulation server
 kos-sim kbot-v1 --no-gravity --no-render
 ```
 
-KOS-Sim is now listening
+This will create a gRPC server which listens for KOS commands and replicates them on your robot.
 
-* you can leave the render on, but there may be latency issues. Disable the rendering if you face this.
-
-**KOS-K-Bot**
+**K-Bot**
 
 Set up CAN lines to communicate with actuators.
 
