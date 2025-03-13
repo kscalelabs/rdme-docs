@@ -6,11 +6,11 @@ hidden: false
 metadata:
   robots: index
 ---
-`pip install pykos`
+The [K-Scale Operating System](https://github.com/kscalelabs/kos)  combines the hardware, software and firmware for K-Scale's general-purpose robots. To install the Python client for interacting with the OS, run the following command:
 
-The K-Scale Operating System (OS) combines the hardware, software and firmware to provide an open-source skeleton for powering general-purpose robots.
-
-[https://github.com/kscalelabs/kos](https://github.com/kscalelabs/kos)
+```shell
+pip install pykos
+```
 
 If you need to develop with KOS on your robot, clone the repository and follow the directions on the README.
 
