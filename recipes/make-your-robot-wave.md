@@ -24,7 +24,7 @@ kos.command_actuator(1,29)
 
 # Connect to the robot
 
-<!-- python@ -->
+<!-- ssh root@<IP_ADDRESS> -->
 
 
 
