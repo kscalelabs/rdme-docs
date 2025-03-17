@@ -68,12 +68,12 @@ Stream PCM audio data to the speaker.
 
 Example:
 ```python
->>> config = AudioConfig(sample_rate=44100, bit_depth=16, channels=2)
->>> with open('audio.raw', 'rb') as f:
-...     def chunks():
-...         while chunk := f.read(4096):
-...             yield chunk
-...     response = client.play_audio(chunks(), config)
+    >>> config = AudioConfig(sample_rate=44100, bit_depth=16, channels=2)
+    >>> with open('audio.raw', 'rb') as f:
+    ...     def chunks():
+    ...         while chunk := f.read(4096):
+    ...             yield chunk
+    ...     response = client.play_audio(chunks(), config)
 ```
 
 #### record_audio(self, duration_ms: int = 0, **kwargs: Unpack[sound.AudioConfig]) -> AsyncGenerator[bytes, NoneType]
@@ -90,12 +90,12 @@ Record PCM audio data from the microphone.
 - *Yields*: 
     Chunks of PCM audio data.
 
-Example:
+- *Example*: 
 ```python
->>> config = AudioConfig(sample_rate=44100, bit_depth=16, channels=1)
->>> with open('recording.raw', 'wb') as f:
-...     for chunk in client.record_audio(duration_ms=5000, **config):
-...         f.write(chunk)
+    >>> config = AudioConfig(sample_rate=44100, bit_depth=16, channels=1)
+- *>>> with open('recording.raw', 'wb') as f*: 
+- *...     for chunk in client.record_audio(duration_ms=5000, **config)*: 
+    ...         f.write(chunk)
 ```
 
 #### stop_recording(self) -> kos.common_pb2.ActionResponse

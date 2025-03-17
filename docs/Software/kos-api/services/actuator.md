@@ -45,10 +45,10 @@ Command multiple actuators at once.
 
 Example:
 ```python
->>> command_actuators([
-...     {"actuator_id": 1, "position": 90.0, "velocity": 100.0, "torque": 1.0},
-...     {"actuator_id": 2, "position": 180.0},
-... ])
+    >>> command_actuators([
+    ...     {"actuator_id": 1, "position": 90.0, "velocity": 100.0, "torque": 1.0},
+    ...     {"actuator_id": 2, "position": 180.0},
+    ... ])
 
 ```
 **Arguments:**
@@ -65,26 +65,26 @@ Configure an actuator's parameters.
 
 Example:
 ```python
->>> configure_actuator(
-...     actuator_id=1,
-...     kp=1.0,
-...     kd=0.1,
-...     ki=0.01,
-...     acceleration=2230,
-...     max_torque=100.0,
-...     protective_torque=None,
-...     protection_time=None,
-...     torque_enabled=True,
-...     new_actuator_id=None,
-...     zero_position=True,
-... )
+    >>> configure_actuator(
+    ...     actuator_id=1,
+    ...     kp=1.0,
+    ...     kd=0.1,
+    ...     ki=0.01,
+    ...     acceleration=2230,
+    ...     max_torque=100.0,
+    ...     protective_torque=None,
+    ...     protection_time=None,
+    ...     torque_enabled=True,
+    ...     new_actuator_id=None,
+    ...     zero_position=True,
+    ... )
 
->>> configure_actuator(
-...     actuator_id=2,
-...     kp=1.0,
-...     kd=0.1,
-...     torque_enabled=True,
-... )
+    >>> configure_actuator(
+    ...     actuator_id=2,
+    ...     kp=1.0,
+    ...     kd=0.1,
+    ...     torque_enabled=True,
+    ... )
 
 ```
 **Arguments:**
@@ -102,7 +102,7 @@ Get the state of multiple actuators.
 
 Example:
 ```python
->>> get_actuators_state([1, 2])
+    >>> get_actuators_state([1, 2])
 
 ```
 **Arguments:**

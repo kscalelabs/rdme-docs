@@ -81,13 +81,13 @@ Upload a model to the robot.
 
 Example:
 ```python
-```
 >>> client.upload_model(model_data,
 ... metadata={"model_name": "MyModel",
 ... "model_description": "A model for inference",
 ... "model_version": "1.0.0",
 ... "model_author": "John Doe"})
 
+```
 **Arguments:**
 - *model_data*: The binary model data to upload.
 - *metadata*: Optional metadata about the model that can include:

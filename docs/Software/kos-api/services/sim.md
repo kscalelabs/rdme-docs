@@ -51,12 +51,12 @@ Reset the simulation to its initial state.
 - *initial_state*: DefaultPosition to reset to
 - *randomize*: Whether to randomize the initial state
 
-Example:
+- *Example*: 
 ```python
->>> client.reset(
-...     initial_state={"qpos": [0.0, 0.0, 0.0]},
-...     randomize=True
-... )
+    >>> client.reset(
+- *...     initial_state={"qpos"*: [0.0, 0.0, 0.0]},
+    ...     randomize=True
+    ... )
 
 ```
 **Returns:**
@@ -68,12 +68,12 @@ Set simulation parameters.
 
 Example:
 ```python
-```
 >>> client.set_parameters(
 ...     time_scale=1.0,
 ...     gravity=9.81,
 ... )
 
+```
 **Arguments:**
 - ***kwargs*: Parameters that may include:
 - *time_scale*: Simulation time scale

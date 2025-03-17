@@ -73,12 +73,12 @@ Zero the IMU.
 
 Example:
 ```python
->>> await zero(duration=1.0,
-...     max_retries=3,
-...     max_angular_error=1.0,
-...     max_velocity=1.0,
-...     max_acceleration=1.0
-... )
+    >>> await zero(duration=1.0,
+    ...     max_retries=3,
+    ...     max_angular_error=1.0,
+    ...     max_velocity=1.0,
+    ...     max_acceleration=1.0
+    ... )
 
 ```
 **Arguments:**
