@@ -4,46 +4,46 @@ Actuator service client.
 
 ## Classes
 
-### ActuatorCommand (dict)
+### `ActuatorCommand (dict)`
 
-dict() -> new empty dictionary
+dict() -> new empty dictionary\
 dict(mapping) -> new dictionary initialized from a mapping object's
-    (key, value) pairs
+(key, value) pairs
 dict(iterable) -> new dictionary initialized as if via:
-    d = {}
-    for k, v in iterable:
-        d[k] = v
-dict(**kwargs) -> new dictionary initialized with the name=value pairs
-    in the keyword argument list.  For example:  dict(one=1, two=2)
+d = {}
+for k, v in iterable:
+d\[k] = v
+dict(\*\*kwargs) -> new dictionary initialized with the name=value pairs
+in the keyword argument list.  For example:  dict(one=1, two=2)
 
-### ActuatorPosition (dict)
+### `ActuatorPosition (dict)`
 
-dict() -> new empty dictionary
+dict() -> new empty dictionary\
 dict(mapping) -> new dictionary initialized from a mapping object's
-    (key, value) pairs
+(key, value) pairs
 dict(iterable) -> new dictionary initialized as if via:
-    d = {}
-    for k, v in iterable:
-        d[k] = v
-dict(**kwargs) -> new dictionary initialized with the name=value pairs
-    in the keyword argument list.  For example:  dict(one=1, two=2)
+d = {}
+for k, v in iterable:
+d\[k] = v
+dict(\*\*kwargs) -> new dictionary initialized with the name=value pairs
+in the keyword argument list.  For example:  dict(one=1, two=2)
 
 ### ActuatorServiceClient (AsyncClientBase)
 
 Client for the ActuatorService.
 
-#### __init__(self, channel: grpc.aio._base_channel.Channel) -> None
+#### **init**(self, channel: grpc.aio.\_base\_channel.Channel) -> None
 
-
-#### calibrate(self, actuator_id: int) -> actuator.CalibrationMetadata
+#### calibrate(self, actuator\_id: int) -> actuator.CalibrationMetadata
 
 Calibrate an actuator.
 
-#### command_actuators(self, commands: list[actuator.ActuatorCommand]) -> kos.actuator_pb2.CommandActuatorsResponse
+#### command\_actuators(self, commands: list\[actuator.ActuatorCommand]) -> kos.actuator\_pb2.CommandActuatorsResponse
 
 Command multiple actuators at once.
 
 Example:
+
 ```python
     >>> command_actuators([
     ...     {"actuator_id": 1, "position": 90.0, "velocity": 100.0, "torque": 1.0},
@@ -51,19 +51,22 @@ Example:
     ... ])
 
 ```
+
 **Arguments:**
-- *commands*: List of dictionaries containing actuator commands.
-             Each dict should have 'actuator_id' and optionally 'position',
-             'velocity', and 'torque'.
 
-**Returns:**
-    List of ActionResult objects indicating success/failure for each command.
+* *commands*: List of dictionaries containing actuator commands.\
+  Each dict should have 'actuator\_id' and optionally 'position',
+  'velocity', and 'torque'.
 
-#### configure_actuator(self, **kwargs: Unpack[actuator.ConfigureActuatorRequest]) -> kos.common_pb2.ActionResult
+**Returns:**\
+List of ActionResult objects indicating success/failure for each command.
+
+#### configure\_actuator(self, \*\*kwargs: Unpack\[actuator.ConfigureActuatorRequest]) -> kos.common\_pb2.ActionResult
 
 Configure an actuator's parameters.
 
 Example:
+
 ```python
     >>> configure_actuator(
     ...     actuator_id=1,
@@ -87,117 +90,118 @@ Example:
     ... )
 
 ```
+
 **Arguments:**
-- *actuator_id*: ID of the actuator to configure
-- ***kwargs*: Configuration parameters that may include:
-             kp, kd, ki, max_torque, protective_torque,
-             protection_time, torque_enabled, new_actuator_id
 
-**Returns:**
-    ActionResponse indicating success/failure
+* *actuator\_id*: ID of the actuator to configure
+* \*\**kwargs*: Configuration parameters that may include:\
+  kp, kd, ki, max\_torque, protective\_torque,
+  protection\_time, torque\_enabled, new\_actuator\_id
 
-#### get_actuators_state(self, actuator_ids: list[int] | None = None) -> kos.actuator_pb2.GetActuatorsStateResponse
+**Returns:**\
+ActionResponse indicating success/failure
+
+#### get\_actuators\_state(self, actuator\_ids: list\[int] | None = None) -> kos.actuator\_pb2.GetActuatorsStateResponse
 
 Get the state of multiple actuators.
 
 Example:
+
 ```python
     >>> get_actuators_state([1, 2])
 
 ```
+
 **Arguments:**
-- *actuator_ids*: List of actuator IDs to query. If None, gets state of all actuators.
 
-**Returns:**
-    List of ActuatorStateResponse objects containing the state information
+* *actuator\_ids*: List of actuator IDs to query. If None, gets state of all actuators.
 
-#### get_calibration_status(self, actuator_id: int) -> str | None
+**Returns:**\
+List of ActuatorStateResponse objects containing the state information
+
+#### get\_calibration\_status(self, actuator\_id: int) -> str | None
 
 Get the calibration status of an actuator.
 
-#### move_to_position(self, positions: list[actuator.ActuatorPosition], num_seconds: float, configure_actuators: list[actuator.ConfigureActuatorRequest] | None = None, commands_per_second: int = 10, torque_enabled: bool | None = None) -> None
+#### move\_to\_position(self, positions: list\[actuator.ActuatorPosition], num\_seconds: float, configure\_actuators: list\[actuator.ConfigureActuatorRequest] | None = None, commands\_per\_second: int = 10, torque\_enabled: bool | None = None) -> None
 
 Helper function for moving actuators to a target position.
 
-This first reads the current position of the actuators, then moves them
+This first reads the current position of the actuators, then moves them\
 to the target positions at a rate of `commands_per_second` commands per
 second.
 
-We can additionally use this command to safely configure the actuator
+We can additionally use this command to safely configure the actuator\
 PD parameters after setting the target position to the current position.
 
 **Arguments:**
-- *positions*: The actuator target positions.
-- *num_seconds*: How long to take the actuators to move to the target
-        positions.
-- *configure_actuators*: List of dictionaries containing actuator
-        configuration parameters.
-- *commands_per_second*: How many commands to send per second.
-- *torque_enabled*: Whether to enable torque for the actuators.
 
-#### zero_actuators(self, actuator_id: int, zero_position: float, configure_actuator: actuator.ConfigureActuatorRequest | None = None, target_velocity: float = 0.25, commands_per_second: int = 10, move_back_seconds: float = 3.0) -> None
+* *positions*: The actuator target positions.
+* *num\_seconds*: How long to take the actuators to move to the target\
+  positions.
+* *configure\_actuators*: List of dictionaries containing actuator\
+  configuration parameters.
+* *commands\_per\_second*: How many commands to send per second.
+* *torque\_enabled*: Whether to enable torque for the actuators.
+
+#### zero\_actuators(self, actuator\_id: int, zero\_position: float, configure\_actuator: actuator.ConfigureActuatorRequest | None = None, target\_velocity: float = 0.25, commands\_per\_second: int = 10, move\_back\_seconds: float = 3.0) -> None
 
 Helper method for zeroing an actuator.
 
-This function works to zero the actuator against an endstop, by moving
+This function works to zero the actuator against an endstop, by moving\
 the actuator until it reaches that endstop, then moving it back a small
 amount.
 
-We can choose which endstop to zero against by setting the sign of
+We can choose which endstop to zero against by setting the sign of\
 `zero_position`. If it is positive, then we rotate counterclockwise
 until we reach an endstop, then back by this amount. If it is negative,
 then we rotate clockwise until we reach an endstop, then back by this
 amount.
 
 **Arguments:**
-- *actuator_id*: The ID of the actuator to zero.
-- *zero_position*: The position to move the actuator back by after
-        reaching the endstop.
-- *configure_actuator*: Configuration parameters to set on the actuator
-        before zeroing.
-- *target_velocity*: The velocity to move the actuator at.
-- *commands_per_second*: How many commands to send per second.
-- *move_back_seconds*: How long to move the actuator back by after
-        reaching the endstop.
+
+* *actuator\_id*: The ID of the actuator to zero.
+* *zero\_position*: The position to move the actuator back by after\
+  reaching the endstop.
+* *configure\_actuator*: Configuration parameters to set on the actuator\
+  before zeroing.
+* *target\_velocity*: The velocity to move the actuator at.
+* *commands\_per\_second*: How many commands to send per second.
+* *move\_back\_seconds*: How long to move the actuator back by after\
+  reaching the endstop.
 
 ### ActuatorStateRequest (dict)
 
-dict() -> new empty dictionary
+dict() -> new empty dictionary\
 dict(mapping) -> new dictionary initialized from a mapping object's
-    (key, value) pairs
+(key, value) pairs
 dict(iterable) -> new dictionary initialized as if via:
-    d = {}
-    for k, v in iterable:
-        d[k] = v
-dict(**kwargs) -> new dictionary initialized with the name=value pairs
-    in the keyword argument list.  For example:  dict(one=1, two=2)
+d = {}
+for k, v in iterable:
+d\[k] = v
+dict(\*\*kwargs) -> new dictionary initialized with the name=value pairs
+in the keyword argument list.  For example:  dict(one=1, two=2)
 
 ### CalibrationMetadata
 
+#### **init**(self, metadata\_any: google.protobuf.any\_pb2.Any) -> None
 
-#### __init__(self, metadata_any: google.protobuf.any_pb2.Any) -> None
+#### **repr**(self) -> str
 
+#### **str**(self) -> str
 
-#### __repr__(self) -> str
-
-
-#### __str__(self) -> str
-
-
-#### decode_metadata(self, metadata_any: google.protobuf.any_pb2.Any) -> None
-
+#### decode\_metadata(self, metadata\_any: google.protobuf.any\_pb2.Any) -> None
 
 ### CalibrationStatus
 
-
 ### ConfigureActuatorRequest (dict)
 
-dict() -> new empty dictionary
+dict() -> new empty dictionary\
 dict(mapping) -> new dictionary initialized from a mapping object's
-    (key, value) pairs
+(key, value) pairs
 dict(iterable) -> new dictionary initialized as if via:
-    d = {}
-    for k, v in iterable:
-        d[k] = v
-dict(**kwargs) -> new dictionary initialized with the name=value pairs
-    in the keyword argument list.  For example:  dict(one=1, two=2)
+d = {}
+for k, v in iterable:
+d\[k] = v
+dict(\*\*kwargs) -> new dictionary initialized with the name=value pairs
+in the keyword argument list.  For example:  dict(one=1, two=2)
