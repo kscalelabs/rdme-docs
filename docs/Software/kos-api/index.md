@@ -88,3 +88,9 @@ cargo run -- --log
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
+## API Documentation Contents
+
+- [__init__](__init__)
+- [client](client)
