@@ -39,25 +39,27 @@ Client for the SimulationService.
 
 Get current simulation parameters.
 
-Returns:
+**Returns:**
     GetParametersResponse containing current parameters and any error
 
 #### reset(self, **kwargs: Unpack[sim.ResetRequest]) -> kos.common_pb2.ActionResponse
 
 Reset the simulation to its initial state.
 
-Args:
-    **kwargs: Reset parameters that may include:
-             initial_state: DefaultPosition to reset to
-             randomize: Whether to randomize the initial state
+**Arguments:**
+- ***kwargs*: Reset parameters that may include:
+- *initial_state*: DefaultPosition to reset to
+- *randomize*: Whether to randomize the initial state
 
 Example:
-    >>> client.reset(
-    ...     initial_state={"qpos": [0.0, 0.0, 0.0]},
-    ...     randomize=True
-    ... )
+```python
+>>> client.reset(
+...     initial_state={"qpos": [0.0, 0.0, 0.0]},
+...     randomize=True
+... )
 
-Returns:
+```
+**Returns:**
     ActionResponse indicating success/failure
 
 #### set_parameters(self, **kwargs: Unpack[sim.SimulationParameters]) -> kos.common_pb2.ActionResponse
@@ -65,39 +67,41 @@ Returns:
 Set simulation parameters.
 
 Example:
+```python
+```
 >>> client.set_parameters(
 ...     time_scale=1.0,
 ...     gravity=9.81,
 ... )
 
-Args:
-    **kwargs: Parameters that may include:
-             time_scale: Simulation time scale
-             gravity: Gravity constant
-             initial_state: Default position state
+**Arguments:**
+- ***kwargs*: Parameters that may include:
+- *time_scale*: Simulation time scale
+- *gravity*: Gravity constant
+- *initial_state*: Default position state
 
-Returns:
+**Returns:**
     ActionResponse indicating success/failure
 
 #### set_paused(self, paused: bool) -> kos.common_pb2.ActionResponse
 
 Pause or unpause the simulation.
 
-Args:
-    paused: True to pause, False to unpause
+**Arguments:**
+- *paused*: True to pause, False to unpause
 
-Returns:
+**Returns:**
     ActionResponse indicating success/failure
 
 #### step(self, num_steps: int, step_size: float | None = None) -> kos.common_pb2.ActionResponse
 
 Step the simulation forward.
 
-Args:
-    num_steps: Number of simulation steps to take
-    step_size: Optional time per step in seconds
+**Arguments:**
+- *num_steps*: Number of simulation steps to take
+- *step_size*: Optional time per step in seconds
 
-Returns:
+**Returns:**
     ActionResponse indicating success/failure
 
 ### SimulationParameters (dict)

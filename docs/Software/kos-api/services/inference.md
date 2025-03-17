@@ -8,9 +8,9 @@ Inference service client.
 
 Response from running model inference.
 
-Args:
-    outputs: Dictionary mapping tensor names to output tensors
-    error: Optional error information if inference failed
+**Arguments:**
+- *outputs*: Dictionary mapping tensor names to output tensors
+- *error*: Optional error information if inference failed
 
 ### GetModelsInfoResponse (dict)
 
@@ -26,18 +26,18 @@ This service allows uploading models and running inference on them.
 
 Initialize the inference service client.
 
-Args:
-    channel: gRPC channel to use for communication.
+**Arguments:**
+- *channel*: gRPC channel to use for communication.
 
 #### forward(self, model_uid: str, inputs: dict[str, inference.Tensor]) -> inference.ForwardResponse
 
 Run inference using a specified model.
 
-Args:
-    model_uid: The UID of the model to use for inference.
-    inputs: Dictionary mapping tensor names to tensors.
+**Arguments:**
+- *model_uid*: The UID of the model to use for inference.
+- *inputs*: Dictionary mapping tensor names to tensors.
 
-Returns:
+**Returns:**
     ForwardResponse containing:
         outputs: Dictionary mapping tensor names to output tensors
         error: Optional error information if inference failed
@@ -46,11 +46,11 @@ Returns:
 
 Get information about available models.
 
-Args:
-    model_uids: Optional list of specific model UIDs to get info for.
+**Arguments:**
+- *model_uids*: Optional list of specific model UIDs to get info for.
                If None, returns info for all models.
 
-Returns:
+**Returns:**
     GetModelsInfoResponse containing:
         models: List of ModelInfo objects
         error: Optional error information if fetching failed
@@ -59,20 +59,20 @@ Returns:
 
 Load models from the robot's filesystem.
 
-Args:
-    uids: List of model UIDs to load.
+**Arguments:**
+- *uids*: List of model UIDs to load.
 
-Returns:
+**Returns:**
     LoadModelsResponse containing information about the loaded models.
 
 #### unload_models(self, uids: list[str]) -> kos.common_pb2.ActionResponse
 
 Unload models from the robot's filesystem.
 
-Args:
-    uids: List of model UIDs to unload.
+**Arguments:**
+- *uids*: List of model UIDs to unload.
 
-Returns:
+**Returns:**
     ActionResponse indicating success/failure of the unload operation.
 
 #### upload_model(self, model_data: bytes, metadata: inference.ModelMetadata | None = None) -> kos.inference_pb2.UploadModelResponse
@@ -80,33 +80,35 @@ Returns:
 Upload a model to the robot.
 
 Example:
+```python
+```
 >>> client.upload_model(model_data,
 ... metadata={"model_name": "MyModel",
 ... "model_description": "A model for inference",
 ... "model_version": "1.0.0",
 ... "model_author": "John Doe"})
 
-Args:
-    model_data: The binary model data to upload.
-    metadata: Optional metadata about the model that can include:
-             model_name: Name of the model
-             model_description: Description of the model
-             model_version: Version of the model
-             model_author: Author of the model
+**Arguments:**
+- *model_data*: The binary model data to upload.
+- *metadata*: Optional metadata about the model that can include:
+- *model_name*: Name of the model
+- *model_description*: Description of the model
+- *model_version*: Version of the model
+- *model_author*: Author of the model
 
-Returns:
+**Returns:**
     UploadModelResponse containing the model UID and any error information.
 
 ### ModelInfo (dict)
 
 Information about a model.
 
-Args:
-    uid: Model UID (assigned by server)
-    metadata: Model metadata
-    input_specs: Expected input tensor specifications
-    output_specs: Expected output tensor specifications
-    description: str
+**Arguments:**
+- *uid*: Model UID (assigned by server)
+- *metadata*: Model metadata
+- *input_specs*: Expected input tensor specifications
+- *output_specs*: Expected output tensor specifications
+- *description*: str
 
 ### ModelMetadata (dict)
 
@@ -118,15 +120,15 @@ All fields are optional and can be used to provide additional information about 
 
 A tensor containing data.
 
-Args:
-    values: Tensor values in row-major order
-    shape: List of dimension information
+**Arguments:**
+- *values*: Tensor values in row-major order
+- *shape*: List of dimension information
 
 ### TensorDimension (dict)
 
 Information about a tensor dimension.
 
-Args:
-    size: Size of this dimension
-    name: Name of this dimension (e.g., "batch", "channels", "height")
-    dynamic: Whether this dimension can vary (e.g., batch size)
+**Arguments:**
+- *size*: Size of this dimension
+- *name*: Name of this dimension (e.g., "batch", "channels", "height")
+- *dynamic*: Whether this dimension can vary (e.g., batch size)

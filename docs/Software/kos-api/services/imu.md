@@ -36,35 +36,35 @@ Calibrate the IMU.
 This starts a long-running calibration operation. The operation can be monitored
 using get_calibration_status().
 
-Returns:
+**Returns:**
     CalibrationMetadata: Metadata about the calibration operation.
 
 #### get_euler_angles(self) -> kos.imu_pb2.EulerAnglesResponse
 
 Get the latest Euler angles.
 
-Returns:
+**Returns:**
     EulerAnglesResponse: The latest Euler angles.
 
 #### get_imu_advanced_values(self) -> kos.imu_pb2.IMUAdvancedValuesResponse
 
 Get the latest IMU advanced values.
 
-Returns:
+**Returns:**
     ImuAdvancedValuesResponse: The latest IMU advanced values.
 
 #### get_imu_values(self) -> kos.imu_pb2.IMUValuesResponse
 
 Get the latest IMU sensor values.
 
-Returns:
+**Returns:**
     ImuValuesResponse: The latest IMU sensor values.
 
 #### get_quaternion(self) -> kos.imu_pb2.QuaternionResponse
 
 Get the latest quaternion.
 
-Returns:
+**Returns:**
     QuaternionResponse: The latest quaternion.
 
 #### zero(self, duration: float = 1.0, **kwargs: Unpack[imu.ZeroIMURequest]) -> kos.common_pb2.ActionResponse
@@ -72,22 +72,24 @@ Returns:
 Zero the IMU.
 
 Example:
-    >>> await zero(duration=1.0,
-    ...     max_retries=3,
-    ...     max_angular_error=1.0,
-    ...     max_velocity=1.0,
-    ...     max_acceleration=1.0
-    ... )
+```python
+>>> await zero(duration=1.0,
+...     max_retries=3,
+...     max_angular_error=1.0,
+...     max_velocity=1.0,
+...     max_acceleration=1.0
+... )
 
-Args:
-    duration: Duration in seconds for zeroing operation
-    **kwargs: Additional zeroing parameters that may include:
-             max_retries: Maximum number of retries
-             max_angular_error: Maximum angular error during zeroing
-             max_velocity: Maximum velocity during zeroing
-             max_acceleration: Maximum acceleration during zeroing
+```
+**Arguments:**
+- *duration*: Duration in seconds for zeroing operation
+- ***kwargs*: Additional zeroing parameters that may include:
+- *max_retries*: Maximum number of retries
+- *max_angular_error*: Maximum angular error during zeroing
+- *max_velocity*: Maximum velocity during zeroing
+- *max_acceleration*: Maximum acceleration during zeroing
 
-Returns:
+**Returns:**
     ActionResponse: The response from the zero operation.
 
 ### ZeroIMURequest (dict)

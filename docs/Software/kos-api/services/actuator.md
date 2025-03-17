@@ -44,17 +44,19 @@ Calibrate an actuator.
 Command multiple actuators at once.
 
 Example:
-    >>> command_actuators([
-    ...     {"actuator_id": 1, "position": 90.0, "velocity": 100.0, "torque": 1.0},
-    ...     {"actuator_id": 2, "position": 180.0},
-    ... ])
+```python
+>>> command_actuators([
+...     {"actuator_id": 1, "position": 90.0, "velocity": 100.0, "torque": 1.0},
+...     {"actuator_id": 2, "position": 180.0},
+... ])
 
-Args:
-    commands: List of dictionaries containing actuator commands.
+```
+**Arguments:**
+- *commands*: List of dictionaries containing actuator commands.
              Each dict should have 'actuator_id' and optionally 'position',
              'velocity', and 'torque'.
 
-Returns:
+**Returns:**
     List of ActionResult objects indicating success/failure for each command.
 
 #### configure_actuator(self, **kwargs: Unpack[actuator.ConfigureActuatorRequest]) -> kos.common_pb2.ActionResult
@@ -62,34 +64,36 @@ Returns:
 Configure an actuator's parameters.
 
 Example:
-    >>> configure_actuator(
-    ...     actuator_id=1,
-    ...     kp=1.0,
-    ...     kd=0.1,
-    ...     ki=0.01,
-    ...     acceleration=2230,
-    ...     max_torque=100.0,
-    ...     protective_torque=None,
-    ...     protection_time=None,
-    ...     torque_enabled=True,
-    ...     new_actuator_id=None,
-    ...     zero_position=True,
-    ... )
+```python
+>>> configure_actuator(
+...     actuator_id=1,
+...     kp=1.0,
+...     kd=0.1,
+...     ki=0.01,
+...     acceleration=2230,
+...     max_torque=100.0,
+...     protective_torque=None,
+...     protection_time=None,
+...     torque_enabled=True,
+...     new_actuator_id=None,
+...     zero_position=True,
+... )
 
-    >>> configure_actuator(
-    ...     actuator_id=2,
-    ...     kp=1.0,
-    ...     kd=0.1,
-    ...     torque_enabled=True,
-    ... )
+>>> configure_actuator(
+...     actuator_id=2,
+...     kp=1.0,
+...     kd=0.1,
+...     torque_enabled=True,
+... )
 
-Args:
-    actuator_id: ID of the actuator to configure
-    **kwargs: Configuration parameters that may include:
+```
+**Arguments:**
+- *actuator_id*: ID of the actuator to configure
+- ***kwargs*: Configuration parameters that may include:
              kp, kd, ki, max_torque, protective_torque,
              protection_time, torque_enabled, new_actuator_id
 
-Returns:
+**Returns:**
     ActionResponse indicating success/failure
 
 #### get_actuators_state(self, actuator_ids: list[int] | None = None) -> kos.actuator_pb2.GetActuatorsStateResponse
@@ -97,12 +101,14 @@ Returns:
 Get the state of multiple actuators.
 
 Example:
-    >>> get_actuators_state([1, 2])
+```python
+>>> get_actuators_state([1, 2])
 
-Args:
-    actuator_ids: List of actuator IDs to query. If None, gets state of all actuators.
+```
+**Arguments:**
+- *actuator_ids*: List of actuator IDs to query. If None, gets state of all actuators.
 
-Returns:
+**Returns:**
     List of ActuatorStateResponse objects containing the state information
 
 #### get_calibration_status(self, actuator_id: int) -> str | None
@@ -120,14 +126,14 @@ second.
 We can additionally use this command to safely configure the actuator
 PD parameters after setting the target position to the current position.
 
-Args:
-    positions: The actuator target positions.
-    num_seconds: How long to take the actuators to move to the target
+**Arguments:**
+- *positions*: The actuator target positions.
+- *num_seconds*: How long to take the actuators to move to the target
         positions.
-    configure_actuators: List of dictionaries containing actuator
+- *configure_actuators*: List of dictionaries containing actuator
         configuration parameters.
-    commands_per_second: How many commands to send per second.
-    torque_enabled: Whether to enable torque for the actuators.
+- *commands_per_second*: How many commands to send per second.
+- *torque_enabled*: Whether to enable torque for the actuators.
 
 #### zero_actuators(self, actuator_id: int, zero_position: float, configure_actuator: actuator.ConfigureActuatorRequest | None = None, target_velocity: float = 0.25, commands_per_second: int = 10, move_back_seconds: float = 3.0) -> None
 
@@ -143,15 +149,15 @@ until we reach an endstop, then back by this amount. If it is negative,
 then we rotate clockwise until we reach an endstop, then back by this
 amount.
 
-Args:
-    actuator_id: The ID of the actuator to zero.
-    zero_position: The position to move the actuator back by after
+**Arguments:**
+- *actuator_id*: The ID of the actuator to zero.
+- *zero_position*: The position to move the actuator back by after
         reaching the endstop.
-    configure_actuator: Configuration parameters to set on the actuator
+- *configure_actuator*: Configuration parameters to set on the actuator
         before zeroing.
-    target_velocity: The velocity to move the actuator at.
-    commands_per_second: How many commands to send per second.
-    move_back_seconds: How long to move the actuator back by after
+- *target_velocity*: The velocity to move the actuator at.
+- *commands_per_second*: How many commands to send per second.
+- *move_back_seconds*: How long to move the actuator back by after
         reaching the endstop.
 
 ### ActuatorStateRequest (dict)

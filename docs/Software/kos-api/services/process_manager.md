@@ -15,15 +15,15 @@ Client for the ProcessManagerService.
 
 Start KClip recording.
 
-Args:
-    action: The action string for the KClip request
+**Arguments:**
+- *action*: The action string for the KClip request
 
-Returns:
+**Returns:**
     The response from the server.
 
 #### stop_kclip(self, request: google.protobuf.empty_pb2.Empty = ) -> kos.process_manager_pb2.KClipStopResponse
 
 Stop KClip recording.
 
-Returns:
+**Returns:**
     The response from the server.
