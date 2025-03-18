@@ -1,12 +1,78 @@
-<a id="client"></a>
+# Table of Contents
 
-# client
+* [client](#client)
+  * [KOS](#client.KOS)
+    * [connect](#client.KOS.connect)
+    * [close](#client.KOS.close)
+* [services](#services)
+  * [add\_sync\_version](#services.add_sync_version)
+  * [AsyncClientBase](#services.AsyncClientBase)
+* [services.sound](#services.sound)
+  * [AudioCapability](#services.sound.AudioCapability)
+  * [AudioInfo](#services.sound.AudioInfo)
+  * [AudioConfig](#services.sound.AudioConfig)
+  * [SoundServiceClient](#services.sound.SoundServiceClient)
+    * [\_\_init\_\_](#services.sound.SoundServiceClient.__init__)
+    * [get\_audio\_info](#services.sound.SoundServiceClient.get_audio_info)
+    * [play\_audio](#services.sound.SoundServiceClient.play_audio)
+    * [record\_audio](#services.sound.SoundServiceClient.record_audio)
+    * [stop\_recording](#services.sound.SoundServiceClient.stop_recording)
+* [services.sim](#services.sim)
+  * [SimServiceClient](#services.sim.SimServiceClient)
+    * [reset](#services.sim.SimServiceClient.reset)
+    * [set\_paused](#services.sim.SimServiceClient.set_paused)
+    * [step](#services.sim.SimServiceClient.step)
+    * [set\_parameters](#services.sim.SimServiceClient.set_parameters)
+    * [get\_parameters](#services.sim.SimServiceClient.get_parameters)
+* [services.process\_manager](#services.process_manager)
+  * [ProcessManagerServiceClient](#services.process_manager.ProcessManagerServiceClient)
+    * [start\_kclip](#services.process_manager.ProcessManagerServiceClient.start_kclip)
+    * [stop\_kclip](#services.process_manager.ProcessManagerServiceClient.stop_kclip)
+* [services.inference](#services.inference)
+  * [ModelMetadata](#services.inference.ModelMetadata)
+  * [TensorDimension](#services.inference.TensorDimension)
+  * [Tensor](#services.inference.Tensor)
+  * [ForwardResponse](#services.inference.ForwardResponse)
+  * [ModelInfo](#services.inference.ModelInfo)
+  * [GetModelsInfoResponse](#services.inference.GetModelsInfoResponse)
+  * [InferenceServiceClient](#services.inference.InferenceServiceClient)
+    * [\_\_init\_\_](#services.inference.InferenceServiceClient.__init__)
+    * [upload\_model](#services.inference.InferenceServiceClient.upload_model)
+    * [load\_models](#services.inference.InferenceServiceClient.load_models)
+    * [unload\_models](#services.inference.InferenceServiceClient.unload_models)
+    * [get\_models\_info](#services.inference.InferenceServiceClient.get_models_info)
+    * [forward](#services.inference.InferenceServiceClient.forward)
+* [services.imu](#services.imu)
+  * [IMUServiceClient](#services.imu.IMUServiceClient)
+    * [get\_imu\_values](#services.imu.IMUServiceClient.get_imu_values)
+    * [get\_imu\_advanced\_values](#services.imu.IMUServiceClient.get_imu_advanced_values)
+    * [get\_euler\_angles](#services.imu.IMUServiceClient.get_euler_angles)
+    * [get\_quaternion](#services.imu.IMUServiceClient.get_quaternion)
+    * [zero](#services.imu.IMUServiceClient.zero)
+    * [calibrate](#services.imu.IMUServiceClient.calibrate)
+* [services.led\_matrix](#services.led_matrix)
+  * [MatrixInfo](#services.led_matrix.MatrixInfo)
+  * [ImageData](#services.led_matrix.ImageData)
+  * [LEDMatrixServiceClient](#services.led_matrix.LEDMatrixServiceClient)
+    * [\_\_init\_\_](#services.led_matrix.LEDMatrixServiceClient.__init__)
+    * [get\_matrix\_info](#services.led_matrix.LEDMatrixServiceClient.get_matrix_info)
+    * [write\_buffer](#services.led_matrix.LEDMatrixServiceClient.write_buffer)
+    * [write\_color\_buffer](#services.led_matrix.LEDMatrixServiceClient.write_color_buffer)
+* [services.actuator](#services.actuator)
+  * [ActuatorServiceClient](#services.actuator.ActuatorServiceClient)
+    * [calibrate](#services.actuator.ActuatorServiceClient.calibrate)
+    * [get\_calibration\_status](#services.actuator.ActuatorServiceClient.get_calibration_status)
+    * [command\_actuators](#services.actuator.ActuatorServiceClient.command_actuators)
+    * [configure\_actuator](#services.actuator.ActuatorServiceClient.configure_actuator)
+    * [get\_actuators\_state](#services.actuator.ActuatorServiceClient.get_actuators_state)
+    * [move\_to\_position](#services.actuator.ActuatorServiceClient.move_to_position)
+    * [zero\_actuators](#services.actuator.ActuatorServiceClient.zero_actuators)
+
+# `client`
 
 KOS client.
 
-<a id="client.KOS"></a>
-
-## KOS Objects
+## `KOS` Objects
 
 ```python
 class KOS()
@@ -14,16 +80,17 @@ class KOS()
 
 KOS client.
 
-Args:
-    ip (str, optional): IP address of the robot running KOS. Defaults to localhost.
-    port (int, optional): Port of the robot running KOS. Defaults to 50051.
+**Arguments**:
 
-Attributes:
-    imu (IMUServiceClient): Client for the IMU service.
+- `ip` _str, optional_ - IP address of the robot running KOS. Defaults to localhost.
+- `port` _int, optional_ - Port of the robot running KOS. Defaults to 50051.
+  
 
-<a id="client.KOS.connect"></a>
+**Attributes**:
 
-#### connect
+- `imu` _IMUServiceClient_ - Client for the IMU service.
+
+### `connect`
 
 ```python
 def connect() -> None
@@ -31,9 +98,7 @@ def connect() -> None
 
 Connect to the gRPC server and initialize service clients.
 
-<a id="client.KOS.close"></a>
-
-#### close
+### `close`
 
 ```python
 async def close() -> None
@@ -41,21 +106,11 @@ async def close() -> None
 
 Close the gRPC channel.
 
-<a id="__init__"></a>
-
-# \_\_init\_\_
-
-KOS Python client.
-
-<a id="services"></a>
-
-# services
+# `services`
 
 KOS service clients.
 
-<a id="services.add_sync_version"></a>
-
-#### add\_sync\_version
+### `add_sync_version`
 
 ```python
 def add_sync_version(
@@ -64,9 +119,7 @@ def add_sync_version(
 
 Create a synchronous version of an async function.
 
-<a id="services.AsyncClientBase"></a>
-
-## AsyncClientBase Objects
+## `AsyncClientBase` Objects
 
 ```python
 class AsyncClientBase(ABC)
@@ -74,15 +127,11 @@ class AsyncClientBase(ABC)
 
 Base class for async gRPC clients that automatically adds sync versions of async methods.
 
-<a id="services.sound"></a>
-
-# services.sound
+# `services.sound`
 
 Sound service client.
 
-<a id="services.sound.AudioCapability"></a>
-
-## AudioCapability Objects
+## `AudioCapability` Objects
 
 ```python
 class AudioCapability(TypedDict)
@@ -90,15 +139,14 @@ class AudioCapability(TypedDict)
 
 Information about audio capabilities.
 
-Args:
-    sample_rates: List of supported sample rates (e.g., 44100, 48000)
-    bit_depths: List of supported bit depths (e.g., 16, 24, 32)
-    channels: List of supported channel counts (e.g., 1, 2)
-    available: Whether this capability is available
+**Arguments**:
 
-<a id="services.sound.AudioInfo"></a>
+- `sample_rates` - List of supported sample rates (e.g., 44100, 48000)
+- `bit_depths` - List of supported bit depths (e.g., 16, 24, 32)
+- `channels` - List of supported channel counts (e.g., 1, 2)
+- `available` - Whether this capability is available
 
-## AudioInfo Objects
+## `AudioInfo` Objects
 
 ```python
 class AudioInfo(TypedDict)
@@ -106,14 +154,13 @@ class AudioInfo(TypedDict)
 
 Information about audio system capabilities.
 
-Args:
-    playback: Playback capabilities
-    recording: Recording capabilities
-    error: Optional error information
+**Arguments**:
 
-<a id="services.sound.AudioConfig"></a>
+- `playback` - Playback capabilities
+- `recording` - Recording capabilities
+- `error` - Optional error information
 
-## AudioConfig Objects
+## `AudioConfig` Objects
 
 ```python
 class AudioConfig(TypedDict)
@@ -121,14 +168,13 @@ class AudioConfig(TypedDict)
 
 Audio configuration parameters.
 
-Args:
-    sample_rate: Sample rate in Hz (e.g., 44100)
-    bit_depth: Bit depth (e.g., 16)
-    channels: Number of channels (1 for mono, 2 for stereo)
+**Arguments**:
 
-<a id="services.sound.SoundServiceClient"></a>
+- `sample_rate` - Sample rate in Hz (e.g., 44100)
+- `bit_depth` - Bit depth (e.g., 16)
+- `channels` - Number of channels (1 for mono, 2 for stereo)
 
-## SoundServiceClient Objects
+## `SoundServiceClient` Objects
 
 ```python
 class SoundServiceClient(AsyncClientBase)
@@ -138,9 +184,7 @@ Client for the SoundService.
 
 This service allows playing audio through speakers and recording from microphones.
 
-<a id="services.sound.SoundServiceClient.__init__"></a>
-
-#### \_\_init\_\_
+### `__init__`
 
 ```python
 def __init__(channel: grpc.aio.Channel) -> None
@@ -148,12 +192,11 @@ def __init__(channel: grpc.aio.Channel) -> None
 
 Initialize the sound service client.
 
-Args:
-    channel: gRPC channel to use for communication.
+**Arguments**:
 
-<a id="services.sound.SoundServiceClient.get_audio_info"></a>
+- `channel` - gRPC channel to use for communication.
 
-#### get\_audio\_info
+### `get_audio_info`
 
 ```python
 async def get_audio_info() -> AudioInfo
@@ -161,12 +204,11 @@ async def get_audio_info() -> AudioInfo
 
 Get information about audio capabilities.
 
-Returns:
-    AudioInfo containing playback and recording capabilities.
+**Returns**:
 
-<a id="services.sound.SoundServiceClient.play_audio"></a>
+  AudioInfo containing playback and recording capabilities.
 
-#### play\_audio
+### `play_audio`
 
 ```python
 async def play_audio(
@@ -176,27 +218,30 @@ async def play_audio(
 
 Stream PCM audio data to the speaker.
 
-Args:
-    audio_iterator: Iterator yielding chunks of PCM audio data
-    **kwargs: Audio configuration parameters
-        sample_rate: Sample rate in Hz (e.g., 44100)
-        bit_depth: Bit depth (e.g., 16)
-        channels: Number of channels (1 for mono, 2 for stereo)
+**Arguments**:
 
-Returns:
-    ActionResponse indicating success/failure of the playback operation.
+- `audio_iterator` - Iterator yielding chunks of PCM audio data
+- `**kwargs` - Audio configuration parameters
+- `sample_rate` - Sample rate in Hz (e.g., 44100)
+- `bit_depth` - Bit depth (e.g., 16)
+- `channels` - Number of channels (1 for mono, 2 for stereo)
+  
 
-Example:
-    >>> config = AudioConfig(sample_rate=44100, bit_depth=16, channels=2)
-    >>> with open('audio.raw', 'rb') as f:
-    ...     def chunks():
-    ...         while chunk := f.read(4096):
-    ...             yield chunk
-    ...     response = client.play_audio(chunks(), config)
+**Returns**:
 
-<a id="services.sound.SoundServiceClient.record_audio"></a>
+  ActionResponse indicating success/failure of the playback operation.
+  
 
-#### record\_audio
+**Example**:
+
+  &gt;&gt;&gt; config = AudioConfig(sample_rate=44100, bit_depth=16, channels=2)
+  &gt;&gt;&gt; with open(&#x27;audio.raw&#x27;, &#x27;rb&#x27;) as f:
+  ...     def chunks():
+  ...         while chunk := f.read(4096):
+  ...             yield chunk
+  ...     response = client.play_audio(chunks(), config)
+
+### `record_audio`
 
 ```python
 async def record_audio(
@@ -206,25 +251,28 @@ async def record_audio(
 
 Record PCM audio data from the microphone.
 
-Args:
-    duration_ms: Recording duration in milliseconds (0 for continuous)
-    **kwargs: Audio configuration parameters
-        sample_rate: Sample rate in Hz (e.g., 44100)
-        bit_depth: Bit depth (e.g., 16)
-        channels: Number of channels (1 for mono, 2 for stereo)
+**Arguments**:
 
-Yields:
-    Chunks of PCM audio data.
+- `duration_ms` - Recording duration in milliseconds (0 for continuous)
+- `**kwargs` - Audio configuration parameters
+- `sample_rate` - Sample rate in Hz (e.g., 44100)
+- `bit_depth` - Bit depth (e.g., 16)
+- `channels` - Number of channels (1 for mono, 2 for stereo)
+  
 
-Example:
-    >>> config = AudioConfig(sample_rate=44100, bit_depth=16, channels=1)
-    >>> with open('recording.raw', 'wb') as f:
-    ...     for chunk in client.record_audio(duration_ms=5000, **config):
-    ...         f.write(chunk)
+**Yields**:
 
-<a id="services.sound.SoundServiceClient.stop_recording"></a>
+  Chunks of PCM audio data.
+  
 
-#### stop\_recording
+**Example**:
+
+  &gt;&gt;&gt; config = AudioConfig(sample_rate=44100, bit_depth=16, channels=1)
+  &gt;&gt;&gt; with open(&#x27;recording.raw&#x27;, &#x27;wb&#x27;) as f:
+  ...     for chunk in client.record_audio(duration_ms=5000, **config):
+  ...         f.write(chunk)
+
+### `stop_recording`
 
 ```python
 async def stop_recording() -> common_pb2.ActionResponse
@@ -232,18 +280,15 @@ async def stop_recording() -> common_pb2.ActionResponse
 
 Stop an ongoing recording session.
 
-Returns:
-    ActionResponse indicating success/failure of the stop operation.
+**Returns**:
 
-<a id="services.sim"></a>
+  ActionResponse indicating success/failure of the stop operation.
 
-# services.sim
+# `services.sim`
 
 Sim service client.
 
-<a id="services.sim.SimServiceClient"></a>
-
-## SimServiceClient Objects
+## `SimServiceClient` Objects
 
 ```python
 class SimServiceClient(AsyncClientBase)
@@ -251,9 +296,7 @@ class SimServiceClient(AsyncClientBase)
 
 Client for the SimulationService.
 
-<a id="services.sim.SimServiceClient.reset"></a>
-
-#### reset
+### `reset`
 
 ```python
 async def reset(**kwargs: Unpack[ResetRequest]) -> common_pb2.ActionResponse
@@ -261,23 +304,26 @@ async def reset(**kwargs: Unpack[ResetRequest]) -> common_pb2.ActionResponse
 
 Reset the simulation to its initial state.
 
-Args:
-    **kwargs: Reset parameters that may include:
-             initial_state: DefaultPosition to reset to
-             randomize: Whether to randomize the initial state
+**Arguments**:
 
-Example:
-    >>> client.reset(
-    ...     initial_state={"qpos": [0.0, 0.0, 0.0]},
-    ...     randomize=True
-    ... )
+- `**kwargs` - Reset parameters that may include:
+- `initial_state` - DefaultPosition to reset to
+- `randomize` - Whether to randomize the initial state
+  
 
-Returns:
-    ActionResponse indicating success/failure
+**Example**:
 
-<a id="services.sim.SimServiceClient.set_paused"></a>
+  &gt;&gt;&gt; client.reset(
+  ...     initial_state={&quot;qpos&quot;: [0.0, 0.0, 0.0]},
+  ...     randomize=True
+  ... )
+  
 
-#### set\_paused
+**Returns**:
+
+  ActionResponse indicating success/failure
+
+### `set_paused`
 
 ```python
 async def set_paused(paused: bool) -> common_pb2.ActionResponse
@@ -285,15 +331,16 @@ async def set_paused(paused: bool) -> common_pb2.ActionResponse
 
 Pause or unpause the simulation.
 
-Args:
-    paused: True to pause, False to unpause
+**Arguments**:
 
-Returns:
-    ActionResponse indicating success/failure
+- `paused` - True to pause, False to unpause
+  
 
-<a id="services.sim.SimServiceClient.step"></a>
+**Returns**:
 
-#### step
+  ActionResponse indicating success/failure
+
+### `step`
 
 ```python
 async def step(num_steps: int,
@@ -302,16 +349,17 @@ async def step(num_steps: int,
 
 Step the simulation forward.
 
-Args:
-    num_steps: Number of simulation steps to take
-    step_size: Optional time per step in seconds
+**Arguments**:
 
-Returns:
-    ActionResponse indicating success/failure
+- `num_steps` - Number of simulation steps to take
+- `step_size` - Optional time per step in seconds
+  
 
-<a id="services.sim.SimServiceClient.set_parameters"></a>
+**Returns**:
 
-#### set\_parameters
+  ActionResponse indicating success/failure
+
+### `set_parameters`
 
 ```python
 async def set_parameters(**kwargs: Unpack[SimulationParameters]
@@ -320,24 +368,27 @@ async def set_parameters(**kwargs: Unpack[SimulationParameters]
 
 Set simulation parameters.
 
-Example:
->>> client.set_parameters(
-...     time_scale=1.0,
-...     gravity=9.81,
-... )
+**Example**:
 
-Args:
-    **kwargs: Parameters that may include:
-             time_scale: Simulation time scale
-             gravity: Gravity constant
-             initial_state: Default position state
+  &gt;&gt;&gt; client.set_parameters(
+  ...     time_scale=1.0,
+  ...     gravity=9.81,
+  ... )
+  
 
-Returns:
-    ActionResponse indicating success/failure
+**Arguments**:
 
-<a id="services.sim.SimServiceClient.get_parameters"></a>
+- `**kwargs` - Parameters that may include:
+- `time_scale` - Simulation time scale
+- `gravity` - Gravity constant
+- `initial_state` - Default position state
+  
 
-#### get\_parameters
+**Returns**:
+
+  ActionResponse indicating success/failure
+
+### `get_parameters`
 
 ```python
 async def get_parameters() -> sim_pb2.GetParametersResponse
@@ -345,18 +396,15 @@ async def get_parameters() -> sim_pb2.GetParametersResponse
 
 Get current simulation parameters.
 
-Returns:
-    GetParametersResponse containing current parameters and any error
+**Returns**:
 
-<a id="services.process_manager"></a>
+  GetParametersResponse containing current parameters and any error
 
-# services.process\_manager
+# `services.process_manager`
 
 Process manager service client.
 
-<a id="services.process_manager.ProcessManagerServiceClient"></a>
-
-## ProcessManagerServiceClient Objects
+## `ProcessManagerServiceClient` Objects
 
 ```python
 class ProcessManagerServiceClient(AsyncClientBase)
@@ -364,9 +412,7 @@ class ProcessManagerServiceClient(AsyncClientBase)
 
 Client for the ProcessManagerService.
 
-<a id="services.process_manager.ProcessManagerServiceClient.start_kclip"></a>
-
-#### start\_kclip
+### `start_kclip`
 
 ```python
 async def start_kclip(action: str) -> process_manager_pb2.KClipStartResponse
@@ -374,15 +420,16 @@ async def start_kclip(action: str) -> process_manager_pb2.KClipStartResponse
 
 Start KClip recording.
 
-Args:
-    action: The action string for the KClip request
+**Arguments**:
 
-Returns:
-    The response from the server.
+- `action` - The action string for the KClip request
+  
 
-<a id="services.process_manager.ProcessManagerServiceClient.stop_kclip"></a>
+**Returns**:
 
-#### stop\_kclip
+  The response from the server.
+
+### `stop_kclip`
 
 ```python
 async def stop_kclip(request: Empty = Empty()
@@ -391,18 +438,15 @@ async def stop_kclip(request: Empty = Empty()
 
 Stop KClip recording.
 
-Returns:
-    The response from the server.
+**Returns**:
 
-<a id="services.inference"></a>
+  The response from the server.
 
-# services.inference
+# `services.inference`
 
 Inference service client.
 
-<a id="services.inference.ModelMetadata"></a>
-
-## ModelMetadata Objects
+## `ModelMetadata` Objects
 
 ```python
 class ModelMetadata(TypedDict)
@@ -412,9 +456,7 @@ Model metadata for uploading models.
 
 All fields are optional and can be used to provide additional information about the model.
 
-<a id="services.inference.TensorDimension"></a>
-
-## TensorDimension Objects
+## `TensorDimension` Objects
 
 ```python
 class TensorDimension(TypedDict)
@@ -422,14 +464,13 @@ class TensorDimension(TypedDict)
 
 Information about a tensor dimension.
 
-Args:
-    size: Size of this dimension
-    name: Name of this dimension (e.g., "batch", "channels", "height")
-    dynamic: Whether this dimension can vary (e.g., batch size)
+**Arguments**:
 
-<a id="services.inference.Tensor"></a>
+- `size` - Size of this dimension
+- `name` - Name of this dimension (e.g., &quot;batch&quot;, &quot;channels&quot;, &quot;height&quot;)
+- `dynamic` - Whether this dimension can vary (e.g., batch size)
 
-## Tensor Objects
+## `Tensor` Objects
 
 ```python
 class Tensor(TypedDict)
@@ -437,13 +478,12 @@ class Tensor(TypedDict)
 
 A tensor containing data.
 
-Args:
-    values: Tensor values in row-major order
-    shape: List of dimension information
+**Arguments**:
 
-<a id="services.inference.ForwardResponse"></a>
+- `values` - Tensor values in row-major order
+- `shape` - List of dimension information
 
-## ForwardResponse Objects
+## `ForwardResponse` Objects
 
 ```python
 class ForwardResponse(TypedDict)
@@ -451,13 +491,12 @@ class ForwardResponse(TypedDict)
 
 Response from running model inference.
 
-Args:
-    outputs: Dictionary mapping tensor names to output tensors
-    error: Optional error information if inference failed
+**Arguments**:
 
-<a id="services.inference.ModelInfo"></a>
+- `outputs` - Dictionary mapping tensor names to output tensors
+- `error` - Optional error information if inference failed
 
-## ModelInfo Objects
+## `ModelInfo` Objects
 
 ```python
 class ModelInfo(TypedDict)
@@ -465,16 +504,15 @@ class ModelInfo(TypedDict)
 
 Information about a model.
 
-Args:
-    uid: Model UID (assigned by server)
-    metadata: Model metadata
-    input_specs: Expected input tensor specifications
-    output_specs: Expected output tensor specifications
-    description: str
+**Arguments**:
 
-<a id="services.inference.GetModelsInfoResponse"></a>
+- `uid` - Model UID (assigned by server)
+- `metadata` - Model metadata
+- `input_specs` - Expected input tensor specifications
+- `output_specs` - Expected output tensor specifications
+- `description` - str
 
-## GetModelsInfoResponse Objects
+## `GetModelsInfoResponse` Objects
 
 ```python
 class GetModelsInfoResponse(TypedDict)
@@ -482,9 +520,7 @@ class GetModelsInfoResponse(TypedDict)
 
 Response containing information about available models.
 
-<a id="services.inference.InferenceServiceClient"></a>
-
-## InferenceServiceClient Objects
+## `InferenceServiceClient` Objects
 
 ```python
 class InferenceServiceClient(AsyncClientBase)
@@ -494,9 +530,7 @@ Client for the InferenceService.
 
 This service allows uploading models and running inference on them.
 
-<a id="services.inference.InferenceServiceClient.__init__"></a>
-
-#### \_\_init\_\_
+### `__init__`
 
 ```python
 def __init__(channel: grpc.aio.Channel) -> None
@@ -504,12 +538,11 @@ def __init__(channel: grpc.aio.Channel) -> None
 
 Initialize the inference service client.
 
-Args:
-    channel: gRPC channel to use for communication.
+**Arguments**:
 
-<a id="services.inference.InferenceServiceClient.upload_model"></a>
+- `channel` - gRPC channel to use for communication.
 
-#### upload\_model
+### `upload_model`
 
 ```python
 async def upload_model(
@@ -520,59 +553,64 @@ async def upload_model(
 
 Upload a model to the robot.
 
-Example:
->>> client.upload_model(model_data,
-... metadata={"model_name": "MyModel",
-... "model_description": "A model for inference",
-... "model_version": "1.0.0",
-... "model_author": "John Doe"})
+**Example**:
 
-Args:
-    model_data: The binary model data to upload.
-    metadata: Optional metadata about the model that can include:
-             model_name: Name of the model
-             model_description: Description of the model
-             model_version: Version of the model
-             model_author: Author of the model
+  &gt;&gt;&gt; client.upload_model(model_data,
+  ... metadata={&quot;model_name&quot;: &quot;MyModel&quot;,
+  ... &quot;model_description&quot;: &quot;A model for inference&quot;,
+  ... &quot;model_version&quot;: &quot;1.0.0&quot;,
+  ... &quot;model_author&quot;: &quot;John Doe&quot;})
+  
 
-Returns:
-    UploadModelResponse containing the model UID and any error information.
+**Arguments**:
 
-<a id="services.inference.InferenceServiceClient.load_models"></a>
+- `model_data` - The binary model data to upload.
+- `metadata` - Optional metadata about the model that can include:
+- `model_name` - Name of the model
+- `model_description` - Description of the model
+- `model_version` - Version of the model
+- `model_author` - Author of the model
+  
 
-#### load\_models
+**Returns**:
+
+  UploadModelResponse containing the model UID and any error information.
+
+### `load_models`
 
 ```python
 async def load_models(uids: list[str]) -> inference_pb2.LoadModelsResponse
 ```
 
-Load models from the robot's filesystem.
+Load models from the robot&#x27;s filesystem.
 
-Args:
-    uids: List of model UIDs to load.
+**Arguments**:
 
-Returns:
-    LoadModelsResponse containing information about the loaded models.
+- `uids` - List of model UIDs to load.
+  
 
-<a id="services.inference.InferenceServiceClient.unload_models"></a>
+**Returns**:
 
-#### unload\_models
+  LoadModelsResponse containing information about the loaded models.
+
+### `unload_models`
 
 ```python
 async def unload_models(uids: list[str]) -> common_pb2.ActionResponse
 ```
 
-Unload models from the robot's filesystem.
+Unload models from the robot&#x27;s filesystem.
 
-Args:
-    uids: List of model UIDs to unload.
+**Arguments**:
 
-Returns:
-    ActionResponse indicating success/failure of the unload operation.
+- `uids` - List of model UIDs to unload.
+  
 
-<a id="services.inference.InferenceServiceClient.get_models_info"></a>
+**Returns**:
 
-#### get\_models\_info
+  ActionResponse indicating success/failure of the unload operation.
+
+### `get_models_info`
 
 ```python
 async def get_models_info(
@@ -581,18 +619,19 @@ async def get_models_info(
 
 Get information about available models.
 
-Args:
-    model_uids: Optional list of specific model UIDs to get info for.
-               If None, returns info for all models.
+**Arguments**:
 
-Returns:
-    GetModelsInfoResponse containing:
-        models: List of ModelInfo objects
-        error: Optional error information if fetching failed
+- `model_uids` - Optional list of specific model UIDs to get info for.
+  If None, returns info for all models.
+  
 
-<a id="services.inference.InferenceServiceClient.forward"></a>
+**Returns**:
 
-#### forward
+  GetModelsInfoResponse containing:
+- `models` - List of ModelInfo objects
+- `error` - Optional error information if fetching failed
+
+### `forward`
 
 ```python
 async def forward(model_uid: str, inputs: dict[str,
@@ -601,24 +640,23 @@ async def forward(model_uid: str, inputs: dict[str,
 
 Run inference using a specified model.
 
-Args:
-    model_uid: The UID of the model to use for inference.
-    inputs: Dictionary mapping tensor names to tensors.
+**Arguments**:
 
-Returns:
-    ForwardResponse containing:
-        outputs: Dictionary mapping tensor names to output tensors
-        error: Optional error information if inference failed
+- `model_uid` - The UID of the model to use for inference.
+- `inputs` - Dictionary mapping tensor names to tensors.
+  
 
-<a id="services.imu"></a>
+**Returns**:
 
-# services.imu
+  ForwardResponse containing:
+- `outputs` - Dictionary mapping tensor names to output tensors
+- `error` - Optional error information if inference failed
+
+# `services.imu`
 
 IMU service client.
 
-<a id="services.imu.IMUServiceClient"></a>
-
-## IMUServiceClient Objects
+## `IMUServiceClient` Objects
 
 ```python
 class IMUServiceClient(AsyncClientBase)
@@ -626,9 +664,7 @@ class IMUServiceClient(AsyncClientBase)
 
 Client for the IMUService.
 
-<a id="services.imu.IMUServiceClient.get_imu_values"></a>
-
-#### get\_imu\_values
+### `get_imu_values`
 
 ```python
 async def get_imu_values() -> imu_pb2.IMUValuesResponse
@@ -636,12 +672,11 @@ async def get_imu_values() -> imu_pb2.IMUValuesResponse
 
 Get the latest IMU sensor values.
 
-Returns:
-    ImuValuesResponse: The latest IMU sensor values.
+**Returns**:
 
-<a id="services.imu.IMUServiceClient.get_imu_advanced_values"></a>
+- `ImuValuesResponse` - The latest IMU sensor values.
 
-#### get\_imu\_advanced\_values
+### `get_imu_advanced_values`
 
 ```python
 async def get_imu_advanced_values() -> imu_pb2.IMUAdvancedValuesResponse
@@ -649,12 +684,11 @@ async def get_imu_advanced_values() -> imu_pb2.IMUAdvancedValuesResponse
 
 Get the latest IMU advanced values.
 
-Returns:
-    ImuAdvancedValuesResponse: The latest IMU advanced values.
+**Returns**:
 
-<a id="services.imu.IMUServiceClient.get_euler_angles"></a>
+- `ImuAdvancedValuesResponse` - The latest IMU advanced values.
 
-#### get\_euler\_angles
+### `get_euler_angles`
 
 ```python
 async def get_euler_angles() -> imu_pb2.EulerAnglesResponse
@@ -662,12 +696,11 @@ async def get_euler_angles() -> imu_pb2.EulerAnglesResponse
 
 Get the latest Euler angles.
 
-Returns:
-    EulerAnglesResponse: The latest Euler angles.
+**Returns**:
 
-<a id="services.imu.IMUServiceClient.get_quaternion"></a>
+- `EulerAnglesResponse` - The latest Euler angles.
 
-#### get\_quaternion
+### `get_quaternion`
 
 ```python
 async def get_quaternion() -> imu_pb2.QuaternionResponse
@@ -675,12 +708,11 @@ async def get_quaternion() -> imu_pb2.QuaternionResponse
 
 Get the latest quaternion.
 
-Returns:
-    QuaternionResponse: The latest quaternion.
+**Returns**:
 
-<a id="services.imu.IMUServiceClient.zero"></a>
+- `QuaternionResponse` - The latest quaternion.
 
-#### zero
+### `zero`
 
 ```python
 async def zero(duration: float = 1.0,
@@ -689,28 +721,31 @@ async def zero(duration: float = 1.0,
 
 Zero the IMU.
 
-Example:
-    >>> await zero(duration=1.0,
-    ...     max_retries=3,
-    ...     max_angular_error=1.0,
-    ...     max_velocity=1.0,
-    ...     max_acceleration=1.0
-    ... )
+**Example**:
 
-Args:
-    duration: Duration in seconds for zeroing operation
-    **kwargs: Additional zeroing parameters that may include:
-             max_retries: Maximum number of retries
-             max_angular_error: Maximum angular error during zeroing
-             max_velocity: Maximum velocity during zeroing
-             max_acceleration: Maximum acceleration during zeroing
+  &gt;&gt;&gt; await zero(duration=1.0,
+  ...     max_retries=3,
+  ...     max_angular_error=1.0,
+  ...     max_velocity=1.0,
+  ...     max_acceleration=1.0
+  ... )
+  
 
-Returns:
-    ActionResponse: The response from the zero operation.
+**Arguments**:
 
-<a id="services.imu.IMUServiceClient.calibrate"></a>
+- `duration` - Duration in seconds for zeroing operation
+- `**kwargs` - Additional zeroing parameters that may include:
+- `max_retries` - Maximum number of retries
+- `max_angular_error` - Maximum angular error during zeroing
+- `max_velocity` - Maximum velocity during zeroing
+- `max_acceleration` - Maximum acceleration during zeroing
+  
 
-#### calibrate
+**Returns**:
+
+- `ActionResponse` - The response from the zero operation.
+
+### `calibrate`
 
 ```python
 async def calibrate() -> imu_pb2.CalibrateIMUResponse
@@ -721,18 +756,15 @@ Calibrate the IMU.
 This starts a long-running calibration operation. The operation can be monitored
 using get_calibration_status().
 
-Returns:
-    CalibrationMetadata: Metadata about the calibration operation.
+**Returns**:
 
-<a id="services.led_matrix"></a>
+- `CalibrationMetadata` - Metadata about the calibration operation.
 
-# services.led\_matrix
+# `services.led_matrix`
 
 LED Matrix service client.
 
-<a id="services.led_matrix.MatrixInfo"></a>
-
-## MatrixInfo Objects
+## `MatrixInfo` Objects
 
 ```python
 class MatrixInfo(TypedDict)
@@ -740,17 +772,16 @@ class MatrixInfo(TypedDict)
 
 Information about the LED matrix.
 
-Args:
-    width: Width in pixels
-    height: Height in pixels
-    brightness_levels: Number of brightness levels supported (1 for binary on/off)
-    color_capable: Whether the matrix supports color
-    bits_per_pixel: Number of bits used to represent each pixel
-    error: Optional error information
+**Arguments**:
 
-<a id="services.led_matrix.ImageData"></a>
+- `width` - Width in pixels
+- `height` - Height in pixels
+- `brightness_levels` - Number of brightness levels supported (1 for binary on/off)
+- `color_capable` - Whether the matrix supports color
+- `bits_per_pixel` - Number of bits used to represent each pixel
+- `error` - Optional error information
 
-## ImageData Objects
+## `ImageData` Objects
 
 ```python
 class ImageData(TypedDict)
@@ -758,16 +789,15 @@ class ImageData(TypedDict)
 
 Image data to be written to the LED matrix.
 
-Args:
-    buffer: Raw image data bytes
-    width: Image width in pixels
-    height: Image height in pixels
-    format: Pixel format specification (e.g. 'RGB888', 'BGR888', 'RGB565', 'MONO8')
-    brightness: Global brightness level (0-255)
+**Arguments**:
 
-<a id="services.led_matrix.LEDMatrixServiceClient"></a>
+- `buffer` - Raw image data bytes
+- `width` - Image width in pixels
+- `height` - Image height in pixels
+- `format` - Pixel format specification (e.g. &#x27;RGB888&#x27;, &#x27;BGR888&#x27;, &#x27;RGB565&#x27;, &#x27;MONO8&#x27;)
+- `brightness` - Global brightness level (0-255)
 
-## LEDMatrixServiceClient Objects
+## `LEDMatrixServiceClient` Objects
 
 ```python
 class LEDMatrixServiceClient(AsyncClientBase)
@@ -777,9 +807,7 @@ Client for the LEDMatrixService.
 
 This service allows controlling an LED matrix display.
 
-<a id="services.led_matrix.LEDMatrixServiceClient.__init__"></a>
-
-#### \_\_init\_\_
+### `__init__`
 
 ```python
 def __init__(channel: grpc.aio.Channel) -> None
@@ -787,12 +815,11 @@ def __init__(channel: grpc.aio.Channel) -> None
 
 Initialize the LED matrix service client.
 
-Args:
-    channel: gRPC channel to use for communication.
+**Arguments**:
 
-<a id="services.led_matrix.LEDMatrixServiceClient.get_matrix_info"></a>
+- `channel` - gRPC channel to use for communication.
 
-#### get\_matrix\_info
+### `get_matrix_info`
 
 ```python
 async def get_matrix_info() -> MatrixInfo
@@ -800,18 +827,17 @@ async def get_matrix_info() -> MatrixInfo
 
 Get information about the LED matrix including dimensions and capabilities.
 
-Returns:
-    MatrixInfo containing:
-        width: Width in pixels
-        height: Height in pixels
-        brightness_levels: Number of brightness levels supported
-        color_capable: Whether the matrix supports color
-        bits_per_pixel: Number of bits used to represent each pixel
-        error: Optional error information
+**Returns**:
 
-<a id="services.led_matrix.LEDMatrixServiceClient.write_buffer"></a>
+  MatrixInfo containing:
+- `width` - Width in pixels
+- `height` - Height in pixels
+- `brightness_levels` - Number of brightness levels supported
+- `color_capable` - Whether the matrix supports color
+- `bits_per_pixel` - Number of bits used to represent each pixel
+- `error` - Optional error information
 
-#### write\_buffer
+### `write_buffer`
 
 ```python
 async def write_buffer(buffer: bytes) -> common_pb2.ActionResponse
@@ -820,17 +846,18 @@ async def write_buffer(buffer: bytes) -> common_pb2.ActionResponse
 Write binary on/off states to the LED matrix.
 
 The buffer should be width * height / 8 bytes long, where each bit
-represents one LED's on/off state.
+represents one LED&#x27;s on/off state.
 
-Args:
-    buffer: Binary buffer containing LED states
+**Arguments**:
 
-Returns:
-    ActionResponse indicating success/failure of the write operation.
+- `buffer` - Binary buffer containing LED states
+  
 
-<a id="services.led_matrix.LEDMatrixServiceClient.write_color_buffer"></a>
+**Returns**:
 
-#### write\_color\_buffer
+  ActionResponse indicating success/failure of the write operation.
+
+### `write_color_buffer`
 
 ```python
 async def write_color_buffer(**kwargs: Unpack[ImageData]
@@ -839,26 +866,25 @@ async def write_color_buffer(**kwargs: Unpack[ImageData]
 
 Write image data to the LED matrix.
 
-Args:
-    **kwargs: Image data containing the raw bytes, dimensions and format
-        buffer: Raw image data bytes
-        width: Image width in pixels
-        height: Image height in pixels
-        format: Pixel format specification (e.g. 'RGB888', 'BGR888', 'RGB565', 'MONO8')
-        brightness: Global brightness level (0-255)
+**Arguments**:
 
-Returns:
-    ActionResponse indicating success/failure of the write operation.
+- `**kwargs` - Image data containing the raw bytes, dimensions and format
+- `buffer` - Raw image data bytes
+- `width` - Image width in pixels
+- `height` - Image height in pixels
+- `format` - Pixel format specification (e.g. &#x27;RGB888&#x27;, &#x27;BGR888&#x27;, &#x27;RGB565&#x27;, &#x27;MONO8&#x27;)
+- `brightness` - Global brightness level (0-255)
+  
 
-<a id="services.actuator"></a>
+**Returns**:
 
-# services.actuator
+  ActionResponse indicating success/failure of the write operation.
+
+# `services.actuator`
 
 Actuator service client.
 
-<a id="services.actuator.ActuatorServiceClient"></a>
-
-## ActuatorServiceClient Objects
+## `ActuatorServiceClient` Objects
 
 ```python
 class ActuatorServiceClient(AsyncClientBase)
@@ -866,9 +892,7 @@ class ActuatorServiceClient(AsyncClientBase)
 
 Client for the ActuatorService.
 
-<a id="services.actuator.ActuatorServiceClient.calibrate"></a>
-
-#### calibrate
+### `calibrate`
 
 ```python
 async def calibrate(actuator_id: int) -> CalibrationMetadata
@@ -876,9 +900,7 @@ async def calibrate(actuator_id: int) -> CalibrationMetadata
 
 Calibrate an actuator.
 
-<a id="services.actuator.ActuatorServiceClient.get_calibration_status"></a>
-
-#### get\_calibration\_status
+### `get_calibration_status`
 
 ```python
 async def get_calibration_status(actuator_id: int) -> str | None
@@ -886,9 +908,7 @@ async def get_calibration_status(actuator_id: int) -> str | None
 
 Get the calibration status of an actuator.
 
-<a id="services.actuator.ActuatorServiceClient.command_actuators"></a>
-
-#### command\_actuators
+### `command_actuators`
 
 ```python
 async def command_actuators(
@@ -898,65 +918,71 @@ async def command_actuators(
 
 Command multiple actuators at once.
 
-Example:
-    >>> command_actuators([
-    ...     {"actuator_id": 1, "position": 90.0, "velocity": 100.0, "torque": 1.0},
-    ...     {"actuator_id": 2, "position": 180.0},
-    ... ])
+**Example**:
 
-Args:
-    commands: List of dictionaries containing actuator commands.
-             Each dict should have 'actuator_id' and optionally 'position',
-             'velocity', and 'torque'.
+  &gt;&gt;&gt; command_actuators([
+  ...     {&quot;actuator_id&quot;: 1, &quot;position&quot;: 90.0, &quot;velocity&quot;: 100.0, &quot;torque&quot;: 1.0},
+  ...     {&quot;actuator_id&quot;: 2, &quot;position&quot;: 180.0},
+  ... ])
+  
 
-Returns:
-    List of ActionResult objects indicating success/failure for each command.
+**Arguments**:
 
-<a id="services.actuator.ActuatorServiceClient.configure_actuator"></a>
+- `commands` - List of dictionaries containing actuator commands.
+  Each dict should have &#x27;actuator_id&#x27; and optionally &#x27;position&#x27;,
+  &#x27;velocity&#x27;, and &#x27;torque&#x27;.
+  
 
-#### configure\_actuator
+**Returns**:
+
+  List of ActionResult objects indicating success/failure for each command.
+
+### `configure_actuator`
 
 ```python
 async def configure_actuator(**kwargs: Unpack[ConfigureActuatorRequest]
                              ) -> common_pb2.ActionResult
 ```
 
-Configure an actuator's parameters.
+Configure an actuator&#x27;s parameters.
 
-Example:
-    >>> configure_actuator(
-    ...     actuator_id=1,
-    ...     kp=1.0,
-    ...     kd=0.1,
-    ...     ki=0.01,
-    ...     acceleration=2230,
-    ...     max_torque=100.0,
-    ...     protective_torque=None,
-    ...     protection_time=None,
-    ...     torque_enabled=True,
-    ...     new_actuator_id=None,
-    ...     zero_position=True,
-    ... )
+**Example**:
 
-    >>> configure_actuator(
-    ...     actuator_id=2,
-    ...     kp=1.0,
-    ...     kd=0.1,
-    ...     torque_enabled=True,
-    ... )
+  &gt;&gt;&gt; configure_actuator(
+  ...     actuator_id=1,
+  ...     kp=1.0,
+  ...     kd=0.1,
+  ...     ki=0.01,
+  ...     acceleration=2230,
+  ...     max_torque=100.0,
+  ...     protective_torque=None,
+  ...     protection_time=None,
+  ...     torque_enabled=True,
+  ...     new_actuator_id=None,
+  ...     zero_position=True,
+  ... )
+  
+  &gt;&gt;&gt; configure_actuator(
+  ...     actuator_id=2,
+  ...     kp=1.0,
+  ...     kd=0.1,
+  ...     torque_enabled=True,
+  ... )
+  
 
-Args:
-    actuator_id: ID of the actuator to configure
-    **kwargs: Configuration parameters that may include:
-             kp, kd, ki, max_torque, protective_torque,
-             protection_time, torque_enabled, new_actuator_id
+**Arguments**:
 
-Returns:
-    ActionResponse indicating success/failure
+- `actuator_id` - ID of the actuator to configure
+- `**kwargs` - Configuration parameters that may include:
+  kp, kd, ki, max_torque, protective_torque,
+  protection_time, torque_enabled, new_actuator_id
+  
 
-<a id="services.actuator.ActuatorServiceClient.get_actuators_state"></a>
+**Returns**:
 
-#### get\_actuators\_state
+  ActionResponse indicating success/failure
+
+### `get_actuators_state`
 
 ```python
 async def get_actuators_state(
@@ -966,18 +992,21 @@ async def get_actuators_state(
 
 Get the state of multiple actuators.
 
-Example:
-    >>> get_actuators_state([1, 2])
+**Example**:
 
-Args:
-    actuator_ids: List of actuator IDs to query. If None, gets state of all actuators.
+  &gt;&gt;&gt; get_actuators_state([1, 2])
+  
 
-Returns:
-    List of ActuatorStateResponse objects containing the state information
+**Arguments**:
 
-<a id="services.actuator.ActuatorServiceClient.move_to_position"></a>
+- `actuator_ids` - List of actuator IDs to query. If None, gets state of all actuators.
+  
 
-#### move\_to\_position
+**Returns**:
+
+  List of ActuatorStateResponse objects containing the state information
+
+### `move_to_position`
 
 ```python
 async def move_to_position(positions: list[ActuatorPosition],
@@ -997,18 +1026,17 @@ second.
 We can additionally use this command to safely configure the actuator
 PD parameters after setting the target position to the current position.
 
-Args:
-    positions: The actuator target positions.
-    num_seconds: How long to take the actuators to move to the target
-        positions.
-    configure_actuators: List of dictionaries containing actuator
-        configuration parameters.
-    commands_per_second: How many commands to send per second.
-    torque_enabled: Whether to enable torque for the actuators.
+**Arguments**:
 
-<a id="services.actuator.ActuatorServiceClient.zero_actuators"></a>
+- `positions` - The actuator target positions.
+- `num_seconds` - How long to take the actuators to move to the target
+  positions.
+- `configure_actuators` - List of dictionaries containing actuator
+  configuration parameters.
+- `commands_per_second` - How many commands to send per second.
+- `torque_enabled` - Whether to enable torque for the actuators.
 
-#### zero\_actuators
+### `zero_actuators`
 
 ```python
 async def zero_actuators(actuator_id: int,
@@ -1032,14 +1060,15 @@ until we reach an endstop, then back by this amount. If it is negative,
 then we rotate clockwise until we reach an endstop, then back by this
 amount.
 
-Args:
-    actuator_id: The ID of the actuator to zero.
-    zero_position: The position to move the actuator back by after
-        reaching the endstop.
-    configure_actuator: Configuration parameters to set on the actuator
-        before zeroing.
-    target_velocity: The velocity to move the actuator at.
-    commands_per_second: How many commands to send per second.
-    move_back_seconds: How long to move the actuator back by after
-        reaching the endstop.
+**Arguments**:
+
+- `actuator_id` - The ID of the actuator to zero.
+- `zero_position` - The position to move the actuator back by after
+  reaching the endstop.
+- `configure_actuator` - Configuration parameters to set on the actuator
+  before zeroing.
+- `target_velocity` - The velocity to move the actuator at.
+- `commands_per_second` - How many commands to send per second.
+- `move_back_seconds` - How long to move the actuator back by after
+  reaching the endstop.
 
