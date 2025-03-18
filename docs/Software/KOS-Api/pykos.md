@@ -1,73 +1,3 @@
-# Table of Contents
-
-* [client](#client)
-  * [KOS](#client.KOS)
-    * [connect](#client.KOS.connect)
-    * [close](#client.KOS.close)
-* [services](#services)
-  * [add\_sync\_version](#services.add_sync_version)
-  * [AsyncClientBase](#services.AsyncClientBase)
-* [services.sound](#services.sound)
-  * [AudioCapability](#services.sound.AudioCapability)
-  * [AudioInfo](#services.sound.AudioInfo)
-  * [AudioConfig](#services.sound.AudioConfig)
-  * [SoundServiceClient](#services.sound.SoundServiceClient)
-    * [\_\_init\_\_](#services.sound.SoundServiceClient.__init__)
-    * [get\_audio\_info](#services.sound.SoundServiceClient.get_audio_info)
-    * [play\_audio](#services.sound.SoundServiceClient.play_audio)
-    * [record\_audio](#services.sound.SoundServiceClient.record_audio)
-    * [stop\_recording](#services.sound.SoundServiceClient.stop_recording)
-* [services.sim](#services.sim)
-  * [SimServiceClient](#services.sim.SimServiceClient)
-    * [reset](#services.sim.SimServiceClient.reset)
-    * [set\_paused](#services.sim.SimServiceClient.set_paused)
-    * [step](#services.sim.SimServiceClient.step)
-    * [set\_parameters](#services.sim.SimServiceClient.set_parameters)
-    * [get\_parameters](#services.sim.SimServiceClient.get_parameters)
-* [services.process\_manager](#services.process_manager)
-  * [ProcessManagerServiceClient](#services.process_manager.ProcessManagerServiceClient)
-    * [start\_kclip](#services.process_manager.ProcessManagerServiceClient.start_kclip)
-    * [stop\_kclip](#services.process_manager.ProcessManagerServiceClient.stop_kclip)
-* [services.inference](#services.inference)
-  * [ModelMetadata](#services.inference.ModelMetadata)
-  * [TensorDimension](#services.inference.TensorDimension)
-  * [Tensor](#services.inference.Tensor)
-  * [ForwardResponse](#services.inference.ForwardResponse)
-  * [ModelInfo](#services.inference.ModelInfo)
-  * [GetModelsInfoResponse](#services.inference.GetModelsInfoResponse)
-  * [InferenceServiceClient](#services.inference.InferenceServiceClient)
-    * [\_\_init\_\_](#services.inference.InferenceServiceClient.__init__)
-    * [upload\_model](#services.inference.InferenceServiceClient.upload_model)
-    * [load\_models](#services.inference.InferenceServiceClient.load_models)
-    * [unload\_models](#services.inference.InferenceServiceClient.unload_models)
-    * [get\_models\_info](#services.inference.InferenceServiceClient.get_models_info)
-    * [forward](#services.inference.InferenceServiceClient.forward)
-* [services.imu](#services.imu)
-  * [IMUServiceClient](#services.imu.IMUServiceClient)
-    * [get\_imu\_values](#services.imu.IMUServiceClient.get_imu_values)
-    * [get\_imu\_advanced\_values](#services.imu.IMUServiceClient.get_imu_advanced_values)
-    * [get\_euler\_angles](#services.imu.IMUServiceClient.get_euler_angles)
-    * [get\_quaternion](#services.imu.IMUServiceClient.get_quaternion)
-    * [zero](#services.imu.IMUServiceClient.zero)
-    * [calibrate](#services.imu.IMUServiceClient.calibrate)
-* [services.led\_matrix](#services.led_matrix)
-  * [MatrixInfo](#services.led_matrix.MatrixInfo)
-  * [ImageData](#services.led_matrix.ImageData)
-  * [LEDMatrixServiceClient](#services.led_matrix.LEDMatrixServiceClient)
-    * [\_\_init\_\_](#services.led_matrix.LEDMatrixServiceClient.__init__)
-    * [get\_matrix\_info](#services.led_matrix.LEDMatrixServiceClient.get_matrix_info)
-    * [write\_buffer](#services.led_matrix.LEDMatrixServiceClient.write_buffer)
-    * [write\_color\_buffer](#services.led_matrix.LEDMatrixServiceClient.write_color_buffer)
-* [services.actuator](#services.actuator)
-  * [ActuatorServiceClient](#services.actuator.ActuatorServiceClient)
-    * [calibrate](#services.actuator.ActuatorServiceClient.calibrate)
-    * [get\_calibration\_status](#services.actuator.ActuatorServiceClient.get_calibration_status)
-    * [command\_actuators](#services.actuator.ActuatorServiceClient.command_actuators)
-    * [configure\_actuator](#services.actuator.ActuatorServiceClient.configure_actuator)
-    * [get\_actuators\_state](#services.actuator.ActuatorServiceClient.get_actuators_state)
-    * [move\_to\_position](#services.actuator.ActuatorServiceClient.move_to_position)
-    * [zero\_actuators](#services.actuator.ActuatorServiceClient.zero_actuators)
-
 # `client`
 
 KOS client.
@@ -84,13 +14,13 @@ KOS client.
 
 - `ip` _str, optional_ - IP address of the robot running KOS. Defaults to localhost.
 - `port` _int, optional_ - Port of the robot running KOS. Defaults to 50051.
-  
+
 
 **Attributes**:
 
 - `imu` _IMUServiceClient_ - Client for the IMU service.
 
-### `connect`
+#### `connect`
 
 ```python
 def connect() -> None
@@ -98,7 +28,7 @@ def connect() -> None
 
 Connect to the gRPC server and initialize service clients.
 
-### `close`
+#### `close`
 
 ```python
 async def close() -> None
@@ -110,7 +40,7 @@ Close the gRPC channel.
 
 KOS service clients.
 
-### `add_sync_version`
+#### `add_sync_version`
 
 ```python
 def add_sync_version(
@@ -184,7 +114,7 @@ Client for the SoundService.
 
 This service allows playing audio through speakers and recording from microphones.
 
-### `__init__`
+#### `__init__`
 
 ```python
 def __init__(channel: grpc.aio.Channel) -> None
@@ -196,7 +126,7 @@ Initialize the sound service client.
 
 - `channel` - gRPC channel to use for communication.
 
-### `get_audio_info`
+#### `get_audio_info`
 
 ```python
 async def get_audio_info() -> AudioInfo
@@ -208,7 +138,7 @@ Get information about audio capabilities.
 
   AudioInfo containing playback and recording capabilities.
 
-### `play_audio`
+#### `play_audio`
 
 ```python
 async def play_audio(
@@ -225,12 +155,12 @@ Stream PCM audio data to the speaker.
 - `sample_rate` - Sample rate in Hz (e.g., 44100)
 - `bit_depth` - Bit depth (e.g., 16)
 - `channels` - Number of channels (1 for mono, 2 for stereo)
-  
+
 
 **Returns**:
 
   ActionResponse indicating success/failure of the playback operation.
-  
+
 
 **Example**:
 
@@ -241,7 +171,7 @@ Stream PCM audio data to the speaker.
   ...             yield chunk
   ...     response = client.play_audio(chunks(), config)
 
-### `record_audio`
+#### `record_audio`
 
 ```python
 async def record_audio(
@@ -258,12 +188,12 @@ Record PCM audio data from the microphone.
 - `sample_rate` - Sample rate in Hz (e.g., 44100)
 - `bit_depth` - Bit depth (e.g., 16)
 - `channels` - Number of channels (1 for mono, 2 for stereo)
-  
+
 
 **Yields**:
 
   Chunks of PCM audio data.
-  
+
 
 **Example**:
 
@@ -272,7 +202,7 @@ Record PCM audio data from the microphone.
   ...     for chunk in client.record_audio(duration_ms=5000, **config):
   ...         f.write(chunk)
 
-### `stop_recording`
+#### `stop_recording`
 
 ```python
 async def stop_recording() -> common_pb2.ActionResponse
@@ -296,7 +226,7 @@ class SimServiceClient(AsyncClientBase)
 
 Client for the SimulationService.
 
-### `reset`
+#### `reset`
 
 ```python
 async def reset(**kwargs: Unpack[ResetRequest]) -> common_pb2.ActionResponse
@@ -309,7 +239,7 @@ Reset the simulation to its initial state.
 - `**kwargs` - Reset parameters that may include:
 - `initial_state` - DefaultPosition to reset to
 - `randomize` - Whether to randomize the initial state
-  
+
 
 **Example**:
 
@@ -317,13 +247,13 @@ Reset the simulation to its initial state.
   ...     initial_state={&quot;qpos&quot;: [0.0, 0.0, 0.0]},
   ...     randomize=True
   ... )
-  
+
 
 **Returns**:
 
   ActionResponse indicating success/failure
 
-### `set_paused`
+#### `set_paused`
 
 ```python
 async def set_paused(paused: bool) -> common_pb2.ActionResponse
@@ -334,13 +264,13 @@ Pause or unpause the simulation.
 **Arguments**:
 
 - `paused` - True to pause, False to unpause
-  
+
 
 **Returns**:
 
   ActionResponse indicating success/failure
 
-### `step`
+#### `step`
 
 ```python
 async def step(num_steps: int,
@@ -353,13 +283,13 @@ Step the simulation forward.
 
 - `num_steps` - Number of simulation steps to take
 - `step_size` - Optional time per step in seconds
-  
+
 
 **Returns**:
 
   ActionResponse indicating success/failure
 
-### `set_parameters`
+#### `set_parameters`
 
 ```python
 async def set_parameters(**kwargs: Unpack[SimulationParameters]
@@ -374,7 +304,7 @@ Set simulation parameters.
   ...     time_scale=1.0,
   ...     gravity=9.81,
   ... )
-  
+
 
 **Arguments**:
 
@@ -382,13 +312,13 @@ Set simulation parameters.
 - `time_scale` - Simulation time scale
 - `gravity` - Gravity constant
 - `initial_state` - Default position state
-  
+
 
 **Returns**:
 
   ActionResponse indicating success/failure
 
-### `get_parameters`
+#### `get_parameters`
 
 ```python
 async def get_parameters() -> sim_pb2.GetParametersResponse
@@ -412,7 +342,7 @@ class ProcessManagerServiceClient(AsyncClientBase)
 
 Client for the ProcessManagerService.
 
-### `start_kclip`
+#### `start_kclip`
 
 ```python
 async def start_kclip(action: str) -> process_manager_pb2.KClipStartResponse
@@ -423,13 +353,13 @@ Start KClip recording.
 **Arguments**:
 
 - `action` - The action string for the KClip request
-  
+
 
 **Returns**:
 
   The response from the server.
 
-### `stop_kclip`
+#### `stop_kclip`
 
 ```python
 async def stop_kclip(request: Empty = Empty()
@@ -530,7 +460,7 @@ Client for the InferenceService.
 
 This service allows uploading models and running inference on them.
 
-### `__init__`
+#### `__init__`
 
 ```python
 def __init__(channel: grpc.aio.Channel) -> None
@@ -542,7 +472,7 @@ Initialize the inference service client.
 
 - `channel` - gRPC channel to use for communication.
 
-### `upload_model`
+#### `upload_model`
 
 ```python
 async def upload_model(
@@ -560,7 +490,7 @@ Upload a model to the robot.
   ... &quot;model_description&quot;: &quot;A model for inference&quot;,
   ... &quot;model_version&quot;: &quot;1.0.0&quot;,
   ... &quot;model_author&quot;: &quot;John Doe&quot;})
-  
+
 
 **Arguments**:
 
@@ -570,13 +500,13 @@ Upload a model to the robot.
 - `model_description` - Description of the model
 - `model_version` - Version of the model
 - `model_author` - Author of the model
-  
+
 
 **Returns**:
 
   UploadModelResponse containing the model UID and any error information.
 
-### `load_models`
+#### `load_models`
 
 ```python
 async def load_models(uids: list[str]) -> inference_pb2.LoadModelsResponse
@@ -587,13 +517,13 @@ Load models from the robot&#x27;s filesystem.
 **Arguments**:
 
 - `uids` - List of model UIDs to load.
-  
+
 
 **Returns**:
 
   LoadModelsResponse containing information about the loaded models.
 
-### `unload_models`
+#### `unload_models`
 
 ```python
 async def unload_models(uids: list[str]) -> common_pb2.ActionResponse
@@ -604,13 +534,13 @@ Unload models from the robot&#x27;s filesystem.
 **Arguments**:
 
 - `uids` - List of model UIDs to unload.
-  
+
 
 **Returns**:
 
   ActionResponse indicating success/failure of the unload operation.
 
-### `get_models_info`
+#### `get_models_info`
 
 ```python
 async def get_models_info(
@@ -623,7 +553,7 @@ Get information about available models.
 
 - `model_uids` - Optional list of specific model UIDs to get info for.
   If None, returns info for all models.
-  
+
 
 **Returns**:
 
@@ -631,7 +561,7 @@ Get information about available models.
 - `models` - List of ModelInfo objects
 - `error` - Optional error information if fetching failed
 
-### `forward`
+#### `forward`
 
 ```python
 async def forward(model_uid: str, inputs: dict[str,
@@ -644,7 +574,7 @@ Run inference using a specified model.
 
 - `model_uid` - The UID of the model to use for inference.
 - `inputs` - Dictionary mapping tensor names to tensors.
-  
+
 
 **Returns**:
 
@@ -664,7 +594,7 @@ class IMUServiceClient(AsyncClientBase)
 
 Client for the IMUService.
 
-### `get_imu_values`
+#### `get_imu_values`
 
 ```python
 async def get_imu_values() -> imu_pb2.IMUValuesResponse
@@ -676,7 +606,7 @@ Get the latest IMU sensor values.
 
 - `ImuValuesResponse` - The latest IMU sensor values.
 
-### `get_imu_advanced_values`
+#### `get_imu_advanced_values`
 
 ```python
 async def get_imu_advanced_values() -> imu_pb2.IMUAdvancedValuesResponse
@@ -688,7 +618,7 @@ Get the latest IMU advanced values.
 
 - `ImuAdvancedValuesResponse` - The latest IMU advanced values.
 
-### `get_euler_angles`
+#### `get_euler_angles`
 
 ```python
 async def get_euler_angles() -> imu_pb2.EulerAnglesResponse
@@ -700,7 +630,7 @@ Get the latest Euler angles.
 
 - `EulerAnglesResponse` - The latest Euler angles.
 
-### `get_quaternion`
+#### `get_quaternion`
 
 ```python
 async def get_quaternion() -> imu_pb2.QuaternionResponse
@@ -712,7 +642,7 @@ Get the latest quaternion.
 
 - `QuaternionResponse` - The latest quaternion.
 
-### `zero`
+#### `zero`
 
 ```python
 async def zero(duration: float = 1.0,
@@ -729,7 +659,7 @@ Zero the IMU.
   ...     max_velocity=1.0,
   ...     max_acceleration=1.0
   ... )
-  
+
 
 **Arguments**:
 
@@ -739,13 +669,13 @@ Zero the IMU.
 - `max_angular_error` - Maximum angular error during zeroing
 - `max_velocity` - Maximum velocity during zeroing
 - `max_acceleration` - Maximum acceleration during zeroing
-  
+
 
 **Returns**:
 
 - `ActionResponse` - The response from the zero operation.
 
-### `calibrate`
+#### `calibrate`
 
 ```python
 async def calibrate() -> imu_pb2.CalibrateIMUResponse
@@ -807,7 +737,7 @@ Client for the LEDMatrixService.
 
 This service allows controlling an LED matrix display.
 
-### `__init__`
+#### `__init__`
 
 ```python
 def __init__(channel: grpc.aio.Channel) -> None
@@ -819,7 +749,7 @@ Initialize the LED matrix service client.
 
 - `channel` - gRPC channel to use for communication.
 
-### `get_matrix_info`
+#### `get_matrix_info`
 
 ```python
 async def get_matrix_info() -> MatrixInfo
@@ -837,7 +767,7 @@ Get information about the LED matrix including dimensions and capabilities.
 - `bits_per_pixel` - Number of bits used to represent each pixel
 - `error` - Optional error information
 
-### `write_buffer`
+#### `write_buffer`
 
 ```python
 async def write_buffer(buffer: bytes) -> common_pb2.ActionResponse
@@ -851,13 +781,13 @@ represents one LED&#x27;s on/off state.
 **Arguments**:
 
 - `buffer` - Binary buffer containing LED states
-  
+
 
 **Returns**:
 
   ActionResponse indicating success/failure of the write operation.
 
-### `write_color_buffer`
+#### `write_color_buffer`
 
 ```python
 async def write_color_buffer(**kwargs: Unpack[ImageData]
@@ -874,7 +804,7 @@ Write image data to the LED matrix.
 - `height` - Image height in pixels
 - `format` - Pixel format specification (e.g. &#x27;RGB888&#x27;, &#x27;BGR888&#x27;, &#x27;RGB565&#x27;, &#x27;MONO8&#x27;)
 - `brightness` - Global brightness level (0-255)
-  
+
 
 **Returns**:
 
@@ -892,7 +822,7 @@ class ActuatorServiceClient(AsyncClientBase)
 
 Client for the ActuatorService.
 
-### `calibrate`
+#### `calibrate`
 
 ```python
 async def calibrate(actuator_id: int) -> CalibrationMetadata
@@ -900,7 +830,7 @@ async def calibrate(actuator_id: int) -> CalibrationMetadata
 
 Calibrate an actuator.
 
-### `get_calibration_status`
+#### `get_calibration_status`
 
 ```python
 async def get_calibration_status(actuator_id: int) -> str | None
@@ -908,7 +838,7 @@ async def get_calibration_status(actuator_id: int) -> str | None
 
 Get the calibration status of an actuator.
 
-### `command_actuators`
+#### `command_actuators`
 
 ```python
 async def command_actuators(
@@ -924,20 +854,20 @@ Command multiple actuators at once.
   ...     {&quot;actuator_id&quot;: 1, &quot;position&quot;: 90.0, &quot;velocity&quot;: 100.0, &quot;torque&quot;: 1.0},
   ...     {&quot;actuator_id&quot;: 2, &quot;position&quot;: 180.0},
   ... ])
-  
+
 
 **Arguments**:
 
 - `commands` - List of dictionaries containing actuator commands.
   Each dict should have &#x27;actuator_id&#x27; and optionally &#x27;position&#x27;,
   &#x27;velocity&#x27;, and &#x27;torque&#x27;.
-  
+
 
 **Returns**:
 
   List of ActionResult objects indicating success/failure for each command.
 
-### `configure_actuator`
+#### `configure_actuator`
 
 ```python
 async def configure_actuator(**kwargs: Unpack[ConfigureActuatorRequest]
@@ -961,14 +891,14 @@ Configure an actuator&#x27;s parameters.
   ...     new_actuator_id=None,
   ...     zero_position=True,
   ... )
-  
+
   &gt;&gt;&gt; configure_actuator(
   ...     actuator_id=2,
   ...     kp=1.0,
   ...     kd=0.1,
   ...     torque_enabled=True,
   ... )
-  
+
 
 **Arguments**:
 
@@ -976,13 +906,13 @@ Configure an actuator&#x27;s parameters.
 - `**kwargs` - Configuration parameters that may include:
   kp, kd, ki, max_torque, protective_torque,
   protection_time, torque_enabled, new_actuator_id
-  
+
 
 **Returns**:
 
   ActionResponse indicating success/failure
 
-### `get_actuators_state`
+#### `get_actuators_state`
 
 ```python
 async def get_actuators_state(
@@ -995,18 +925,18 @@ Get the state of multiple actuators.
 **Example**:
 
   &gt;&gt;&gt; get_actuators_state([1, 2])
-  
+
 
 **Arguments**:
 
 - `actuator_ids` - List of actuator IDs to query. If None, gets state of all actuators.
-  
+
 
 **Returns**:
 
   List of ActuatorStateResponse objects containing the state information
 
-### `move_to_position`
+#### `move_to_position`
 
 ```python
 async def move_to_position(positions: list[ActuatorPosition],
@@ -1036,7 +966,7 @@ PD parameters after setting the target position to the current position.
 - `commands_per_second` - How many commands to send per second.
 - `torque_enabled` - Whether to enable torque for the actuators.
 
-### `zero_actuators`
+#### `zero_actuators`
 
 ```python
 async def zero_actuators(actuator_id: int,
@@ -1071,4 +1001,3 @@ amount.
 - `commands_per_second` - How many commands to send per second.
 - `move_back_seconds` - How long to move the actuator back by after
   reaching the endstop.
-
