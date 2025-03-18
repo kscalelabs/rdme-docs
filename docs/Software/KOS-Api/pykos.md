@@ -1,3 +1,73 @@
+# Table of Contents
+
+* [client](#client)
+  * [KOS](#client.KOS)
+    * [connect](#client.KOS.connect)
+    * [close](#client.KOS.close)
+* [services](#services)
+  * [add\_sync\_version](#services.add_sync_version)
+  * [AsyncClientBase](#services.AsyncClientBase)
+* [services.sound](#services.sound)
+  * [AudioCapability](#services.sound.AudioCapability)
+  * [AudioInfo](#services.sound.AudioInfo)
+  * [AudioConfig](#services.sound.AudioConfig)
+  * [SoundServiceClient](#services.sound.SoundServiceClient)
+    * [\_\_init\_\_](#services.sound.SoundServiceClient.__init__)
+    * [get\_audio\_info](#services.sound.SoundServiceClient.get_audio_info)
+    * [play\_audio](#services.sound.SoundServiceClient.play_audio)
+    * [record\_audio](#services.sound.SoundServiceClient.record_audio)
+    * [stop\_recording](#services.sound.SoundServiceClient.stop_recording)
+* [services.sim](#services.sim)
+  * [SimServiceClient](#services.sim.SimServiceClient)
+    * [reset](#services.sim.SimServiceClient.reset)
+    * [set\_paused](#services.sim.SimServiceClient.set_paused)
+    * [step](#services.sim.SimServiceClient.step)
+    * [set\_parameters](#services.sim.SimServiceClient.set_parameters)
+    * [get\_parameters](#services.sim.SimServiceClient.get_parameters)
+* [services.process\_manager](#services.process_manager)
+  * [ProcessManagerServiceClient](#services.process_manager.ProcessManagerServiceClient)
+    * [start\_kclip](#services.process_manager.ProcessManagerServiceClient.start_kclip)
+    * [stop\_kclip](#services.process_manager.ProcessManagerServiceClient.stop_kclip)
+* [services.inference](#services.inference)
+  * [ModelMetadata](#services.inference.ModelMetadata)
+  * [TensorDimension](#services.inference.TensorDimension)
+  * [Tensor](#services.inference.Tensor)
+  * [ForwardResponse](#services.inference.ForwardResponse)
+  * [ModelInfo](#services.inference.ModelInfo)
+  * [GetModelsInfoResponse](#services.inference.GetModelsInfoResponse)
+  * [InferenceServiceClient](#services.inference.InferenceServiceClient)
+    * [\_\_init\_\_](#services.inference.InferenceServiceClient.__init__)
+    * [upload\_model](#services.inference.InferenceServiceClient.upload_model)
+    * [load\_models](#services.inference.InferenceServiceClient.load_models)
+    * [unload\_models](#services.inference.InferenceServiceClient.unload_models)
+    * [get\_models\_info](#services.inference.InferenceServiceClient.get_models_info)
+    * [forward](#services.inference.InferenceServiceClient.forward)
+* [services.imu](#services.imu)
+  * [IMUServiceClient](#services.imu.IMUServiceClient)
+    * [get\_imu\_values](#services.imu.IMUServiceClient.get_imu_values)
+    * [get\_imu\_advanced\_values](#services.imu.IMUServiceClient.get_imu_advanced_values)
+    * [get\_euler\_angles](#services.imu.IMUServiceClient.get_euler_angles)
+    * [get\_quaternion](#services.imu.IMUServiceClient.get_quaternion)
+    * [zero](#services.imu.IMUServiceClient.zero)
+    * [calibrate](#services.imu.IMUServiceClient.calibrate)
+* [services.led\_matrix](#services.led_matrix)
+  * [MatrixInfo](#services.led_matrix.MatrixInfo)
+  * [ImageData](#services.led_matrix.ImageData)
+  * [LEDMatrixServiceClient](#services.led_matrix.LEDMatrixServiceClient)
+    * [\_\_init\_\_](#services.led_matrix.LEDMatrixServiceClient.__init__)
+    * [get\_matrix\_info](#services.led_matrix.LEDMatrixServiceClient.get_matrix_info)
+    * [write\_buffer](#services.led_matrix.LEDMatrixServiceClient.write_buffer)
+    * [write\_color\_buffer](#services.led_matrix.LEDMatrixServiceClient.write_color_buffer)
+* [services.actuator](#services.actuator)
+  * [ActuatorServiceClient](#services.actuator.ActuatorServiceClient)
+    * [calibrate](#services.actuator.ActuatorServiceClient.calibrate)
+    * [get\_calibration\_status](#services.actuator.ActuatorServiceClient.get_calibration_status)
+    * [command\_actuators](#services.actuator.ActuatorServiceClient.command_actuators)
+    * [configure\_actuator](#services.actuator.ActuatorServiceClient.configure_actuator)
+    * [get\_actuators\_state](#services.actuator.ActuatorServiceClient.get_actuators_state)
+    * [move\_to\_position](#services.actuator.ActuatorServiceClient.move_to_position)
+    * [zero\_actuators](#services.actuator.ActuatorServiceClient.zero_actuators)
+
 # `client`
 
 KOS client.
@@ -14,7 +84,7 @@ KOS client.
 
 - `ip` _str, optional_ - IP address of the robot running KOS. Defaults to localhost.
 - `port` _int, optional_ - Port of the robot running KOS. Defaults to 50051.
-
+  
 
 **Attributes**:
 
@@ -155,17 +225,17 @@ Stream PCM audio data to the speaker.
 - `sample_rate` - Sample rate in Hz (e.g., 44100)
 - `bit_depth` - Bit depth (e.g., 16)
 - `channels` - Number of channels (1 for mono, 2 for stereo)
-
+  
 
 **Returns**:
 
   ActionResponse indicating success/failure of the playback operation.
-
+  
 
 **Example**:
 
-  &gt;&gt;&gt; config = AudioConfig(sample_rate=44100, bit_depth=16, channels=2)
-  &gt;&gt;&gt; with open(&#x27;audio.raw&#x27;, &#x27;rb&#x27;) as f:
+  >>> config = AudioConfig(sample_rate=44100, bit_depth=16, channels=2)
+  >>> with open('audio.raw', 'rb') as f:
   ...     def chunks():
   ...         while chunk := f.read(4096):
   ...             yield chunk
@@ -188,17 +258,17 @@ Record PCM audio data from the microphone.
 - `sample_rate` - Sample rate in Hz (e.g., 44100)
 - `bit_depth` - Bit depth (e.g., 16)
 - `channels` - Number of channels (1 for mono, 2 for stereo)
-
+  
 
 **Yields**:
 
   Chunks of PCM audio data.
-
+  
 
 **Example**:
 
-  &gt;&gt;&gt; config = AudioConfig(sample_rate=44100, bit_depth=16, channels=1)
-  &gt;&gt;&gt; with open(&#x27;recording.raw&#x27;, &#x27;wb&#x27;) as f:
+  >>> config = AudioConfig(sample_rate=44100, bit_depth=16, channels=1)
+  >>> with open('recording.raw', 'wb') as f:
   ...     for chunk in client.record_audio(duration_ms=5000, **config):
   ...         f.write(chunk)
 
@@ -239,15 +309,15 @@ Reset the simulation to its initial state.
 - `**kwargs` - Reset parameters that may include:
 - `initial_state` - DefaultPosition to reset to
 - `randomize` - Whether to randomize the initial state
-
+  
 
 **Example**:
 
-  &gt;&gt;&gt; client.reset(
-  ...     initial_state={&quot;qpos&quot;: [0.0, 0.0, 0.0]},
+  >>> client.reset(
+  ...     initial_state={"qpos": [0.0, 0.0, 0.0]},
   ...     randomize=True
   ... )
-
+  
 
 **Returns**:
 
@@ -264,7 +334,7 @@ Pause or unpause the simulation.
 **Arguments**:
 
 - `paused` - True to pause, False to unpause
-
+  
 
 **Returns**:
 
@@ -283,7 +353,7 @@ Step the simulation forward.
 
 - `num_steps` - Number of simulation steps to take
 - `step_size` - Optional time per step in seconds
-
+  
 
 **Returns**:
 
@@ -300,11 +370,11 @@ Set simulation parameters.
 
 **Example**:
 
-  &gt;&gt;&gt; client.set_parameters(
+  >>> client.set_parameters(
   ...     time_scale=1.0,
   ...     gravity=9.81,
   ... )
-
+  
 
 **Arguments**:
 
@@ -312,7 +382,7 @@ Set simulation parameters.
 - `time_scale` - Simulation time scale
 - `gravity` - Gravity constant
 - `initial_state` - Default position state
-
+  
 
 **Returns**:
 
@@ -353,7 +423,7 @@ Start KClip recording.
 **Arguments**:
 
 - `action` - The action string for the KClip request
-
+  
 
 **Returns**:
 
@@ -397,7 +467,7 @@ Information about a tensor dimension.
 **Arguments**:
 
 - `size` - Size of this dimension
-- `name` - Name of this dimension (e.g., &quot;batch&quot;, &quot;channels&quot;, &quot;height&quot;)
+- `name` - Name of this dimension (e.g., "batch", "channels", "height")
 - `dynamic` - Whether this dimension can vary (e.g., batch size)
 
 ## `Tensor` Objects
@@ -485,12 +555,12 @@ Upload a model to the robot.
 
 **Example**:
 
-  &gt;&gt;&gt; client.upload_model(model_data,
-  ... metadata={&quot;model_name&quot;: &quot;MyModel&quot;,
-  ... &quot;model_description&quot;: &quot;A model for inference&quot;,
-  ... &quot;model_version&quot;: &quot;1.0.0&quot;,
-  ... &quot;model_author&quot;: &quot;John Doe&quot;})
-
+  >>> client.upload_model(model_data,
+  ... metadata={"model_name": "MyModel",
+  ... "model_description": "A model for inference",
+  ... "model_version": "1.0.0",
+  ... "model_author": "John Doe"})
+  
 
 **Arguments**:
 
@@ -500,7 +570,7 @@ Upload a model to the robot.
 - `model_description` - Description of the model
 - `model_version` - Version of the model
 - `model_author` - Author of the model
-
+  
 
 **Returns**:
 
@@ -512,12 +582,12 @@ Upload a model to the robot.
 async def load_models(uids: list[str]) -> inference_pb2.LoadModelsResponse
 ```
 
-Load models from the robot&#x27;s filesystem.
+Load models from the robot's filesystem.
 
 **Arguments**:
 
 - `uids` - List of model UIDs to load.
-
+  
 
 **Returns**:
 
@@ -529,12 +599,12 @@ Load models from the robot&#x27;s filesystem.
 async def unload_models(uids: list[str]) -> common_pb2.ActionResponse
 ```
 
-Unload models from the robot&#x27;s filesystem.
+Unload models from the robot's filesystem.
 
 **Arguments**:
 
 - `uids` - List of model UIDs to unload.
-
+  
 
 **Returns**:
 
@@ -553,7 +623,7 @@ Get information about available models.
 
 - `model_uids` - Optional list of specific model UIDs to get info for.
   If None, returns info for all models.
-
+  
 
 **Returns**:
 
@@ -574,7 +644,7 @@ Run inference using a specified model.
 
 - `model_uid` - The UID of the model to use for inference.
 - `inputs` - Dictionary mapping tensor names to tensors.
-
+  
 
 **Returns**:
 
@@ -653,13 +723,13 @@ Zero the IMU.
 
 **Example**:
 
-  &gt;&gt;&gt; await zero(duration=1.0,
+  >>> await zero(duration=1.0,
   ...     max_retries=3,
   ...     max_angular_error=1.0,
   ...     max_velocity=1.0,
   ...     max_acceleration=1.0
   ... )
-
+  
 
 **Arguments**:
 
@@ -669,7 +739,7 @@ Zero the IMU.
 - `max_angular_error` - Maximum angular error during zeroing
 - `max_velocity` - Maximum velocity during zeroing
 - `max_acceleration` - Maximum acceleration during zeroing
-
+  
 
 **Returns**:
 
@@ -724,7 +794,7 @@ Image data to be written to the LED matrix.
 - `buffer` - Raw image data bytes
 - `width` - Image width in pixels
 - `height` - Image height in pixels
-- `format` - Pixel format specification (e.g. &#x27;RGB888&#x27;, &#x27;BGR888&#x27;, &#x27;RGB565&#x27;, &#x27;MONO8&#x27;)
+- `format` - Pixel format specification (e.g. 'RGB888', 'BGR888', 'RGB565', 'MONO8')
 - `brightness` - Global brightness level (0-255)
 
 ## `LEDMatrixServiceClient` Objects
@@ -776,12 +846,12 @@ async def write_buffer(buffer: bytes) -> common_pb2.ActionResponse
 Write binary on/off states to the LED matrix.
 
 The buffer should be width * height / 8 bytes long, where each bit
-represents one LED&#x27;s on/off state.
+represents one LED's on/off state.
 
 **Arguments**:
 
 - `buffer` - Binary buffer containing LED states
-
+  
 
 **Returns**:
 
@@ -802,9 +872,9 @@ Write image data to the LED matrix.
 - `buffer` - Raw image data bytes
 - `width` - Image width in pixels
 - `height` - Image height in pixels
-- `format` - Pixel format specification (e.g. &#x27;RGB888&#x27;, &#x27;BGR888&#x27;, &#x27;RGB565&#x27;, &#x27;MONO8&#x27;)
+- `format` - Pixel format specification (e.g. 'RGB888', 'BGR888', 'RGB565', 'MONO8')
 - `brightness` - Global brightness level (0-255)
-
+  
 
 **Returns**:
 
@@ -850,18 +920,18 @@ Command multiple actuators at once.
 
 **Example**:
 
-  &gt;&gt;&gt; command_actuators([
-  ...     {&quot;actuator_id&quot;: 1, &quot;position&quot;: 90.0, &quot;velocity&quot;: 100.0, &quot;torque&quot;: 1.0},
-  ...     {&quot;actuator_id&quot;: 2, &quot;position&quot;: 180.0},
+  >>> command_actuators([
+  ...     {"actuator_id": 1, "position": 90.0, "velocity": 100.0, "torque": 1.0},
+  ...     {"actuator_id": 2, "position": 180.0},
   ... ])
-
+  
 
 **Arguments**:
 
 - `commands` - List of dictionaries containing actuator commands.
-  Each dict should have &#x27;actuator_id&#x27; and optionally &#x27;position&#x27;,
-  &#x27;velocity&#x27;, and &#x27;torque&#x27;.
-
+  Each dict should have 'actuator_id' and optionally 'position',
+  'velocity', and 'torque'.
+  
 
 **Returns**:
 
@@ -874,11 +944,11 @@ async def configure_actuator(**kwargs: Unpack[ConfigureActuatorRequest]
                              ) -> common_pb2.ActionResult
 ```
 
-Configure an actuator&#x27;s parameters.
+Configure an actuator's parameters.
 
 **Example**:
 
-  &gt;&gt;&gt; configure_actuator(
+  >>> configure_actuator(
   ...     actuator_id=1,
   ...     kp=1.0,
   ...     kd=0.1,
@@ -891,14 +961,14 @@ Configure an actuator&#x27;s parameters.
   ...     new_actuator_id=None,
   ...     zero_position=True,
   ... )
-
-  &gt;&gt;&gt; configure_actuator(
+  
+  >>> configure_actuator(
   ...     actuator_id=2,
   ...     kp=1.0,
   ...     kd=0.1,
   ...     torque_enabled=True,
   ... )
-
+  
 
 **Arguments**:
 
@@ -906,7 +976,7 @@ Configure an actuator&#x27;s parameters.
 - `**kwargs` - Configuration parameters that may include:
   kp, kd, ki, max_torque, protective_torque,
   protection_time, torque_enabled, new_actuator_id
-
+  
 
 **Returns**:
 
@@ -924,13 +994,13 @@ Get the state of multiple actuators.
 
 **Example**:
 
-  &gt;&gt;&gt; get_actuators_state([1, 2])
-
+  >>> get_actuators_state([1, 2])
+  
 
 **Arguments**:
 
 - `actuator_ids` - List of actuator IDs to query. If None, gets state of all actuators.
-
+  
 
 **Returns**:
 
@@ -1001,3 +1071,4 @@ amount.
 - `commands_per_second` - How many commands to send per second.
 - `move_back_seconds` - How long to move the actuator back by after
   reaching the endstop.
+
