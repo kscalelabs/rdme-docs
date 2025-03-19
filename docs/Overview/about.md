@@ -1,5 +1,6 @@
 ---
-title: About
+title: Getting Started
+excerpt: 'About K-Scale Labs: robots, software, ML, and community.'
 deprecated: false
 hidden: false
 metadata:
