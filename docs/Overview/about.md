@@ -71,4 +71,12 @@ metadata:
   <Card title="Zeroth Bot Developer Discord" href="https://docs.kscale.dev/docs/kos#/" icon="fa-robot">
     Zeroth Bot developers and open-source community Discord.
   </Card>
+
+  <Card title="K-Scale Hackathons" href="https://docs.kscale.dev/docs/k-hacks#/" icon="fa-robot">
+    Join our next hackathon!
+  </Card>
+
+  <Card title="K-Scale Residency" href="https://docs.kscale.dev/docs/residency#/" icon="fa-robot">
+    Are you a researcher or engineer? Come work with us on your own projects!
+  </Card>
 </Cards>
