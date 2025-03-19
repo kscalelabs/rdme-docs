@@ -22,7 +22,7 @@ metadata:
     Our open-source Optimus competitor.
   </Card>
 
-  <Card title="Zeroth Bot" href="https://docs.kscale.dev/docs/zeroth-bot#/" icon="fa-user">
+  <Card title="Zeroth Bot" href="https://docs.kscale.dev/docs/zeroth-bot#/" icon="fa-robot">
     The world's most affordable and open-source humanoid robot, pwoered by end-to-end models.
   </Card>
 
