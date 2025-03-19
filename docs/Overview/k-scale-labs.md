@@ -37,6 +37,26 @@ metadata:
 
 <br />
 
+<Cards columns={4}>
+  <Card title="Ksim" href="https://docs.kscale.dev/docs/ksim#/" icon="fa-robot" target="_blank">
+    Open-source locomotion and manipulation framework for robot learning built with MJX.
+  </Card>
+
+  <Card title="KOS" href="https://docs.kscale.dev/docs/kos#/" icon="fa-robot">
+    Humanoid robot OS/HAL for  hardware, software, and firmware.
+  </Card>
+
+  <Card title="KOS Sim" href="https://docs.kscale.dev/docs/kos-sim#/" icon="fa-robot">
+    Digital twin and simulation backend of KOS for prototyping and training in MuJoCo.
+  </Card>
+
+  <Card title="KOS SDK" href="https://docs.kscale.dev/docs/zeroth-bot-01#/" icon="fa-robot">
+    Software Development Kit (SDK) for KOS robots that bundles together libraries, tools, APIs for developers to build, test, and deploy Z-Bot and K-Bot applications.
+  </Card>
+</Cards>
+
+<br />
+
 # Community
 
 <Image align="center" src="https://files.readme.io/8bb18da45d157da340feda4765e8431c7f6524830bc5cef1cf9e61b757e10d37-Slide_16_9_-_489.png" />
