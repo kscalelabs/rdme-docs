@@ -1,6 +1,8 @@
 ---
 title: Zeroth-Bot
-excerpt: Open-source robotics dev kit & platform for builders.
+excerpt: >-
+  The world's most affordable and open-source humanoid robot, powered by
+  end-to-end models.
 deprecated: false
 hidden: false
 metadata:
