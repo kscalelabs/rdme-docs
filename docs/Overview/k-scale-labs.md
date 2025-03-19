@@ -18,7 +18,7 @@ metadata:
 <Image align="center" src="https://files.readme.io/5f3ad22518b1ece1f4c03a2039eab0f519be93fff8192dda570f8ce8780fe414-Group_243.png" />
 
 <Cards columns={3}>
-  <Card title="K-Bot" href="https://docs.kscale.dev/docs/kbot#/" icon="fa-user" target="_blank">
+  <Card title="K-Bot" href="https://docs.kscale.dev/docs/kbot#/" icon="fa-robot" target="_blank">
     Our open-source Optimus competitor.
   </Card>
 
@@ -26,7 +26,7 @@ metadata:
     The world's most affordable and open-source humanoid robot, pwoered by end-to-end models.
   </Card>
 
-  <Card title="Zeroth Bot (3D Printed)" href="https://docs.kscale.dev/docs/zeroth-bot-01#/" icon="fa-user">
+  <Card title="Zeroth Bot (3D Printed)" href="https://docs.kscale.dev/docs/zeroth-bot-01#/" icon="fa-robot">
     Zeroth Bot, for hackers.
   </Card>
 </Cards>
