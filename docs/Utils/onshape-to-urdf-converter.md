@@ -1,5 +1,5 @@
 ---
-title: KOL K-Scale Onshape Library
+title: KOL CAD to URDF Library
 deprecated: false
 hidden: false
 metadata:
