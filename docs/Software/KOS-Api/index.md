@@ -1,3 +1,6 @@
+---
+title: KOS API
+---
 # KOS Services API
 
 The KOS API provides a collection of service clients that enable interaction with various hardware components and system resources. Each service client is specialized for a specific aspect of the robot's functionality.
