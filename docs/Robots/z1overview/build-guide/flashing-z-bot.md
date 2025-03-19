@@ -1,5 +1,5 @@
 ---
-title: Flashing Z-Bot
+title: Flashing the robot with latest software
 deprecated: false
 hidden: false
 metadata:
