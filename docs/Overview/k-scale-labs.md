@@ -9,6 +9,24 @@ metadata:
 ---
 <Image align="center" src="https://files.readme.io/036beba228420d628064421764a5f0c58ed994fb8ed030ac18a2c665b1b7f256-Slide_16_9_-_462.png" />
 
+[K-Scale Labs](https://kscale.dev)  is building open-source humanoid robot software and hardware. We believe that a developer-focused, open-source humanoid robot is the best way to get billions of robots out in the wild.
+
+# Robots
+
+<Image align="center" src="https://files.readme.io/5f3ad22518b1ece1f4c03a2039eab0f519be93fff8192dda570f8ce8780fe414-Group_243.png" />
+
 <br />
 
-[K-Scale Labs](https://kscale.dev)  is building open-source humanoid robot software and hardware. We believe that a developer-focused, open-source humanoid robot is the best way to get billions of robots out in the wild.
+/
+
+<br />
+
+# Software & ML
+
+<Image align="center" src="https://files.readme.io/18761370ef4487f4137320c306e768300d1b3c5113a8c3d51fe9e3064fce5695-Slide_16_9_-_490.png" />
+
+<br />
+
+# Community
+
+<Image align="center" src="https://files.readme.io/8bb18da45d157da340feda4765e8431c7f6524830bc5cef1cf9e61b757e10d37-Slide_16_9_-_489.png" />
