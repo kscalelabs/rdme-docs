@@ -60,3 +60,15 @@ metadata:
 # Community
 
 <Image align="center" src="https://files.readme.io/8bb18da45d157da340feda4765e8431c7f6524830bc5cef1cf9e61b757e10d37-Slide_16_9_-_489.png" />
+
+<br />
+
+<Cards columns={2}>
+  <Card title="K-Scale Discord" href="https://discord.gg/G6KP76uha5" icon="fa-robot" target="_blank">
+    Discord for all things K-Scale and K-Bot related.
+  </Card>
+
+  <Card title="Zeroth Bot Developer Discord" href="https://docs.kscale.dev/docs/kos#/" icon="fa-robot">
+    Zeroth Bot developers and open-source community Discord.
+  </Card>
+</Cards>
