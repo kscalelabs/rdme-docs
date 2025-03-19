@@ -1,5 +1,5 @@
 ---
-title: Zeroth-Bot
+title: Zeroth Bot
 excerpt: >-
   The world's most affordable and open-source humanoid robot, powered by
   end-to-end models.
