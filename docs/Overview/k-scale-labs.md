@@ -11,15 +11,25 @@ metadata:
 
 [K-Scale Labs](https://kscale.dev)  is building open-source humanoid robot software and hardware. We believe that a developer-focused, open-source humanoid robot is the best way to get billions of robots out in the wild.
 
+<br />
+
 # Robots
 
 <Image align="center" src="https://files.readme.io/5f3ad22518b1ece1f4c03a2039eab0f519be93fff8192dda570f8ce8780fe414-Group_243.png" />
 
-<br />
+<Cards columns={4}>
+  <Card title="K-Bot" href="https://readme.com" icon="ffa-user" target="_blank">
+    Neque porro quisquam est qui dolorem ipsum quia
+  </Card>
 
-/
+  <Card title="Zeroth Bot" icon="fa-user">
+    *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
+  </Card>
 
-<br />
+  <Card title="Zeroth-01" icon="fa-user">
+    > Ut enim ad minim veniam, quis nostrud ullamco
+  </Card>
+</Cards>
 
 # Software & ML
 
