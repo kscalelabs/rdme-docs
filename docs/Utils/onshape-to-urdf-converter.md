@@ -20,7 +20,7 @@ pip install 'kscale-onshape-library[all]' // Install all dependencies
 
 ```
 
-### Set you API Key
+## Set you API Key
 
 With an OnShape account, you may request API keys at: [https://cad.onshape.com/appstore/dev-portal](https://cad.onshape.com/appstore/dev-portal)
 
@@ -34,13 +34,13 @@ export ONSHAPE_SECRET_KEY=Your_Secret_Key
 
 <br />
 
-### Minimal Run Example
+## Minimal Run Example
 
 ```
 kol run https://cad.onshape.com/documents/af093f8....
 ```
 
-The most frequently used arguments with `kol run` takes are:
+The most frequently used arguments with `kol run`  are:
 
 * `-o "path/to/folderForRobot"` to specify location outputs of KOL is stored
   * Default will create a `robot` folder at your current working directory.
@@ -54,7 +54,9 @@ To also convert to a XML for MuJoCo, you need to specify a metadata.json file
 
 Additional configuration options are defined in the config file \[[https://github.com/kscalelabs/onshape/blob/master/kol/onshape/config.py](https://github.com/kscalelabs/onshape/blob/master/kol/onshape/config.py)
 
-### General Commands
+<br />
+
+## General Commands
 
 * `download`: Downloads the model and establishes an initial URDF.
 
@@ -62,7 +64,7 @@ Additional configuration options are defined in the config file \[[https://githu
 kol download <document-url> (--output-dir <output-directory>)
 ```
 
-* `postprocesss`: Processes the provided urdf for use.
+* `postprocesss`: Processes the provided URDF for use.
 
 ```
 kol postprocess <urdf-path>
@@ -77,7 +79,7 @@ kol pybullet <urdf-path> [options]
 
 <br />
 
-### Config File Reference
+## Config File Reference
 
 **Ignore Welding Joints**
 
@@ -93,10 +95,6 @@ or
 ```yaml
 merge_fixed_joints: false
 ```
-
-<br />
-
-<br />
 
 <br />
 
@@ -213,28 +211,22 @@ merge_fixed_joints: false
 
 <br />
 
-<br />
-
-<br />
-
-<br />
-
 # CAD Considerations
 
-KOL currently only supports  `Fixture` mates and `Revolute` joints.
+`KOL` currently only supports  `Fixture` mates and `Revolute` joints.
 
 * Set joint limits on all `Revolute` joints. Pay attention to orientation of the axes and the 0-position. OnShape provides a dropdown action "reset" on all mates to return to 0-position.
-* Ensure that there are no redundant mates in your assembly, as they will interfere with generating a sensible graph structure for the URDF
+* Ensure that there are no redundant mates in your assembly, as they will interfere with generating a sensible graph structure for the URDF.
 
 <br />
 
-To identify left and right orientation of bodies, KOL requires the syntax `L_<item>` and `R_<item>` for the `Revoluate` joints.
+To identify left and right orientation of bodies, `KOL` requires the syntax `L_<item>` and `R_<item>` for the `Revolute` joints.
 
 * As in `L_Thigh_Yaw` or `R_ElbowPitch`
 
 <br />
 
-KOL does not ensure functionality of OnShape assembly configurations.
+`KOL` does not ensure functionality of OnShape assembly configurations.
 
 # Additional Resources
 
