@@ -10,6 +10,8 @@ metadata:
 * linuks-kbot v0.0.4+
 * kos-kbot 0.1.3+
 
+# Teleop
+
 ## Starting WebRTC stream
 
 ```Text bash
@@ -38,3 +40,19 @@ docker run --rm -it --network=host \
 ## VR Headset link
 
 [https://kscale.ai/webrtcflask/www/stereo-video.html](https://kscale.ai/webrtcflask/www/stereo-video.html)
+
+<br />
+
+# Data collection
+
+## Starting a recording
+
+```Text python
+rec_uuid = kos.process_manager.start_kclip("pick up the blue cup")
+```
+
+## Ending a recording
+
+```Text python
+rec_uuid = kos.process_manager.stop_kclip()
+```
