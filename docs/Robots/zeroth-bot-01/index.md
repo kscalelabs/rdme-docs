@@ -1,5 +1,5 @@
 ---
-title: Zeroth Bot (01)
+title: Zeroth-01
 excerpt: Open-source 3D pirnted end-to-end humanoid robot.
 deprecated: false
 hidden: false
