@@ -14,7 +14,7 @@ metadata:
 
 ## Starting WebRTC stream
 
-```Text bash
+```shell bash
 docker run --rm -it --network=host \
   --device=/dev/video45 \
   --add-host xr.kscale.ai:10.33.20.104 \
@@ -47,19 +47,19 @@ docker run --rm -it --network=host \
 
 ## Starting a recording
 
-```Text python
+```python
 rec_uuid = kos.process_manager.start_kclip("pick up the blue cup")
 ```
 
 ## Stopping a recording
 
-```Text python
+```python
 rec_uuid = kos.process_manager.stop_kclip()
 ```
 
 ## Exploring krec
 
-```Text python
+```python
 import krec
 
 rec = krec.extract_from_video('recording_20250319_193701_real_test_1_9c85a9a4-f5b4-437c-9425-d0a2ec732570.krec.mkv')
