@@ -7,7 +7,9 @@ metadata:
 ---
 [https://github.com/kscalelabs/onshape](https://github.com/kscalelabs/onshape)
 
-K-Scale OnShape Library `KOL` provides tooling for generating fully connected humanoid robot body files directly from an OnShape assembly. Utilizing the OnShape API, `KOL` synthesizes model joint definitions, body properties, and layout into a standardized robotics file structure. The command line interface allows for downloading, checking, and transitioning your robot directly into simulation environments.
+K-Scale OnShape Library `KOL` provides tooling for generating fully connected humanoid robot body files directly from an OnShape assembly.
+
+Utilizing the OnShape API, `KOL` synthesizes model joint definitions, body properties, and layout into a standardized robotics file structure. The command line interface allows for downloading, checking, and implementing your robot directly into simulation environments.
 
 # Getting Started
 
