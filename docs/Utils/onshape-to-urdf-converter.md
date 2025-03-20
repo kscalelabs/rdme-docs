@@ -197,6 +197,30 @@ merge_fixed_joints: false
 
 # CAD Considerations
 
-1. Use `Fixture` joints and `Revolute` joints only
-2. Set joint limits on all `Revolute` joints
-3. <br />
+KOL currently only supports  `Fixture` mates and `Revolute` joints.
+
+* Set joint limits on all `Revolute` joints. Pay attention to orientation of the axes and the 0-position. OnShape provides a dropdown action "reset" on all mates to return to 0-position.
+* Ensure that there are no redundant mates in your assembly, as they will interfere with generating a sensible graph structure for the URDF
+
+<br />
+
+To identify left and right orientation of bodies, KOL requires the syntax `L_<item>` and `R_<item>` for the `Revoluate` joints.
+
+* As in `L_Thigh_Yaw` or `R_ElbowPitch`
+
+<br />
+
+KOL does not ensure functionality of OnShape assembly configurations.
+
+# Additional Resources
+
+## OnShape API
+
+* [OnShape API Explorer Glassworks](https://cad.onshape.com/glassworks/explorer/)
+* [OnShape API Documentation](https://onshape-public.github.io/docs/api-intro/)
+
+<br />
+
+## Other Tools
+
+* [Rhoban's Onshape-to-Robot Github](https://github.com/Rhoban/onshape-to-robot)
