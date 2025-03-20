@@ -5,11 +5,7 @@ hidden: false
 metadata:
   robots: index
 ---
-![](https://files.readme.io/7288103b624390d91dddf0be919f94e8e67940f931d5886f4e817a41ffb6c504-image.png)
-
-<br />
-
-`kos-sim` is a pure-simulation backend for the [K-Scale Operating System (KOS)](https://github.com/kscalelabs/kos), using the same gRPC interface. This lets you try out your KOS programs before deploying them onto a real robot. Once you're ready, you can run your code on the robot just by changing the client IP address.
+`kos-sim` is a simulation backend for the [K-Scale Operating System (KOS)](https://github.com/kscalelabs/kos), using the same gRPC interface. This lets you try out your KOS programs before deploying them onto a real robot. Once you're ready, you can run your code on the robot just by changing the client IP address.
 
 ## Installation
 
