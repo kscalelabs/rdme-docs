@@ -51,7 +51,7 @@ docker run --rm -it --network=host \
 rec_uuid = kos.process_manager.start_kclip("pick up the blue cup")
 ```
 
-## Ending a recording
+## Stopping a recording
 
 ```Text python
 rec_uuid = kos.process_manager.stop_kclip()
