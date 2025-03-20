@@ -54,7 +54,7 @@ To also convert to a XML for MuJoCo, you need to specify a metadata.json file
 
 <br />
 
-Additional configuration options are defined in the config file \[[https://github.com/kscalelabs/onshape/blob/master/kol/onshape/config.py\](](https://github.com/kscalelabs/onshape/blob/master/kol/onshape/config.py]\()[https://github.com/kscalelabs/onshape/blob/master/kol/onshape/config.py](https://github.com/kscalelabs/onshape/blob/master/kol/onshape/config.py))
+Additional configuration options are defined in the config file \[config.py](https://github.com/kscalelabs/onshape/blob/master/kol/onshape/config.py)
 
 <br />
 
