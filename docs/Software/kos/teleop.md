@@ -1,5 +1,5 @@
 ---
-title: Teleop
+title: Teleop & data collection
 deprecated: false
 hidden: false
 metadata:
