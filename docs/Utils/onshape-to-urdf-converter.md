@@ -7,9 +7,11 @@ metadata:
 ---
 [https://github.com/kscalelabs/onshape](https://github.com/kscalelabs/onshape)
 
-<br />
+K-Scale OnShape Library `KOL` provides tooling for generating fully connected humanoid robot body files directly from an OnShape assembly. Utilizing the OnShape API, `KOL` synthesizes model joint definitions, body properties, and layout into a standardized robotics file structure. The command line interface allows for downloading, checking, and transitioning your robot directly into simulation environments.
 
 # Getting Started
+
+`KOL` is accessible through `pip`. If you encounter dependency issues, please see the below commands:
 
 ```bash
 pip install kscale-onshape-library
@@ -20,9 +22,9 @@ pip install 'kscale-onshape-library[all]' // Install all dependencies
 
 ### Set you API Key
 
-Obtain from: [https://cad.onshape.com/appstore/dev-portal](https://cad.onshape.com/appstore/dev-portal)
+With an OnShape account, you may request API keys at: [https://cad.onshape.com/appstore/dev-portal](https://cad.onshape.com/appstore/dev-portal)
 
-Then set in your *.bashrc* (or *.zshrc* etc.)
+These keys will need to be stored in your console environment (or else set in your *.bashrc*  *.zshrc* etc.):
 
 ```
 export ONSHAPE_ACCESS_KEY=Your_Access_Key
