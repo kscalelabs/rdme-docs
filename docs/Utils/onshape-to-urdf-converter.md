@@ -24,7 +24,7 @@ pip install 'kscale-onshape-library[all]' // Install all dependencies
 
 With an OnShape account, you may request API keys at: [https://cad.onshape.com/appstore/dev-portal](https://cad.onshape.com/appstore/dev-portal)
 
-These keys will need to be stored in your console environment (or else set in your *.bashrc*  *.zshrc* etc.):
+These keys will need to be stored in your terminal environment (or else set in your *.bashrc*  *.zshrc* etc.):
 
 ```
 export ONSHAPE_ACCESS_KEY=Your_Access_Key
@@ -43,6 +43,7 @@ kol run https://cad.onshape.com/documents/af093f8....
 The most frequently used arguments with `kol run` takes are:
 
 * `-o "path/to/folderForRobot"` to specify location outputs of KOL is stored
+  * Default will create a `robot` folder at your current working directory.
 * `-f "configFilePath.yaml`
 
 <br />
@@ -51,11 +52,32 @@ To also convert to a XML for MuJoCo, you need to specify a metadata.json file
 
 <br />
 
+Additional configuration options are defined in the config file \[[https://github.com/kscalelabs/onshape/blob/master/kol/onshape/config.py](https://github.com/kscalelabs/onshape/blob/master/kol/onshape/config.py)
+
+### General Commands
+
+* `download`: Downloads the model and establishes an initial URDF.
+
+```
+kol download <document-url> (--output-dir <output-directory>)
+```
+
+* `postprocesss`: Processes the provided urdf for use.
+
+```
+kol postprocess <urdf-path>
+```
+
+* `run`: Combined download and postprocessing. Similar argument options to `download`.
+* `pybullet`: Simulates the provided urdf in a basic pybullet environment.
+
+```
+kol pybullet <urdf-path> [options]
+```
+
 <br />
 
 ### Config File Reference
-
-<br />
 
 **Ignore Welding Joints**
 
