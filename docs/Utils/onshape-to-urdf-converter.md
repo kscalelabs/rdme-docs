@@ -22,7 +22,7 @@ pip install 'kscale-onshape-library[all]' // Install all dependencies
 
 ```
 
-## Set you API Key
+## Set your API Key
 
 With an OnShape account, you may request API keys at: [https://cad.onshape.com/appstore/dev-portal](https://cad.onshape.com/appstore/dev-portal)
 
@@ -55,6 +55,7 @@ To also convert to a XML for MuJoCo, you need to specify a metadata.json file
 <br />
 
 Additional configuration options are defined in [config.py](https://github.com/kscalelabs/onshape/blob/master/kol/onshape/config.py)
+
 <br />
 
 ## General Commands
