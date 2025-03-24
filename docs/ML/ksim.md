@@ -4,6 +4,7 @@ excerpt: K-Scale's Mujoco-based framework for training policies in simulation
 deprecated: false
 hidden: false
 metadata:
+  title: ksim
   robots: index
 ---
 Welcome to `ksim`, K-Scale's Mujoco-based framework for training policies in simulation.
