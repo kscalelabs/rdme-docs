@@ -33,7 +33,7 @@ Zeroth-01 is constructed from both prefabricated and 3D printed parts.
 
 Are are the prototype PCBs for the Zeroth Bot:
 
-<Table>
+<Table align={["left","left","left","left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -81,7 +81,7 @@ Are are the prototype PCBs for the Zeroth Bot:
       </td>
 
       <td>
-        *
+        * <br />
       </td>
 
       <td>
@@ -107,7 +107,7 @@ Are are the prototype PCBs for the Zeroth Bot:
       </td>
 
       <td>
-        *
+        * <br />
       </td>
 
       <td>
