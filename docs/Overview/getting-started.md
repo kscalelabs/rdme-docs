@@ -38,8 +38,8 @@ metadata:
 
 <br />
 
-<Cards columns={4}>
-  <Card title="Ksim" href="https://docs.kscale.dev/docs/ksim#/" icon="fa-robot" target="_blank">
+<Cards columns={2}>
+  <Card title="ksim" href="https://docs.kscale.dev/docs/ksim#/" icon="fa-robot" target="_blank">
     Open-source locomotion and manipulation framework for robot learning built with MJX.
   </Card>
 
