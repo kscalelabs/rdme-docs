@@ -1,17 +1,35 @@
 ---
-title: KSim
-excerpt: >-
-  Open-source locomotion and manipulation framework for robot learning built
-  with MJX.
+title: ksim
+excerpt: K-Scale's Mujoco-based framework for training policies in simulation
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-![](https://files.readme.io/81b418d428e8e357884f606ba1a27d4a1dd959aa0b372d205b2f9aff9d3b0650-image.png)
-
-<br />
+Welcome to `ksim`, K-Scale's Mujoco-based framework for training policies in simulation.
 
 [https://github.com/kscalelabs/ksim](https://github.com/kscalelabs/ksim)
 
-Open-source locomotion and manipulation framework for robot learning built with MJX with the goals of simulation, training, and sim-to-real transfer onto real robots.
+### Getting Started
+
+To get started, run one of our [example scripts](https://github.com/kscalelabs/ksim/tree/master/examples) .
+
+## Common Errors
+
+### NaNs when running example policy
+
+This manifests sometimes when you have an error like this:
+
+`Registers are spilled to local memory in function`
+
+We have observed this happening when training on RTX 4090s. To mitigate, disable Triton GEMM kernels:
+
+```shell
+export XLA_FLAGS='--xla_gpu_enable_latency_hiding_scheduler=true --xla_gpu_enable_triton_gemm=false'
+```
+
+Then, you may need to remove your JAX cache to trigger JAX to rebuild the kernels:
+
+```shell
+rm -r ~/.cache/jax/jaxcache
+```
