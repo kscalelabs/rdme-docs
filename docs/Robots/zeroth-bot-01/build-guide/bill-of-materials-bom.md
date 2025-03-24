@@ -5,7 +5,7 @@ hidden: false
 metadata:
   robots: index
 ---
-> ❗️ ⚠️ The Bill of Materials (BoM) is not yet finalized. For more information, see our [Discord](\[https://discord.gg/G6KP76uha5]\(https://discord.gg/G6KP76uha5\))
+> ❗️ ⚠️ The Bill of Materials (BoM) is currently under changes. For more information, see our [Discord](\[https://discord.gg/G6KP76uha5]\(https://discord.gg/G6KP76uha5\))
 
 Zeroth-01 is constructed from both prefabricated and 3D printed parts.
 
@@ -26,3 +26,93 @@ Zeroth-01 is constructed from both prefabricated and 3D printed parts.
 | Amplifier          | LM386 Mono Audio Amplifier                      | [Link](https://www.amazon.com/HiLetgo-LM386-Audio-Amplifier-Module/dp/B00LNACGTY/)                                                                                     | x1       | 8                                                                | 11/01        |
 
 \*The STS3215 45RPM servos are no longer sufficient for the speed requirements of the legs. Please use the STS3250 servos as we look for a suitable replacement.
+
+<br />
+
+## PCBs
+
+Are are the prototype PCBs for the Zeroth Bot:
+
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Part
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+        Link
+      </th>
+
+      <th>
+        Quantity
+      </th>
+
+      <th>
+        Total Cost (USD)
+      </th>
+
+      <th>
+        Date Decided
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        IMU Mount
+      </td>
+
+      <td>
+        Rev A
+      </td>
+
+      <td>
+        [https://github.com/zeroth-robotics/hardware/tree/main/Custom%20Electronics%20/IMU%20Mount%2C%20Rev%20A](https://github.com/zeroth-robotics/hardware/tree/main/Custom%20Electronics%20/IMU%20Mount%2C%20Rev%20A)
+      </td>
+
+      <td>
+        1
+      </td>
+
+      <td>
+        *
+      </td>
+
+      <td>
+        11/14
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Milk V Hat
+      </td>
+
+      <td>
+        Rev B
+      </td>
+
+      <td>
+        [https://github.com/zeroth-robotics/hardware/tree/main/Custom%20Electronics%20/Milk%20V%20Hat%2C%20Rev%20B](https://github.com/zeroth-robotics/hardware/tree/main/Custom%20Electronics%20/Milk%20V%20Hat%2C%20Rev%20B)
+      </td>
+
+      <td>
+        1
+      </td>
+
+      <td>
+        *
+      </td>
+
+      <td>
+        11/14
+      </td>
+    </tr>
+  </tbody>
+</Table>
