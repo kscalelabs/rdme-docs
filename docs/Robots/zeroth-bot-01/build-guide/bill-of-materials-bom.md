@@ -31,7 +31,7 @@ Zeroth-01 is constructed from both prefabricated and 3D printed parts.
 
 ## PCBs
 
-Are are the prototype PCBs for the Zeroth Bot:
+Are are the prototype PCBs for the Zeroth Bot, you can get them from JLC-PCB. We will consider making directly shippable units in the future.
 
 <Table align={["left","left","left","left","left","left"]}>
   <thead>
@@ -73,7 +73,7 @@ Are are the prototype PCBs for the Zeroth Bot:
       </td>
 
       <td>
-        [https://github.com/zeroth-robotics/hardware/tree/main/Custom%20Electronics%20/IMU%20Mount%2C%20Rev%20A](https://github.com/zeroth-robotics/hardware/tree/main/Custom%20Electronics%20/IMU%20Mount%2C%20Rev%20A)
+        [Link](https://github.com/zeroth-robotics/hardware/tree/main/Custom%20Electronics%20/IMU%20Mount%2C%20Rev%20A)
       </td>
 
       <td>
@@ -99,7 +99,7 @@ Are are the prototype PCBs for the Zeroth Bot:
       </td>
 
       <td>
-        [https://github.com/zeroth-robotics/hardware/tree/main/Custom%20Electronics%20/Milk%20V%20Hat%2C%20Rev%20B](https://github.com/zeroth-robotics/hardware/tree/main/Custom%20Electronics%20/Milk%20V%20Hat%2C%20Rev%20B)
+        [Link](https://github.com/zeroth-robotics/hardware/tree/main/Custom%20Electronics%20/Milk%20V%20Hat%2C%20Rev%20B)
       </td>
 
       <td>
