@@ -5,6 +5,10 @@ deprecated: false
 hidden: false
 metadata:
   title: ksim
+  keywords:
+    - mujoco
+    - simulation
+    - policies
   robots: index
 ---
 Welcome to `ksim`, K-Scale's Mujoco-based framework for training policies in simulation.
