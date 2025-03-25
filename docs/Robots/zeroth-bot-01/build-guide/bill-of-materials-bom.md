@@ -135,3 +135,5 @@ The gross screw counts are as follows:
 | Socket Head Cap Screw | M3     | 5           | 12       | Board Mounts                     |
 
 \*standard Coarse thread pitch
+
+See the Assembly Guide for more information on Fastener installation.
