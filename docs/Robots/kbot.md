@@ -12,4 +12,4 @@ metadata:
 
 Below is a diagram of the K-Bot motor IDs.
 
-<Image align="center" src="https://files.readme.io/e081049d7815cc37aef9e8f61dfb161a4af8376b644aefd240b80073d720670c-kbot-v1-annotated.png" />
+<Image align="center" src="https://files.readme.io/be469ece05fa55b37e811cdc7b3eff1d639fcc5a1dea715f38c50fee0347f5d7-kbot.png" />
