@@ -1,87 +1,97 @@
 ---
-title: KOL CAD to URDF Library
+title: Onshape to URDF Converter
+excerpt: K-Scale's toolkit for converting Onshape files to URDFs.
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-[https://github.com/kscalelabs/onshape](https://github.com/kscalelabs/onshape)
-
-K-Scale OnShape Library `KOL` provides tooling for generating fully connected humanoid robot body files directly from an OnShape assembly.
-
-Utilizing the OnShape API, `KOL` synthesizes model joint definitions, body properties, and layout into a standardized robotics file structure. The command line interface allows for downloading, checking, and implementing your robot directly into simulation environments.
+See the source code for this repository [here](https://github.com/kscalelabs/onshape) .
 
 # Getting Started
 
-`KOL` is accessible through `pip`. If you encounter dependency issues, please see the below commands:
+## Dependencies
+
+The `onshape` package requires Python 3.11 or greater.
+
+## Installation
+
+`onshape` can be installed through `pip` using the following command:
 
 ```bash
-pip install kscale-onshape-library
-pip install 'kscale-onshape-library @ git+https://github.com/kscalelabs/onshape.git@master'  //Install from Github
-pip install 'kscale-onshape-library[all]' // Install all dependencies
-
+pip install onshape  # To install the vanilla version
+pip install 'onshape[all]'  # To install with all dependencies
 ```
 
-## Set your API Key
+Verify that the package was installed correctly by checking that the `onshape` CLI is available:
 
-With an OnShape account, you may request API keys at: [https://cad.onshape.com/appstore/dev-portal](https://cad.onshape.com/appstore/dev-portal)
-
-These keys will need to be stored in your terminal environment (or else set in your *.bashrc*  *.zshrc* etc.):
-
-```
-export ONSHAPE_ACCESS_KEY=Your_Access_Key
-export ONSHAPE_SECRET_KEY=Your_Secret_Key
-
+```text
+$ onshape
+usage: onshape {run,download,postprocess,pybullet,mujoco}
+onshape: error: the following arguments are required: subcommand
 ```
 
-<br />
-
-## Minimal Run Example
+Next, you should retrieve an Onshape Access Key and Secret Key from [here](https://cad.onshape.com/appstore/dev-portal) . Set the required environment variables like so:
 
 ```
-kol run https://cad.onshape.com/documents/af093f8....
+export ONSHAPE_ACCESS_KEY='XXXXXXXXXXXXXXXXXXXXXXXX'
+export ONSHAPE_SECRET_KEY='YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY'
 ```
 
-The most frequently used arguments with `kol run`  are:
+# Usage
 
-* `-o "path/to/folderForRobot"` to specify location outputs of KOL is stored
-  * Default will create a `robot` folder at your current working directory.
-* `-f "configFilePath.yaml`
+The Onshape CLI has the following components:
 
-<br />
+* `download` - takes a link to an Onshape assembly and downloads it as a URDF
+* `postprocess` - takes a path to a downloaded URDF and applies postprocessing to make it useful
+* `run` - Combines `download` and `postprocess` into a single script
+* `pybullet` - Opens a Pybullet visualization of a generated URDF file, for debugging purposes
+* `mujoco` - Opens a Mujoco visualization of a generated MJCF file, for debugging purposes
 
-To also convert to a XML for MuJoCo, you need to specify a metadata.json file
+## Download
 
-<br />
-
-Additional configuration options are defined in [config.py](https://github.com/kscalelabs/onshape/blob/master/kol/onshape/config.py)
-
-<br />
-
-## General Commands
-
-* `download`: Downloads the model and establishes an initial URDF.
+To download a URDF file, use the following command:
 
 ```
-kol download <document-url> (--output-dir <output-directory>)
+$ onshape download --help
+usage: onshape [-h] [-o OUTPUT_DIR] [-f CONFIG_PATH] [-n] document_url
+
+positional arguments:
+  document_url          The URL of the OnShape document.
+
+options:
+  -h, --help            show this help message and exit
+  -o OUTPUT_DIR, --output-dir OUTPUT_DIR
+                        The output directory.
+  -f CONFIG_PATH, --config-path CONFIG_PATH
+                        The path to the config file.
+  -n, --no-cache        Disables caching.
 ```
 
-* `postprocesss`: Processes the provided URDF for use.
+You can override configuration options from the command line by passing the values using [omegaconf syntax](https://omegaconf.readthedocs.io/) or by providing a configuration file.
+
+## Postprocess
+
+To postprocess a downloaded URDF file, use the following command:
 
 ```
-kol postprocess <urdf-path>
+$ onshape postprocess --help
+usage: onshape [-h] [-f CONFIG_PATH] urdf_path
+
+positional arguments:
+  urdf_path             The path to the downloaded URDF.
+
+options:
+  -h, --help            show this help message and exit
+  -f CONFIG_PATH, --config-path CONFIG_PATH
+                        The path to the config file.
 ```
 
-* `run`: Combined download and postprocessing. Similar argument options to `download`.
-* `pybullet`: Simulates the provided urdf in a basic pybullet environment.
-
-```
-kol pybullet <urdf-path> [options]
-```
-
-<br />
+You can override the postprocess configuration arguments in the same way.
 
 ## Config File Reference
+
+To view all the available configuration options, see [this file](https://github.com/kscalelabs/onshape/blob/master/onshape/onshape/config.py) .
 
 **Ignore Welding Joints**
 
@@ -97,8 +107,6 @@ or
 ```yaml
 merge_fixed_joints: false
 ```
-
-<br />
 
 **Examples**
 
@@ -215,29 +223,31 @@ merge_fixed_joints: false
 
 # CAD Considerations
 
-`KOL` currently only supports  `Fixture` mates and `Revolute` joints.
+`onshape` currently only supports`Fixture` mates and `Revolute` joints.
 
-* Set joint limits on all `Revolute` joints. Pay attention to orientation of the axes and the 0-position. OnShape provides a dropdown action "reset" on all mates to return to 0-position.
-* Ensure that there are no redundant mates in your assembly, as they will interfere with generating a sensible graph structure for the URDF.
+* You must set joint limits for all `Revolute` joints
+  * Pay attention to orientation of the axes and the 0-position
+  * Onshape provides a dropdown action "reset" on all mates to return to 0-position
+* Ensure that there are no redundant mates in your assembly, as they will interfere with generating a sensible graph structure for the URDF
 
-<br />
+# Tips and Tricks
 
-To identify left and right orientation of bodies, `KOL` requires the syntax `L_<item>` and `R_<item>` for the `Revolute` joints.
+We suggest first downloading your URDF file using the `download` command, then checking to make sure that it looks correct. Once this works, you can then `postprocess` the resulting URDF to clean up the meshes.
 
-* As in `L_Thigh_Yaw` or `R_ElbowPitch`
+Note that 500 errors or other errors that happen during the initial download phase can sometimes be fixed just by rerunning the command (in our experience, the Onshape API can be a bit flaky).
 
-<br />
-
-`KOL` does not ensure functionality of OnShape assembly configurations.
+The Onshape tool includes quite a few checks to make sure that the robot model can be converted to a valid URDF, although sometimes these checks can be overly restrictive to prevent unintended side effects. If you encounter an issue, the error message should be relatively informative - if it is not, please file an issue on our Github page.
 
 # Additional Resources
+
+## Get Help
+
+* [Github Issues](https://github.com/kscalelabs/onshape/issues)
 
 ## OnShape API
 
 * [OnShape API Explorer Glassworks](https://cad.onshape.com/glassworks/explorer/)
 * [OnShape API Documentation](https://onshape-public.github.io/docs/api-intro/)
-
-<br />
 
 ## Other Tools
 
