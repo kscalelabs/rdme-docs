@@ -31,28 +31,11 @@ We recommend using `conda` instead of `uv` as a virtual environment manager for 
 
 After installation, run one of our [example scripts](https://github.com/kscalelabs/ksim/tree/master/examples) .
 
-## Terminology
-
-The following terminology is relevant to understanding RL tasks.
-
-* `Trajector`: includes obs, command, action, and done. The latter is\
-  conditioned on the trajectory produced by the action.
-* Dataset: a set of `Trajectory`s used for training an RL update. Fully defined by\
-  `num_env_states_per_minibatch * num_minibatches`.
-* Minibatch: a subset of the dataset used for training an RL update. Updates are\
-  performed per minibatch.
-* Minibatch size: the number of environment states in each minibatch.
-* Epoch: number of full passes through the current training dataset.
-* Num Envs: the amount of parallel environments to run. Because of automatic\
-  resetting, this should not affect the batch math (in expectation).
-
 ### Variable Naming Conventions
 
-Please use these units in the suffixes of variable names. For PyTrees, assume\
-consistency of all dimensions except `L`. If including the timestampe would
-help someone understand the variable, do the dimension suffix first, then the
-timestamp suffix. (e.g. `mjx_data_L_0`). If it helps, specify return units in
-function docstrings.
+We try to follow [Noam Shazeer's variable naming conventions](https://medium.com/@NoamShazeer/shape-suffixes-good-coding-style-f836e72e24fd)  where possible.
+
+Please use these units in the suffixes of variable names. For PyTrees, assume consistency of all dimensions except `L`. If including the timestamp would help someone understand the variable, do the dimension suffix first, then the timestamp suffix. (e.g. `mjx_data_L_0`). If it helps, specify return units in function docstrings.
 
 Dimension suffixes:
 
@@ -60,8 +43,7 @@ Dimension suffixes:
 * `B`: dimension of environment states in each minibatch.
 * `T`: the time dimension during rollout.
 * `E`: the env dimension during rollout.
-* `L`: leaf dimension of a pytree (e.g. joint position vector size in an obs),\
-  should not be used if the variable's final dimension is a scalar.
+* `L`: leaf dimension of a pytree (e.g. joint position vector size in an obs), should not be used if the variable's final dimension is a scalar.
 
 Timestamp suffixes:
 
