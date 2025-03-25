@@ -1,6 +1,6 @@
 ---
 title: Zeroth-01
-excerpt: Open-source 3D pirnted end-to-end humanoid robot.
+excerpt: Open-source 3D printed end-to-end humanoid robot.
 deprecated: false
 hidden: false
 metadata:
