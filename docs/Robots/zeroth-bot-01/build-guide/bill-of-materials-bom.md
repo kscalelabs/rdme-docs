@@ -11,6 +11,8 @@ Zeroth-01 is constructed from both prefabricated and 3D printed parts.
 
 *Last updated: 11/28/2024*
 
+## Electronics
+
 | Part               | Description                                     | Link                                                                                                                                                                   | Quantity | Total Cost (USD)                                                 | Date Decided |
 | ------------------ | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ---------------------------------------------------------------- | ------------ |
 | Serial Bus Servo   | \*STS3250 50KG Serial Bus Servo                 | [STS3250](https://www.aliexpress.us/item/3256806337383027.html?gatewayAdapt=glo2usa4itemAdapt)                                                                         | x16      | Depends by Seller due to Supply Chain Issues. Previously: 222.24 | 9/10         |
