@@ -116,3 +116,22 @@ Are are the prototype PCBs for the Zeroth Bot, you can get them from JLC-PCB. We
     </tr>
   </tbody>
 </Table>
+
+<br />
+
+## Fasteners
+
+The robot is joined together by M3 screws for all of the motor outputs, and M2 screws for all of the motor housings. The same fastener sizes have been used for the other structural joints as well, as was possible.
+
+Button head cap screws were preferred for being low-profile around critical joints; Phillips-head drives are generally sufficient. Socket-head screws and hex-drive screws are also likely acceptable where clearance is not a concern.
+
+The gross screw counts are as follows:
+
+| Type                  | Size\* | Length (mm) | Quantity | Description                      |
+| :-------------------- | :----- | :---------- | :------- | :------------------------------- |
+| Button Head Cap Screw | M3     | 10          | 14       | Structural Joints etc.           |
+| Button Head Cap Screw | M3     | 4.5         | 137      | Motor Outputs, Motor Axles, etc. |
+| Button Head Cap Screw | M2     | 5           | 70       | Motor Housings                   |
+| Socket Head Cap Screw | M3     | 5           | 12       | Board Mounts                     |
+
+\*standard Coarse thread pitch
