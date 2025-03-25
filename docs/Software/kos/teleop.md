@@ -1,5 +1,6 @@
 ---
-title: Teleop & data collection
+title: Teleoperation
+excerpt: Details about running the teleoperation flow
 deprecated: false
 hidden: false
 metadata:
@@ -35,13 +36,11 @@ docker run --rm -it --network=host \
 
 ## Teleop script
 
-[https://github.com/kscalelabs/gst-rs-webrtc/blob/master/robot\_data\_channel.py](https://github.com/kscalelabs/gst-rs-webrtc/blob/master/robot_data_channel.py)
+To start the teleop data channel over WebRTC, see the script [here](https://github.com/kscalelabs/gst-rs-webrtc/blob/master/robot_data_channel.py) .
 
 ## VR Headset link
 
-[https://kscale.ai/webrtcflask/www/stereo-video.html](https://kscale.ai/webrtcflask/www/stereo-video.html)
-
-<br />
+View the VR headset teleoperation portal [here](https://kscale.ai/webrtcflask/www/stereo-video.html)
 
 # Data collection
 
