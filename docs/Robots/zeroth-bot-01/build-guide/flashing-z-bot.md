@@ -49,4 +49,9 @@ vim /boot/wpa_supplicant.conf
 
 ## ID
 
-Feetech change ID
+```
+killall kos
+feetech_scan
+
+feetech_identify [id number]
+```
