@@ -136,4 +136,8 @@ The gross screw counts are as follows:
 
 \*standard Coarse thread pitch
 
-See the Assembly Guide for more information on Fastener installation.
+For metal-on-metal screw joints, we recommend using low-strength removeable threadlocker (*Loctite Purple*). Medium-strength may present issues on disassembly due to the small fastener sizes. High-strength should be avoided.
+
+<br />
+
+See the Assembly Guide for more information on heat-set inserts etc.
