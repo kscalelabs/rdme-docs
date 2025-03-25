@@ -131,13 +131,13 @@ The gross screw counts are as follows:
 | :-------------------- | :----- | :---------- | :------- | :------------------------------- |
 | Button Head Cap Screw | M3     | 10          | 14       | Structural Joints etc.           |
 | Button Head Cap Screw | M3     | 4.5         | 129      | Motor Outputs, Motor Axles, etc. |
-| Button Head Cap Screw | M2     | 5           | 78       | Motor Housings                   |
+| Button Head Cap Screw | M2     | 5           | 80       | Motor Housings                   |
 | Socket Head Cap Screw | M2     | 5           | 12       | Board Mounts                     |
+| Heat-Set Insert       | M3     |             | 13       | Torso etc.                       |
+| Heat-Set Insert       | M2     |             | 14       | Electronics Carriage             |
 
 \*standard Coarse thread pitch
 
 For metal-on-metal screw joints, we recommend using low-strength removeable threadlocker (*Loctite Purple*). Medium-strength may present issues on disassembly due to the small fastener sizes. High-strength should be avoided.
-
-<br />
 
 See the Assembly Guide for more information on heat-set inserts etc.
