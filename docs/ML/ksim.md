@@ -13,7 +13,7 @@ metadata:
 ---
 Welcome to `ksim`, K-Scale's Mujoco-based framework for training policies in simulation.
 
-<Image align="center" src="https://files.readme.io/62a1fb382d2b181d46516cf14909b38ea0359a41cb6d1ba01988ad8f38b2ab77-policy.gif" />
+<Image align="center" src="https://files.readme.io/42bf70f3cd26469792fe6474ee855580257f6e12aa1c0368196bf32b353adce5-individualImage.gif" />
 
 See the framework source code on [Github](https://github.com/kscalelabs/ksim).
 
