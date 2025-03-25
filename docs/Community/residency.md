@@ -1,6 +1,6 @@
 ---
 title: Residency
-excerpt: _Are you interested in hacking on a robot project for a couple weeks?\_
+excerpt: Are you interested in hacking on a robot project for a couple weeks?
 deprecated: false
 hidden: false
 metadata:
