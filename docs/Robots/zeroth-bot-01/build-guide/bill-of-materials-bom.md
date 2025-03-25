@@ -144,7 +144,7 @@ For metal-on-metal screw joints, we recommend using low-strength removeable thre
 
 See the Assembly Guide for more information on heat-set inserts etc.
 
-*A Note:* The above assumes using STS3250 motors, with an aluminum body. If using STS3215's, with a plastic housing, most holes are *not* pre-tapped; you may be able to still use a regular screw, but self-tapping screws will make for an easier installation. Specifically:
+*A Note:* The above assumes using STS3250 motors, with an aluminum body. If using STS3215's, with a plastic housing, most holes are *not* pre-tapped; you may be able to still use a regular screw, but self-tapping screws will make for an easier assembly process. Specifically:
 
 * The non-drive side ('bushing') axle screw on the 3215 will not be tapped. A regular screw may still be used on the drive side (with the splined output shaft).
 * The mounting holes will not be tapped, so all M2's intended for the motor housings may need converted to the self-tapping.
