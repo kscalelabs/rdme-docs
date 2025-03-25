@@ -130,9 +130,9 @@ The gross screw counts are as follows:
 | Type                  | Size\* | Length (mm) | Quantity | Description                      |
 | :-------------------- | :----- | :---------- | :------- | :------------------------------- |
 | Button Head Cap Screw | M3     | 10          | 14       | Structural Joints etc.           |
-| Button Head Cap Screw | M3     | 4.5         | 137      | Motor Outputs, Motor Axles, etc. |
-| Button Head Cap Screw | M2     | 5           | 70       | Motor Housings                   |
-| Socket Head Cap Screw | M3     | 5           | 12       | Board Mounts                     |
+| Button Head Cap Screw | M3     | 4.5         | 129      | Motor Outputs, Motor Axles, etc. |
+| Button Head Cap Screw | M2     | 5           | 78       | Motor Housings                   |
+| Socket Head Cap Screw | M2     | 5           | 12       | Board Mounts                     |
 
 \*standard Coarse thread pitch
 
