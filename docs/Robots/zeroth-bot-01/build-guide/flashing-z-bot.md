@@ -44,3 +44,9 @@ cp /etc/wpa_supplicant.conf /boot/
 # Add your wifi network name (ssid) and password (psk)
 vim /boot/wpa_supplicant.conf
 ```
+
+<br />
+
+## ID
+
+Feetech change ID
