@@ -31,7 +31,7 @@ Zeroth-01 is constructed from both prefabricated and 3D printed parts.
 
 ## PCBs
 
-Are are the prototype PCBs for the Zeroth Bot, you can get them from JLC-PCB. We will consider making directly shippable units in the future.
+Below are the prototype PCBs for the Zeroth Bot, you can get them from JLC-PCB. We will consider making directly ship-able units in the future.
 
 <Table align={["left","left","left","left","left","left"]}>
   <thead>
