@@ -1,5 +1,6 @@
 ---
 title: CAD
+excerpt: See the current OnShape public model "Opus" below
 deprecated: false
 hidden: false
 metadata:
