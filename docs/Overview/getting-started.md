@@ -20,7 +20,7 @@ metadata:
 
 <Cards columns={3}>
   <Card title="K-Bot" href="https://docs.kscale.dev/docs/kbot#/" icon="fa-robot" target="_blank">
-    Our open-source Optimus competitor.
+    Our open-source full-size humanoid robot.
   </Card>
 
   <Card title="Zeroth Bot" href="https://docs.kscale.dev/docs/zeroth-bot#/" icon="fa-robot">
