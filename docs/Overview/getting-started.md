@@ -24,7 +24,7 @@ metadata:
   </Card>
 
   <Card title="Zeroth Bot" href="https://docs.kscale.dev/docs/zeroth-bot#/" icon="fa-robot">
-    The world's most affordable and open-source humanoid robot, pwoered by end-to-end models.
+    The world's most affordable and open-source humanoid robot, powered by end-to-end models.
   </Card>
 
   <Card title="Zeroth Bot (3D Printed)" href="https://docs.kscale.dev/docs/zeroth-bot-01#/" icon="fa-robot">
@@ -44,7 +44,7 @@ metadata:
   </Card>
 
   <Card title="KOS" href="https://docs.kscale.dev/docs/kos#/" icon="fa-robot">
-    Humanoid robot OS/HAL for  hardware, software, and firmware.
+    Humanoid robot OS/HAL for hardware, software, and firmware.
   </Card>
 
   <Card title="KOS Sim" href="https://docs.kscale.dev/docs/kos-sim#/" icon="fa-robot">
