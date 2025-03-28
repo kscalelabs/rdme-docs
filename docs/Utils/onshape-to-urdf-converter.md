@@ -238,6 +238,10 @@ Note that 500 errors or other errors that happen during the initial download pha
 
 The Onshape tool includes quite a few checks to make sure that the robot model can be converted to a valid URDF, although sometimes these checks can be overly restrictive to prevent unintended side effects. If you encounter an issue, the error message should be relatively informative - if it is not, please file an issue on our Github page.
 
+# FAQ
+
+How to update permission? After requesting permissions, remove \~/.kscale/
+
 # Additional Resources
 
 ## Get Help
