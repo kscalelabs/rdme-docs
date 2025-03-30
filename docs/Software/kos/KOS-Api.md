@@ -3,7 +3,7 @@ title: KOS API
 excerpt: 'SEE HERE: https://kscalelabs.github.io/api-docs/'
 link:
   new_tab: true
-  url: https://kscalelabs.github.io/api-docs/
+  url: https://kscalelabs.github.io/api-docs/pykos/actuator.html
 ---
 # KOS Services API
 
