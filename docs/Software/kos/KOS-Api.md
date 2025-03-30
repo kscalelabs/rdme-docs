@@ -1,6 +1,8 @@
 ---
 title: KOS API
 excerpt: 'SEE HERE: https://kscalelabs.github.io/api-docs/'
+link:
+  url: https://kscalelabs.github.io/api-docs/
 ---
 # KOS Services API
 
