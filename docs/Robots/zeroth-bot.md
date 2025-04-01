@@ -12,7 +12,7 @@ Zeroth Bot is an open-source humanoid robot development platform designed for de
 
 ## Joint Motors
 
-<Image align="center" src="https://files.readme.io/55ea9222399e998e74877705053dc1ecf1643204553f4006d3d1799544d2b3e4-zbot.png" />
+<Image align="center" src="https://files.readme.io/0fd0e4a199ec07382b7cbcfcd0c623d4e7ec178c650898664934d1fed12bc624-Zeroth_Bot_Motor_Join_ID_Diagram.png" />
 
 ## Robot Composition
 
