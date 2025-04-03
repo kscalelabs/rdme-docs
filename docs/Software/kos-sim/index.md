@@ -28,3 +28,13 @@ python -m examples.kbot
 ```
 
 You should see the simulated K-Bot move in response to the client commands.
+
+<br />
+
+### Kscale Assets
+
+To fetch your mjcf from a local kscale assets repo instead of the kscape api, set the `KSCALE_ASSETS_PATH` environment variable to point to that repo
+
+```
+export KSCALE_ASSETS_PATH=/path/to/kscale-assets
+```
