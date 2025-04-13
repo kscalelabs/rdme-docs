@@ -102,3 +102,17 @@ rm -r ~/.cache/jax/jaxcache
 ```
 
 We've found that removing the cache can fix a number of otherwise-mysterious errors.
+
+### NaNs during training
+
+Seeing NaNs when training a new policy is always frustrating. We have implemented a few tools in ksim to help debug such NaNs. Here is our suggested workflow:
+
+1. Make sure you are regularly saving checkpoints.
+2. When you start seeing NaNs, kill your training job.
+3. Re-run the training job initializing from the same checkpoint
+
+```Text bash
+JAX_DEBUG_NANS=True DISABLE_JIT_LEVEL=10 python -m examples.walking exp_dir=/path/to/exp/dir/run_N
+```
+
+This will disable JIT'ting the training pass of your neural network while keeping the MJX environment step JIT'ted, while also throwing an error the first time that JAX encounters a NaN.
