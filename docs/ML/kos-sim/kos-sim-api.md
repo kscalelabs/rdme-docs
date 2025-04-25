@@ -1,5 +1,5 @@
 ---
-title: KOS-SIM API
+title: API
 deprecated: false
 hidden: false
 link:
