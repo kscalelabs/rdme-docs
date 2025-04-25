@@ -1,5 +1,5 @@
 ---
-title: KOS API
+title: Python SDK
 excerpt: 'SEE HERE: https://kscalelabs.github.io/api-docs/'
 link:
   new_tab: true
