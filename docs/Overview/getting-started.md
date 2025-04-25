@@ -30,6 +30,8 @@ metadata:
   </Card>
 </Cards>
 
+***
+
 # Robots
 
 <Image align="center" src="https://files.readme.io/5f3ad22518b1ece1f4c03a2039eab0f519be93fff8192dda570f8ce8780fe414-Group_243.png" />
@@ -47,6 +49,8 @@ metadata:
     Zeroth Bot, for hackers.
   </Card>
 </Cards>
+
+***
 
 # Software & ML
 
@@ -72,7 +76,7 @@ metadata:
   </Card>
 </Cards>
 
-<br />
+***
 
 # Community
 
