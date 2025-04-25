@@ -1,6 +1,6 @@
 ---
-title: Getting Started
-excerpt: What is K-Scale?
+title: Introduction
+excerpt: What is K-Scale Labs?
 deprecated: false
 hidden: false
 metadata:
