@@ -8,7 +8,7 @@ metadata:
 ---
 # Troubleshooting
 
-### Headless Systems
+## Headless Systems
 
 When you try to render a trajectory while on a headless system, you may get an error like the following:
 
@@ -30,7 +30,7 @@ You may also need to tell MuJoCo to use GPU accelerated off-screen rendering via
 export MUJOCO_GL="egl"
 ```
 
-### NaNs when running example policy
+## NaNs when running example policy
 
 This manifests sometimes when you have an error like this:
 
@@ -50,7 +50,7 @@ rm -r ~/.cache/jax/jaxcache
 
 We've found that removing the cache can fix a number of otherwise-mysterious errors.
 
-### NaNs during training
+## NaNs during training
 
 Seeing NaNs when training a new policy is always frustrating. We have implemented a few tools in ksim to help debug such NaNs. Here is our suggested workflow:
 
@@ -64,6 +64,6 @@ JAX_DEBUG_NANS=True DISABLE_JIT_LEVEL=10 python -m examples.walking exp_dir=/pat
 
 This will disable JIT'ting the training pass of your neural network while keeping the MJX environment step JIT'ted, while also throwing an error the first time that JAX encounters a NaN.
 
-### General Training Issues
+## General Training Issues
 
 If you're experiencing issues with training recurrent models, it's important to double check exactly how the carry term progresses through training. Specifically, check that the carry term in `sample_action` gets produced in a similar way when getting off-policy training variables.
