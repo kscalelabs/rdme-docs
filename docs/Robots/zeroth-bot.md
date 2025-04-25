@@ -8,7 +8,7 @@ metadata:
 ---
 Zeroth Bot, or Z-Bot, is an open-source humanoid robot development platform designed for developers and researchers, made for advanced ML and software applications development.
 
-<Image align="center" border={false} caption="The Zeroth Bot in action" src="https://files.readme.io/c3113928dcaf24c38d8528dd6f25762e5e36d744773c3e7c073f5645803030a0-image.png" width="500em" />
+<Image align="center" border={false} src="https://files.readme.io/c3113928dcaf24c38d8528dd6f25762e5e36d744773c3e7c073f5645803030a0-image.png" width="500em" />
 
 <Cards columns={3}>
   <Card title="Z-Bot" href="https://www.zerothbot.com/" icon="fa-globe" target="_blank">
