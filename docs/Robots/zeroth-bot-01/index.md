@@ -20,7 +20,7 @@ Zeroth-01 is an open-source 3D printed end-to-end humanoid robot starting at wit
     Zeroth Bot monorepo, including everything needed to get started
   </Card>
 
-  <Card title="Website" href="https://www.zerothbot.com/" icon="fa-globe" target="_blank">
-    Zeroth Bot website
+  <Card title="Announcement" href="https://x.com/JingxiangMo/status/1856148967819751817" icon="fa-globe" target="_blank">
+    Zeroth Bot public announcement post
   </Card>
 </Cards>
