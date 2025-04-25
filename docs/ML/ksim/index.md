@@ -30,15 +30,6 @@ Welcome to `ksim`, a modular and robust framework for training policies in simul
 
 See the framework source code on [Github](https://github.com/kscalelabs/ksim).
 
-## Table of Contents
-
-* [Quick Start](./quick_start.md)
-* [Defining a Task](./task.md)
-* [Environment Builders](./builders.md)
-* [Troubleshooting](./troubleshooting.md)
-
-## Overview
-
 ## Contributing
 
 We welcome contributions! Please see the [contributing guide](./contributing.md) for more information.
