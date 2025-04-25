@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting
+excerpt: A living document of issues that we have encountered while using K-Sim
 deprecated: false
 hidden: false
 metadata:
