@@ -30,7 +30,7 @@ metadata:
   </Card>
 </Cards>
 
-***
+<br />
 
 # Robots
 
@@ -50,7 +50,7 @@ metadata:
   </Card>
 </Cards>
 
-***
+<br />
 
 # Software & ML
 
@@ -76,7 +76,7 @@ metadata:
   </Card>
 </Cards>
 
-***
+<br />
 
 # Community
 
