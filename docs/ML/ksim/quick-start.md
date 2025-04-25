@@ -1,5 +1,6 @@
 ---
 title: Quick Start
+excerpt: Introductory guide to training your own policies with ksim
 deprecated: false
 hidden: false
 metadata:
