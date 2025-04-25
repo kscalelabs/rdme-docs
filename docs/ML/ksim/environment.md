@@ -1,5 +1,8 @@
 ---
 title: Environment
+excerpt: >-
+  Overview of how different robots, observations and commands are specified in
+  K-Sim
 deprecated: false
 hidden: false
 metadata:
