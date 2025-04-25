@@ -1,5 +1,6 @@
 ---
-title: Flashing the robot with latest software
+title: Flashing the Robot
+excerpt: Overview of how to flash the robot operating system image
 deprecated: false
 hidden: false
 metadata:
