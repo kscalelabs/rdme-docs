@@ -9,7 +9,7 @@ metadata:
 
 ## Installation
 
-```bash
+```shell bash
 pip install kos-sim
 ```
 
@@ -17,13 +17,13 @@ pip install kos-sim
 
 First, start the `kos-sim` backend:
 
-```bash
+```shell
 kos-sim kbot-v1
 ```
 
 Then, in a separate terminal, run one of the [repository examples](https://github.com/kscalelabs/kos-sim), such as:
 
-```bash
+```shell
 python -m examples.kbot
 ```
 
@@ -33,6 +33,6 @@ You should see the simulated K-Bot move in response to the client commands.
 
 To fetch your MJCF from a local repository instead of from the K-Scale api, set the `KSCALE_ASSETS_PATH` environment variable to point to that repo. For example, you can reference the [kscale-assets](https://github.com/kscalelabs/kscale-assets) repository
 
-```
+```shell
 export KSCALE_ASSETS_PATH=/path/to/kscale-assets
 ```
