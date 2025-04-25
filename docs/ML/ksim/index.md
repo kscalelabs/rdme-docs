@@ -1,5 +1,5 @@
 ---
-title: ksim
+title: K-Sim
 excerpt: K-Scale's ML training framework
 deprecated: false
 hidden: false
