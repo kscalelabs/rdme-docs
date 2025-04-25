@@ -12,6 +12,28 @@ metadata:
 
 [K-Scale Labs](https://kscale.dev)  is building open-source humanoid robot software and hardware. Our mission is to accelerate the timeline to a world with billions of general-purpose robots. Read more [here](http://url.kscale.dev/mission).
 
+# Getting Started
+
+Here are some links for how to get started contributing to our mission.
+
+<Cards columns={4}>
+  <Card title="Leaderboard" href="https://leaderboard.kscale.dev/" icon="fa-home" target="_blank">
+    Compete on our leaderboard by training your own RL policy
+  </Card>
+
+  <Card title="Discord" href="https://url.kscale.dev/discord" icon="fa-discord">
+    Join our Discord community
+  </Card>
+
+  <Card title="Bounties" href="http://url.kscale.dev/bounties" icon="fa-star">
+    Tackle one of our open bounties
+  </Card>
+
+  <Card title="Github" href="https://github.com/kscalelabs" icon="fa-github">
+    Check out our open-source repositories
+  </Card>
+</Cards>
+
 # Robots
 
 <Image align="center" src="https://files.readme.io/5f3ad22518b1ece1f4c03a2039eab0f519be93fff8192dda570f8ce8780fe414-Group_243.png" />
