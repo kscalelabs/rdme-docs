@@ -17,7 +17,7 @@ metadata:
     Train your own RL policy and compete on our leaderboard
   </Card>
 
-  <Card title="Discord" href="https://url.kscale.dev/discord" icon="fa-discord" target="_blank">
+  <Card title="Discord" href="https://url.kscale.dev/discord" icon="fa-comments" target="_blank">
     Join our Discord community
   </Card>
 
@@ -25,7 +25,7 @@ metadata:
     Tackle one of our open bounties
   </Card>
 
-  <Card title="Github" href="https://github.com/kscalelabs" icon="fa-github" target="_blank">
+  <Card title="Github" href="https://github.com/kscalelabs" icon="fa-code" target="_blank">
     Check out our open-source repositories
   </Card>
 </Cards>
