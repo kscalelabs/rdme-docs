@@ -6,7 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-<Cards columns={4}>
+<Cards columns={3}>
   <Card title="Github" href="https://github.com/kscalelabs/ksim" icon="fa-home" target="_blank">
     The main <code>ksim</code> Github repository
   </Card>
