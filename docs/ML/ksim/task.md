@@ -1,6 +1,6 @@
 ---
 title: Task
-excerpt: The atomic unit in ksim
+excerpt: Getting started defining your own RL tasks
 deprecated: false
 hidden: false
 metadata:
