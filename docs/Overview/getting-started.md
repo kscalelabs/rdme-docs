@@ -21,7 +21,7 @@ metadata:
     Join our Discord community
   </Card>
 
-  <Card title="Bounties" href="http://url.kscale.dev/bounties" icon="fa-star" target="_blank">
+  <Card title="Bounties" href="https://url.kscale.dev/bounties" icon="fa-star" target="_blank">
     Tackle one of our open bounties
   </Card>
 
