@@ -6,9 +6,13 @@ hidden: false
 metadata:
   robots: index
 ---
-<Cards columns={3}>
+<Cards columns={2}>
   <Card title="Github" href="https://github.com/kscalelabs/ksim" icon="fa-home" target="_blank">
     The main <code>ksim</code> Github repository
+  </Card>
+
+  <Card title="Github" href="https://github.com/kscalelabs/ksim/tree/master/examples" icon="fa-code" target="_blank">
+    Examples to get started training your own policies
   </Card>
 
   <Card title="ksim-kbot" href="https://github.com/kscalelabs/ksim-kbot" icon="fa-user">
