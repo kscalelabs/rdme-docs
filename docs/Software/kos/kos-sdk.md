@@ -5,7 +5,7 @@ hidden: false
 metadata:
   robots: index
 ---
-Software Development Kit (SDK) for KOS robots that bundles together libraries, tools, APIs for developers to build, test, and deploy Z-Bot and K-Bot applications.
+We provide some examples for interacting with our robots through K-OS.
 
 <Cards columns={3}>
   <Card title="K-OS SDK" href="https://github.com/kscalelabs/kos-sdk" icon="fa-home" target="_blank">
