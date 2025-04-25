@@ -25,7 +25,7 @@ metadata:
     Tackle one of our open bounties
   </Card>
 
-  <Card title="Github" href="https://github.com/kscalelabs" icon="fa-code" target="_blank">
+  <Card title="Github" href="https://url.kscale.dev/github" icon="fa-code" target="_blank">
     Check out our open-source repositories
   </Card>
 </Cards>
