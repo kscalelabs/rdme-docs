@@ -15,7 +15,7 @@ next:
 
 Zeroth-01 is an open-source 3D printed end-to-end humanoid robot starting at with vision, RL-based walking, and speech using the KOS framework.
 
-<Cards columns={4}>
+<Cards columns={2}>
   <Card title="Zeroth-Bot" href="https://github.com/zeroth-robotics/zeroth-bot" icon="fa-home" target="_blank">
     Zeroth Bot monorepo, including everything needed to get started
   </Card>
