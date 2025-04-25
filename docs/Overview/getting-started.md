@@ -17,7 +17,7 @@ metadata:
 Here are some links for how to get started contributing to our mission.
 
 <Cards columns={4}>
-  <Card title="Leaderboard" href="https://url.kscale.dev/leaderboard" icon="fa-home" target="_blank">
+  <Card title="Leaderboard" href="https://url.kscale.dev/leaderboard" icon="fa-trophy" target="_blank">
     Train your own RL policy and compete on our leaderboard
   </Card>
 
