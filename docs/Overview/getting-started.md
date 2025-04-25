@@ -17,19 +17,19 @@ metadata:
 Here are some links for how to get started contributing to our mission.
 
 <Cards columns={4}>
-  <Card title="Leaderboard" href="https://leaderboard.kscale.dev/" icon="fa-home" target="_blank">
-    Compete on our leaderboard by training your own RL policy
+  <Card title="Leaderboard" href="https://url.kscale.dev/leaderboard" icon="fa-home" target="_blank">
+    Train your own RL policy and compete on our leaderboard
   </Card>
 
-  <Card title="Discord" href="https://url.kscale.dev/discord" icon="fa-discord">
+  <Card title="Discord" href="https://url.kscale.dev/discord" icon="fa-discord" target="_blank">
     Join our Discord community
   </Card>
 
-  <Card title="Bounties" href="http://url.kscale.dev/bounties" icon="fa-star">
+  <Card title="Bounties" href="http://url.kscale.dev/bounties" icon="fa-star" target="_blank">
     Tackle one of our open bounties
   </Card>
 
-  <Card title="Github" href="https://github.com/kscalelabs" icon="fa-github">
+  <Card title="Github" href="https://github.com/kscalelabs" icon="fa-github" target="_blank">
     Check out our open-source repositories
   </Card>
 </Cards>
