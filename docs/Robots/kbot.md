@@ -12,7 +12,7 @@ metadata:
 
 <Cards columns={3}>
   <Card title="K-Bot Monorepo" href="https://github.com/kscalelabs/kbot" icon="fa-home" target="_blank">
-    The main repository where we collect everything related to K-Bot
+    The main repository for K-Bot software and hardware
   </Card>
 
   <Card title="K-OS" href="https://github.com/kscalelabs/kos-kbot" icon="fa-user">
