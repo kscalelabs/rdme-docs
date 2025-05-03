@@ -6,4 +6,14 @@ hidden: false
 metadata:
   robots: index
 ---
-[https://api.kscale.dev/](https://api.kscale.dev/)
+<Cards columns={2}>
+  <Card title="API Endpoint" href="https://api.kscale.dev" icon="fa-internet" target="_blank">
+    API endpoint, with OpenAPI documentation
+  </Card>
+
+  <Card title="Python SDK" href="https://github.com/kscalelabs/kscale" icon="fa-code">
+    Python SDK for interacting with the K-Scale API
+  </Card>
+</Cards>
+
+The K-Scale API is the endpoint for interacting with K-Scale's web services.
