@@ -16,4 +16,8 @@ metadata:
   </Card>
 </Cards>
 
-The K-Scale API is the endpoint for interacting with K-Scale's web services.
+The K-Scale API is the endpoint for interacting with K-Scale's web services. The easiest way to interact with the API is by installing the Python SDK.
+
+```Text Shell
+pip install kscale
+```
