@@ -7,7 +7,7 @@ metadata:
   robots: index
 ---
 <Cards columns={2}>
-  <Card title="API Endpoint" href="https://api.kscale.dev" icon="fa-internet" target="_blank">
+  <Card title="API Endpoint" href="https://api.kscale.dev" icon="fa-network-wired" target="_blank">
     API endpoint, with OpenAPI documentation
   </Card>
 
