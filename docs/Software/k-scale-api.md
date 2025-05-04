@@ -11,7 +11,7 @@ metadata:
     API endpoint, with OpenAPI documentation
   </Card>
 
-  <Card title="Python SDK" href="https://github.com/kscalelabs/kscale" icon="fa-code">
+  <Card title="Python SDK" href="https://github.com/kscalelabs/kscale" icon="fa-code" target="_blank">
     Python SDK for interacting with the K-Scale API
   </Card>
 </Cards>
