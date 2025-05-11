@@ -26,7 +26,7 @@ Each `kinfer` model has three parts:
 
 The control loop for a `kinfer` model can be thought of as follows:
 
-```Text Python
+```python Python
 carry = init() # Onnx graph
 while True:
   model_input = get_model_input() # Implemented by provider
@@ -39,13 +39,13 @@ while True:
 
 This requires `onnxruntime = 1.20.0`, which can be installed through `pip`:
 
-```Text Shell
+```shell Shell
 pip install 'onnxruntime==1.20.0'
 ```
 
 After doing this, you need to set `ORT_DYLIB_PATH` to point to the dynamic library. This can be found using the following command:
 
-```
+```shell
 python -c 'import onnxruntime as ort ; from pathlib import Path ; print(next((Path(ort.__file__).parent / "capi").glob("libonnxruntime.*")))'
 
 export ORT_DYLIB_PATH=/path/to/libonnxruntime.[so,dylib]
