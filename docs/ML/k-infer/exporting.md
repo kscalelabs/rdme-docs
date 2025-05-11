@@ -33,7 +33,7 @@ Note that the model should expect the input tensors to have these shapes.
 
 To convert a Jax model to `kinfer` format:
 
-```Text Python
+```python Python
 import jax
 from jax import numpy as jnp
 
@@ -91,7 +91,7 @@ root_dir = Path("~").expanduser()
 
 To convert a PyTorch model to `kinfer` format:
 
-```Text Python
+```python Python
 import torch
 from torch import Tensor
 
