@@ -37,7 +37,7 @@ while True:
 
 ## Dependencies
 
-This requires `onnxruntime = 1.20.0`, which can be installed through `pip`:
+This requires `onnxruntime = 1.20.0`. The easiest way to install this is through `pip`, which will determine the correct shared library to use for your system:
 
 ```shell Shell
 pip install 'onnxruntime==1.20.0'
@@ -51,4 +51,4 @@ python -c 'import onnxruntime as ort ; from pathlib import Path ; print(next((Pa
 export ORT_DYLIB_PATH=/path/to/libonnxruntime.[so,dylib]
 ```
 
-This should be the correct file for your system. The runtime will dynamically link to this path.
+The runtime will dynamically link to this path.
