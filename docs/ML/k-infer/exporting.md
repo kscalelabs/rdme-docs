@@ -25,6 +25,7 @@ metadata:
 * `projected_gravity` The 3-dimensional projected gravity unit vector
 * `accelerometer` The accelerometer readings, in meters per second squared
 * `gyroscope` The gyroscope readings, in radians per second
+* `command` An N-dimensional command vector
 * `carry` The model carry
 
 Note that the model should expect the input tensors to have these shapes.
