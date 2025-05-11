@@ -8,6 +8,8 @@ metadata:
 ---
 ## Onnx Runtime
 
+If using Python, `kinfer` should automatically set the required `ORT_DYLIB_PATH` environment variable for you. However, when running the Rust binary directly, you will have to specify this yourself.
+
 This requires `onnxruntime = 1.20.0`. The easiest way to install this is through `pip`, which will determine the correct shared library to use for your system:
 
 ```shell Shell
