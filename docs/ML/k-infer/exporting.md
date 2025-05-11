@@ -1,5 +1,5 @@
 ---
-title: Exporting
+title: Export
 excerpt: Guide to exporting a model to K-Infer format
 deprecated: false
 hidden: false
