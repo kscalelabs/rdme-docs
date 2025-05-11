@@ -15,12 +15,12 @@ metadata:
     Examples to get started training your own policies
   </Card>
 
-  <Card title="ksim-kbot" href="https://github.com/kscalelabs/ksim-kbot" icon="fa-user">
-    <code>ksim</code> tasks for the K-Bot
+  <Card title="ksim-humanoid-benchmark" href="https://github.com/kscalelabs/kscale-humanoid-benchmark" icon="fa-code" target="_blank">
+    <code>ksim</code> starter code for K-Bot
   </Card>
 
-  <Card title="ksim-zbot" href="https://github.com/kscalelabs/ksim-zbot" icon="fa-star">
-    <code>ksim</code> tasks for the Z-Bot
+  <Card title="ksim-zbot-benchmark" href="https://github.com/kscalelabs/kscale-zbot-benchmark" icon="fa-code" target="_blank">
+    <code>ksim</code> starter code for Z-Bot
   </Card>
 </Cards>
 
