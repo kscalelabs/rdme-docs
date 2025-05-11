@@ -22,7 +22,7 @@ metadata:
 
 * `joint_angles` The robot joint angles, in radians
 * `joint_angular_velocities` The robot joint angular velocities, in radians per second
-* `projected_gravity` The 3-dimensional projected gravity unit vector
+* `projected_gravity` The 3-dimensional projected gravity vector, with magnitude \~9.81
 * `accelerometer` The accelerometer readings, in meters per second squared
 * `gyroscope` The gyroscope readings, in radians per second
 * `command` An N-dimensional command vector
