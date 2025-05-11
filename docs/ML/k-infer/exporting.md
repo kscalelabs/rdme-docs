@@ -38,6 +38,9 @@ To convert a Jax model to `kinfer` format:
 import jax
 from jax import numpy as jnp
 
+from kinfer.export.jax import export_fn
+from kinfer.export.serialize import pack
+
 JOINT_NAMES = ["left_arm", "right_arm", "left_leg", "right_leg"]
 NUM_JOINTS = len(JOINT_NAMES)
 CARRY_SIZE = 10
@@ -95,6 +98,9 @@ To convert a PyTorch model to `kinfer` format:
 ```python Python
 import torch
 from torch import Tensor
+
+from kinfer.export.pytorch import export_fn
+from kinfer.export.serialize import pack
 
 JOINT_NAMES = ["left_arm", "right_arm", "left_leg", "right_leg"]
 NUM_JOINTS = len(JOINT_NAMES)
