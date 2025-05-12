@@ -28,4 +28,4 @@ metadata:
 
 Motors each have their own unique CAN ID. We use a consistent naming convention to make development easier.
 
-<Image align="center" src="https://files.readme.io/5ec636cbfb120627a32df54ed5a1d576c44894376a80735dfc1e7c4992435300-kbot.jpg" />
+<Image align="center" src="https://files.readme.io/ffef29a195fd46c11adf0da1ef05837b06cb454d57814b4c484b2d688b224df8-kbot.jpg" />
