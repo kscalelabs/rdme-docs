@@ -30,6 +30,35 @@ PID1=$!
 export DISPLAY=:100.0
 ```
 
+Alternatively (and to save yourself the pain of having to do this many times), make a `systemctl` service. First
+
+```
+sudo vim /etc/systemd/system/xvfb.service
+```
+
+Then:
+
+```
+[Unit]
+Description=Virtual Framebuffer X Server (Xvfb)
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/Xvfb :100 -screen 0 1024x768x24 -ac
+Restart=always
+Environment=DISPLAY=:100
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Finally:
+
+```
+sudo systemctl enable xvfb.service
+sudo systemctl start xvfb.service
+```
+
 You may also need to tell MuJoCo to use GPU accelerated off-screen rendering via
 
 ```
