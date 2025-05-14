@@ -99,6 +99,20 @@ JAX_DEBUG_NANS=True DISABLE_JIT_LEVEL=10 python -m examples.walking exp_dir=/pat
 
 This will disable JIT'ting the training pass of your neural network while keeping the MJX environment step JIT'ted, while also throwing an error the first time that JAX encounters a NaN.
 
+## Sudden performance drop
+
+Sometimes you will see a sudden drop in performance, maybe after 30 minutes or an hour of training. In Tensorboard, this could look like this:
+
+<Image align="center" src="https://files.readme.io/147d029a57ee7f169287327944d25ccdbdac50bf72adffdb8771c0d83ec8a83b-errors.png" />
+
+These errors are quite frustrating to debug. Fortunately, we provide some useful utility functions to help debug the root cause. Here is the suggested workflow:
+
+1. Use `DISABLE_JIT_LEVEL=10` to disable all JIT'ing and use the fallback Python implementation of `scan` and `vmap`
+2. Load the last checkpoint from your model using `exp_dir=/path/to/exp/dir`
+3. Lower the number of environments and batch size using `num_envs=16 batch_size=8` or some similarly low values
+4. Place a breakpoint around where you call your actor and critic, to check that the model outputs are reasonable
+5. Place a breakpoint after retrieving your observations, to check that the observation values are scaled properly and not blowing up
+
 ## General Training Issues
 
 If you're experiencing issues with training recurrent models, it's important to double check exactly how the carry term progresses through training. Specifically, check that the carry term in `sample_action` gets produced in a similar way when getting off-policy training variables.
