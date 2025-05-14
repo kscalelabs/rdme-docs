@@ -107,7 +107,7 @@ Sometimes you will see a sudden drop in performance, maybe after 30 minutes or a
 
 These errors are quite frustrating to debug. Fortunately, we provide some useful utility functions to help debug the root cause. Here is the suggested workflow:
 
-1. Use `DISABLE_JIT_LEVEL=10` to disable all JIT'ing and use the fallback Python implementation of `scan` and `vmap`
+1. Use `DISABLE_JIT_LEVEL=10` to disable all JIT'ing except for the MJX environment, and use the fallback Python implementation of `scan` and `vmap` provided by [xax](https://github.com/kscalelabs/xax)
 2. Load the last checkpoint from your model using `exp_dir=/path/to/exp/dir`
 3. Lower the number of environments and batch size using `num_envs=16 batch_size=8` or some similarly low values
 4. Place a breakpoint around where you call your actor and critic, to check that the model outputs are reasonable
