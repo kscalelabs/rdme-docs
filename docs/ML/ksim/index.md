@@ -26,7 +26,7 @@ metadata:
 
 Welcome to `ksim`, a modular and robust framework for training policies in simulation.
 
-<Image align="center" border={false} caption="Example K-Sim policy trained for the K-Bot" src="https://files.readme.io/0a70b3dc9ea1b92014d4b61bad102ae882a43cf143080d2af3e400943578a53c-individualImage_3.gif" />
+<Image align="center" border={false} caption="Example K-Sim policy trained for the K-Bot" src="https://files.readme.io/5db95d15ebad27d4ef5957d3fb66affd3119a4a889f61e3be7b8fb0b5670ba11-individualImage.gif" />
 
 See the framework source code on [Github](https://github.com/kscalelabs/ksim).
 
