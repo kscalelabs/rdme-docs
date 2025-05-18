@@ -15,7 +15,7 @@ metadata:
     The main <code>ksim</code> Github repository
   </Card>
 
-  <Card title="Github" href="https://github.com/kscalelabs/ksim/tree/master/examples" icon="fa-code" target="_blank">
+  <Card title="Examples" href="https://github.com/kscalelabs/ksim/tree/master/examples" icon="fa-code" target="_blank">
     Examples to get started training your own policies
   </Card>
 
