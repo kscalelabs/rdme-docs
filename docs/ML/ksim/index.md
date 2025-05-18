@@ -1,6 +1,6 @@
 ---
 title: K-Sim
-excerpt: K-Scale's ML training framework
+excerpt: Making robots useful with RL
 deprecated: false
 hidden: false
 metadata:
