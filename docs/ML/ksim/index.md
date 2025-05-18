@@ -28,6 +28,12 @@ metadata:
   </Card>
 </Cards>
 
+## Tutorial
+
+<Embed typeOfEmbed="youtube" url="https://www.youtube.com/watch?v=c64FnSvj8kQ" />
+
+<br />
+
 ## Contributing
 
 We welcome contributions! Please see the [contributing guide](./contributing.md) for more information.
