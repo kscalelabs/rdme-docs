@@ -4,6 +4,7 @@ excerpt: Open-source 3D printed end-to-end humanoid robot.
 deprecated: false
 hidden: false
 metadata:
+  title: Zeroth-01 Bot
   robots: index
 next:
   pages:
