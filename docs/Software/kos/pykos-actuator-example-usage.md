@@ -1,5 +1,5 @@
 ---
-title: PyKOS Actuator Example Usage
+title: PyKOS Example Usage
 deprecated: false
 hidden: false
 metadata:
