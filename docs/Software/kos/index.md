@@ -99,7 +99,7 @@ if __name__ == "__main__":
 
 <br />
 
-The actuator we use are Robstride actuator: [https://github.com/RobStride/Product\_Information](https://github.com/RobStride/Product_Information). The control mode we use is the 'Operation control mode' which is described at the end of the manual. Thus, we can also pass in an expected velocity as such:
+We use actuators from [Robstride Dynamics](\[https://github.com/RobStride/Product_Information]\(https://github.com/RobStride/Product_Information\)). The control mode we use is the 'Operation control mode' which is described at the end of the manual. Thus, we can also pass in an expected velocity as such:
 
 ```python
 import pykos
