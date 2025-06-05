@@ -16,6 +16,14 @@ metadata:
 
 # Troubleshooting
 
+## "Cannot initialize a EGL device display"
+
+This error message shows up on some systems. Some users have reported fixing this by doing:
+
+```shell
+conda install -c conda-forge libstdcxx-ng
+```
+
 ## Headless Systems
 
 When you try to render a trajectory while on a headless system, you may get an error like the following:
